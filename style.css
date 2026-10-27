@@ -1360,6 +1360,11 @@ body.pg-playing .chatbot { display: none; }
 .lt-porta .rk-error { margin: 0; }
 .lt-porta-ico { font-size: 2rem; line-height: 1; }
 .lt-go { margin-top: auto; padding: 12px 16px; text-align: center; }
+.lt-temas { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 6px; margin: 4px 0 8px; }
+.lt-tema { display: flex; align-items: center; gap: 6px; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font: inherit; font-size: .88rem; font-weight: 700; cursor: pointer; text-align: left; }
+.lt-tema:hover { border-color: var(--muted); }
+.lt-tema[aria-checked="true"] { border-color: #1f4fbf; background: #1f4fbf22; box-shadow: inset 0 0 0 1px #1f4fbf; }
+.lt-tema span:first-child { font-size: 1.1rem; }
 .lt-code-input { font: 700 1.8rem "Space Grotesk", Inter, sans-serif; letter-spacing: .4em; text-align: center; padding: 8px 0 8px .4em; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); color: var(--text); width: 100%; }
 .lt-code-input:focus { outline: 2px solid #1f4fbf; outline-offset: 1px; }
 .lt-regras { margin-top: 18px; font-size: .92rem; }

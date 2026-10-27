@@ -79,29 +79,60 @@
   // A sala guarda só "faixa:número:ordem" de cada pergunta do banco oficial (perguntas.js), nunca o texto:
   // assim ninguém consegue mostrar uma pergunta inventada para o adversário.
   // "ordem" diz em que posição aparece cada opção (0 é a certa).
+  // Temas: o jiu-jitsu usa perguntas.js por faixa ("faixa:número:ordem"); os outros temas usam
+  // temas-luta.js por nível ("tema:nível:número:ordem", nível f/m/d = fácil/médio/difícil).
   const banco = () => Object.fromEntries(window.COHAB_QUIZ.LEVELS.map((l) => [l.id, l.questions]));
+  const EXTRAS = () => window.COHAB_TEMAS ?? {};
   const ptsDa = (i) => (i < 4 ? 2 : i < 7 ? 3 : 4); // 4 raspagens, 3 passagens, 3 montadas
+  const nivelDa = (i) => "fmd"[i < 4 ? 0 : i < 7 ? 1 : 2];
+  const temas = () => ({
+    jiujitsu: { nome: "Jiu-jitsu", ico: "🥋" },
+    ...Object.fromEntries(Object.entries(EXTRAS()).map(([k, t]) => [k, { nome: t.nome, ico: t.ico }])),
+    mix: { nome: "Misturado", ico: "🎲" },
+  });
+  const temaDe = (k) => temas()[k] ?? temas().jiujitsu;
 
-  function sortear() {
-    const B = banco();
-    return GOLPES.flatMap((g) => shuffle(g.faixas.flatMap((f) => B[f].map((_, i) => `${f}:${i}`)))
-      .slice(0, g.n)
-      .map((id) => `${id}:${shuffle(["0", "1", "2", "3"]).join("")}`));
+  function sortear(tema) {
+    const B = banco(), T = EXTRAS();
+    const ordem = () => shuffle(["0", "1", "2", "3"]).join("");
+    const usadas = new Set();
+    const textoDe = (id) => { const p = id.split(":"); return (p.length === 2 ? B[p[0]][p[1]] : T[p[0]][p[1]][p[2]])[0]; };
+    return GOLPES.flatMap((g, gi) => {
+      const nivel = "fmd"[gi];
+      // cada fonte de perguntas deste nível (no misturado, sorteia a fonte de cada pergunta)
+      const fontes = {};
+      if (tema === "jiujitsu" || tema === "mix") fontes.jiujitsu = shuffle(g.faixas.flatMap((f) => B[f].map((_, i) => `${f}:${i}`)));
+      Object.keys(T).forEach((t) => { if (tema === t || tema === "mix") fontes[t] = shuffle(T[t][nivel].map((_, i) => `${t}:${nivel}:${i}`)); });
+      const ids = [];
+      while (ids.length < g.n) {
+        const vivas = Object.keys(fontes).filter((f) => fontes[f].length);
+        if (!vivas.length) break;
+        const id = fontes[vivas[Math.floor(Math.random() * vivas.length)]].pop();
+        // no misturado, alguns temas têm perguntas iguais às do jiu-jitsu: não repete na mesma luta
+        if (usadas.has(textoDe(id))) continue;
+        usadas.add(textoDe(id));
+        ids.push(id);
+      }
+      return ids.map((id) => `${id}:${ordem()}`);
+    });
   }
 
   // transforma os números de volta nas perguntas; null se alguma não existir no banco
   function expandir(ids) {
     const B = banco();
     if (!Array.isArray(ids) || ids.length !== RODADAS) return null;
+    const T = EXTRAS();
     const ps = ids.map((id, i) => {
-      const m = /^(branca|azul|roxa|marrom|preta):(\d{1,2}):([0-3]{4})$/.exec(String(id));
-      if (!m || !GOLPES.find((g) => g.pts === ptsDa(i)).faixas.includes(m[1])) return null;
-      const item = B[m[1]][Number(m[2])];
-      if (!item || new Set(m[3]).size !== 4) return null;
+      let item, ordem, faixa;
+      const jj = /^(branca|azul|roxa|marrom|preta):(\d{1,2}):([0-3]{4})$/.exec(String(id));
+      const tm = /^([a-z]+):([fmd]):(\d{1,2}):([0-3]{4})$/.exec(String(id));
+      if (jj && GOLPES.find((g) => g.pts === ptsDa(i)).faixas.includes(jj[1])) { item = B[jj[1]][Number(jj[2])]; ordem = jj[3]; faixa = jj[1]; }
+      else if (tm && T[tm[1]] && tm[2] === nivelDa(i)) { item = T[tm[1]][tm[2]][Number(tm[3])]; ordem = tm[4]; faixa = tm[1]; }
+      if (!item || new Set(ordem).size !== 4) return null;
       const [q, certa, erradas, porque, img] = item;
       const base = [certa, ...erradas];
-      const opcoes = [...m[3]].map((k) => base[Number(k)]);
-      return { q, opcoes, certa: m[3].indexOf("0"), porque, img: img || null, faixa: m[1], pts: ptsDa(i) };
+      const opcoes = [...ordem].map((k) => base[Number(k)]);
+      return { q, opcoes, certa: ordem.indexOf("0"), porque, img: img || null, faixa, pts: ptsDa(i) };
     });
     return ps.every(Boolean) ? ps : null;
   }
@@ -170,10 +201,10 @@
   }
 
   // ---------- Firebase ----------
-  function nova(nick) {
+  function nova(nick, tema) {
     const ts = C.fs.serverTimestamp();
     return {
-      azul: C.uid, branco: null, nickAzul: nick, nickBranco: null, status: "espera", perguntas: sortear(), rodada: 0,
+      azul: C.uid, branco: null, nickAzul: nick, nickBranco: null, status: "espera", tema, perguntas: sortear(tema), rodada: 0,
       inicio: ts, criada: ts, vistoAzul: ts, vistoBranco: null, vencedor: null, motivo: null, revanche: null,
     };
   }
@@ -193,14 +224,14 @@
     } catch (e) { console.warn("Limpeza de salas antigas não rodou.", e); }
   }
 
-  async function criar() {
+  async function criar(tema) {
     const { fs, db } = C;
     for (let i = 0; i < 12; i++) {
       const c = sortearCodigo();
       const ok = await fs.runTransaction(db, async (t) => {
         const s = await t.get(salaRef(c));
         if (s.exists()) return false;
-        t.set(salaRef(c), nova(R.nick()));
+        t.set(salaRef(c), nova(R.nick(), tema));
         return true;
       });
       if (ok) { limpar(); return c; }
@@ -266,7 +297,7 @@
       for (let i = 0; i < 8; i++) {
         const c = sortearCodigo();
         if ((await t.get(salaRef(c))).exists()) continue;
-        t.set(salaRef(c), nova(R.nick()));
+        t.set(salaRef(c), nova(R.nick(), d.tema ?? "jiujitsu")); // revanche no mesmo tema
         t.update(salaRef(codigo), { revanche: c });
         return c;
       }
@@ -452,12 +483,30 @@
     // criar
     const criarCard = el("div", "lt-porta lt-porta-criar");
     criarCard.append(el("span", "lt-porta-ico", "🥋"), el("h2", "", "Criar luta"),
-      el("p", "muted", "Você recebe um código de 4 números para mandar ao seu adversário. Você luta de Azul."));
+      el("p", "muted", "Escolha o tema. Você recebe um código de 4 números para mandar ao seu adversário e luta de Azul."));
+    // tema da luta (fica lembrado para a próxima)
+    let tema = temas()[store.get("lt-tema", "jiujitsu")] ? store.get("lt-tema", "jiujitsu") : "jiujitsu";
+    const escolha = el("div", "lt-temas");
+    escolha.setAttribute("role", "radiogroup");
+    escolha.setAttribute("aria-label", "Tema da luta");
+    Object.entries(temas()).forEach(([k, t]) => {
+      const b = btn("lt-tema", "", () => {
+        tema = k;
+        store.set("lt-tema", k);
+        escolha.querySelectorAll("button").forEach((x) => x.setAttribute("aria-checked", x === b));
+      });
+      b.setAttribute("role", "radio");
+      b.setAttribute("aria-checked", k === tema);
+      b.dataset.tema = k;
+      b.append(el("span", "", t.ico), el("span", "", t.nome));
+      escolha.append(b);
+    });
+    criarCard.append(escolha);
     const criarMsg = el("p", "rk-error");
     const criarBtn = btn("button lt-go", "Criar luta", async () => {
       criarBtn.disabled = true;
       criarBtn.textContent = "Criando a sala…";
-      try { abrir(await criar()); } catch (e) {
+      try { abrir(await criar(tema)); } catch (e) {
         console.warn(e);
         criarMsg.textContent = navigator.onLine === false ? "Sem internet agora." : "Não deu para criar a sala. Tente de novo.";
         criarBtn.disabled = false;
@@ -505,7 +554,7 @@
     [
       `São ${RODADAS} perguntas. A mesma pergunta aparece para os dois ao mesmo tempo.`,
       "Quem acerta primeiro marca os pontos. A hora vale pelo servidor, não pelo celular.",
-      ...GOLPES.map((g) => `${g.nome} +${g.pts}: perguntas de faixa ${g.faixas.join(" e ")}.`),
+      ...GOLPES.map((g, i) => `${g.nome} +${g.pts}: perguntas ${["fáceis", "médias", "difíceis"][i]} (no jiu-jitsu, de faixa ${g.faixas.join(" e ")}).`),
       "Acertou, mas o outro foi mais rápido? Ganha 1 vantagem.",
       "Errou? Leva 1 punição. Cada um só responde uma vez por pergunta.",
       `Abriu ${FINALIZA} pontos de diferença: finalização, a luta acaba na hora.`,
@@ -521,12 +570,13 @@
   function esperar() {
     if (!trocar("espera")) return;
     const wrap = el("div", "lt-espera");
-    wrap.append(el("p", "eyebrow", revancheContra ? "Revanche · agora você é o Azul" : "Sala criada · você é o Azul"),
+    const tm = temaDe(sala.tema);
+    wrap.append(el("p", "eyebrow", `${revancheContra ? "Revanche · agora você é o Azul" : "Sala criada · você é o Azul"} · ${tm.ico} ${tm.nome}`),
       el("h2", "", revancheContra ? `Esperando ${revancheContra} aceitar a revanche` : "Mande este código para o seu adversário"));
     const digits = el("div", "lt-codigo");
     digits.setAttribute("aria-label", `Código ${codigo.split("").join(" ")}`);
     codigo.split("").forEach((d) => digits.append(el("span", "", d)));
-    const convite = `🥋 Te desafio para uma Luta ao vivo de jiu-jitsu no site da Cohab! Entra com o código ${codigo}: ${linkSala()}`;
+    const convite = `🥋 Te desafio para uma Luta ao vivo (tema: ${tm.nome}) no site da Cohab! Entra com o código ${codigo}: ${linkSala()}`;
     const acoes = el("div", "lt-acoes");
     const zap = el("a", "button lt-zap", "Chamar no WhatsApp");
     zap.href = `https://wa.me/?text=${encodeURIComponent(convite)}`;
@@ -563,7 +613,7 @@
     if (cor === "azul") {
       wrap.append(el("p", "eyebrow", "Adversário na área"), el("h2", "", `${nickDe("branco")} entrou! Começando…`));
     } else {
-      wrap.append(el("p", "eyebrow", `Sala ${codigo} · você é o Branco`), el("h2", "", `Esperando ${nickDe("azul")} voltar para a sala`));
+      wrap.append(el("p", "eyebrow", `Sala ${codigo} · você é o Branco · ${temaDe(sala.tema).ico} ${temaDe(sala.tema).nome}`), el("h2", "", `Esperando ${nickDe("azul")} voltar para a sala`));
       const esperando = el("div", "lt-aguarde");
       esperando.append(el("span", "lt-pulso"), el("span", "", "A luta começa sozinha quando ele abrir a página."));
       wrap.append(esperando, el("p", "muted lt-dica", "Ele pode estar no WhatsApp mandando o código. Se demorar, mande uma mensagem para ele voltar."),
@@ -587,7 +637,7 @@
         if (!confirm("Desistir da luta? Seu adversário vence por W.O.")) return;
         terminar(outra(cor), "wo").catch((e) => console.warn(e));
       });
-      ui.top.append(el("span", "lt-sala", `Sala ${codigo}`), sair);
+      ui.top.append(el("span", "lt-sala", `Sala ${codigo} · ${temaDe(sala.tema).ico} ${temaDe(sala.tema).nome}`), sair);
       box.append(ui.top, ui.board, ui.aviso, ui.stage);
       if (!reduced) {
         const go = el("div", "lt-combate", "Combate!");
@@ -610,7 +660,9 @@
     ui.stage.replaceChildren();
     const head = el("div", "lt-head");
     const tag = el("span", `lt-golpe p${q.pts}`, `${g.nome} +${q.pts}`);
-    head.append(el("span", "muted", `Pergunta ${r + 1} de ${RODADAS}`), tag);
+    // no misturado, mostra de que tema é a pergunta
+    const de = sala.tema === "mix" ? ` · ${temaDe(q.faixa).ico} ${temaDe(q.faixa).nome}` : "";
+    head.append(el("span", "muted", `Pergunta ${r + 1} de ${RODADAS}${de}`), tag);
     ui.bar = el("div", "lt-tempo");
     ui.fill = el("i");
     ui.secs = el("span", "lt-secs");
@@ -735,7 +787,7 @@
       sub = ganhei ? `${nickDe(outra(cor))} saiu ou ficou sem sinal.` : `Você saiu ou ficou sem sinal, e ${nickDe(venc)} venceu por W.O.`;
     } else if (ganhei) { titulo = comoVenceu === "finalizacao" ? "Finalizou! 🥋" : "Você venceu!"; sub = `Vitória ${motivo}. Oss!`; }
     else { titulo = comoVenceu === "finalizacao" ? "Você bateu! 🫱" : "Não foi dessa vez"; sub = `${nickDe(venc)} venceu ${motivo}.`; }
-    card.append(el("p", "eyebrow", `Sala ${codigo} · ${rodadas.length} de ${RODADAS} perguntas`), el("h2", "", titulo), el("p", "lt-sub", sub));
+    card.append(el("p", "eyebrow", `Sala ${codigo} · ${temaDe(sala.tema).ico} ${temaDe(sala.tema).nome} · ${rodadas.length} de ${RODADAS} perguntas`), el("h2", "", titulo), el("p", "lt-sub", sub));
     if (venc && venc !== "empate") {
       const braco = el("div", `lt-braco ${venc}`);
       braco.append(el("span", "", "✋"), el("strong", "", nickDe(venc)), el("small", "", `${COR[venc]} · vencedor`));
