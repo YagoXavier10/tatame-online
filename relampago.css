@@ -1,0 +1,120 @@
+/* Desafios relâmpago (usa as cores e os blocos .lt-* do style.css) */
+.rl { --rl-verde: #1a9a5c; --rl-vermelho: #e5484d; --rl-amarelo: #f5c542; }
+.rl-av { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--bg); border: 1px solid var(--border); font-size: 1.15rem; flex-shrink: 0; }
+.rl-av.grande { width: 64px; height: 64px; font-size: 2.2rem; }
+.rl-av.pronto { border-color: var(--rl-verde); box-shadow: 0 0 0 2px var(--rl-verde); }
+.rl-nick { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+
+/* início */
+.rl-lista-jogos { display: grid; gap: 8px; margin-top: 10px; }
+.rl-mini { display: grid; grid-template-columns: 34px 1fr; column-gap: 10px; align-items: center; }
+.rl-mini small { grid-column: 2; }
+.rl-mini-ico { grid-row: span 2; font-size: 1.6rem; text-align: center; }
+.rl-pontos { margin: 12px 0 0; font-size: .88rem; }
+
+/* sala de espera */
+.rl-contagem { margin: 20px 0 8px; font-weight: 700; }
+.rl-jogadores { list-style: none; padding: 0; margin: 0 auto; max-width: 420px; display: grid; gap: 6px; text-align: left; }
+.rl-jogadores li { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 12px; background: var(--bg); border: 1px solid var(--border); animation: cm-in .25s ease; }
+.rl-jogadores li.eu { border-color: #1f4fbf; }
+.rl-tag { margin-left: auto; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.rl-controle { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 18px; }
+.rl-quantos { justify-content: center; margin: 0; }
+.rl-controle .lt-go { min-width: 220px; }
+
+/* rodada */
+.rl-topo { display: flex; justify-content: space-between; align-items: center; }
+.rl-tempo-txt { font: 700 .9rem "Space Grotesk", Inter, sans-serif; }
+.rl .lt-tempo { margin: 8px 0 14px; }
+.rl-titulo { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.rl-titulo h2 { margin: 0; font-size: 1.5rem; }
+.rl-titulo-ico { font-size: 2rem; line-height: 1; }
+.rl-area { min-height: 320px; display: flex; flex-direction: column; }
+.rl-intro { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px; }
+.rl-intro p { margin: 0; max-width: 420px; font-size: 1.05rem; }
+.rl-contagem-grande { font: 700 4rem "Space Grotesk", Inter, sans-serif; line-height: 1; color: var(--rl-verde); }
+.rl-feito { margin: auto 0 4px; text-align: center; font-size: 1.3rem; font-weight: 700; }
+.rl-feito + .muted { text-align: center; margin: 0 0 auto; }
+.rl-status { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 12px 0 0; font-size: .88rem; color: var(--muted); min-height: 34px; }
+.rl-jogo { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.rl-dica { margin: 0; text-align: center; font-weight: 700; color: var(--muted); }
+
+/* reflexo */
+.rl-reflexo { flex: 1; min-height: 260px; border: 0; border-radius: 18px; font: 700 2rem "Space Grotesk", Inter, sans-serif; color: #fff; cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; background: #2a2a31; }
+.rl-reflexo.vermelho { background: var(--rl-vermelho); }
+.rl-reflexo.verde { background: var(--rl-verde); }
+.rl-reflexo.queimou { background: #6b3e1e; }
+.rl-reflexo.amarelo { background: var(--rl-amarelo); color: #111; }
+
+/* memória */
+.rl-pads { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; flex: 1; }
+.rl-pad { min-height: 110px; border: 0; border-radius: 18px; background: var(--c); opacity: .35; cursor: pointer; touch-action: manipulation; transition: opacity .1s ease, transform .1s ease; }
+.rl-pad.on { opacity: 1; transform: scale(1.04); box-shadow: 0 0 24px var(--c); }
+
+/* perguntas de escolha */
+.rl-palco { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+.rl-pergunta { margin: 0; text-align: center; font: 700 2.2rem "Space Grotesk", Inter, sans-serif; }
+.rl-opcoes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.rl-opcao { min-height: 64px; font: 700 1.6rem "Space Grotesk", Inter, sans-serif; border-radius: 14px; border: 1px solid var(--border); background: var(--bg); color: var(--text); cursor: pointer; touch-action: manipulation; }
+.rl-opcao.certa { border-color: var(--rl-verde); background: #1a9a5c33; }
+.rl-opcao.errada { border-color: var(--rl-vermelho); background: #e5484d33; }
+.rl-campo { position: relative; height: 280px; border-radius: 16px; background: var(--bg); border: 1px solid var(--border); overflow: hidden; }
+.rl-campo span { position: absolute; font-size: 1.9rem; line-height: 1; }
+
+/* na hora certa */
+.rl-barra { position: relative; height: 56px; margin: 30px 0 10px; border-radius: 14px; background: var(--bg); border: 1px solid var(--border); overflow: hidden; }
+.rl-alvo { position: absolute; left: 46%; width: 8%; top: 0; bottom: 0; background: #1a9a5c55; border-left: 2px solid var(--rl-verde); border-right: 2px solid var(--rl-verde); }
+.rl-marca { position: absolute; top: 4px; bottom: 4px; width: 8px; margin-left: -4px; border-radius: 4px; background: var(--text); }
+.rl-barra.acerto { animation: rl-pisca-verde .4s ease; }
+.rl-barra.erro { animation: rl-pisca-vermelho .4s ease; }
+.rl-toque { align-self: center; min-width: 220px; min-height: 72px; font: 700 1.6rem "Space Grotesk", Inter, sans-serif !important; touch-action: manipulation; }
+.rl-notas { margin: 0; text-align: center; color: var(--muted); font-weight: 700; min-height: 1.4em; }
+
+/* cor diferente */
+.rl-cores { display: grid; grid-template-columns: repeat(var(--lado, 3), 1fr); gap: 6px; flex: 1; align-content: start; max-width: 420px; width: 100%; margin: 0 auto; }
+.rl-q { aspect-ratio: 1; border: 0; border-radius: 10px; cursor: pointer; touch-action: manipulation; }
+.rl-q.certa { outline: 4px solid var(--text); outline-offset: -4px; }
+
+/* resultado da rodada */
+.rl-resultado h2, .rl-fim h2 { margin: 4px 0 12px; font-size: 1.8rem; }
+.rl-rank { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.rl-rank li { display: grid; grid-template-columns: 36px 34px 1fr auto; grid-template-areas: "pos av nick pts" "pos av txt pts"; column-gap: 10px; align-items: center; padding: 8px 12px; border-radius: 12px; background: var(--bg); border: 1px solid var(--border); animation: cm-in .3s ease backwards; }
+.rl-rank li:nth-child(2) { animation-delay: .06s; }
+.rl-rank li:nth-child(3) { animation-delay: .12s; }
+.rl-rank li:nth-child(n+4) { animation-delay: .18s; }
+.rl-rank li.eu { border-color: #1f4fbf; }
+.rl-rank .rl-pos { grid-area: pos; font: 700 1.1rem "Space Grotesk", Inter, sans-serif; text-align: center; }
+.rl-rank .rl-av { grid-area: av; }
+.rl-rank .rl-nick { grid-area: nick; font-weight: 700; }
+.rl-rank small { grid-area: txt; }
+.rl-rank b { grid-area: pts; font: 700 1.2rem "Space Grotesk", Inter, sans-serif; }
+.rl-ganhou { color: var(--rl-verde); }
+.rl-rank.pequeno li { grid-template-areas: "pos av nick pts"; padding: 6px 12px; }
+.rl-geral { margin-top: 18px; }
+.rl-geral h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.rl-proxima { text-align: center; margin: 14px 0 0; }
+
+/* pódio */
+.rl-fim { position: relative; text-align: center; }
+.rl-podio { display: flex; justify-content: center; align-items: flex-end; gap: 10px; margin: 10px 0 18px; }
+.rl-degrau { flex: 1; max-width: 150px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.rl-degrau strong { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rl-degrau span:not(.rl-av) { font-size: .85rem; color: var(--muted); }
+.rl-degrau-n { width: 100%; display: grid; place-items: center; border-radius: 12px 12px 0 0; font: 700 1.8rem "Space Grotesk", Inter, sans-serif; color: #111; animation: rl-sobe .6s ease backwards; transform-origin: bottom; }
+.rl-degrau.d1 .rl-degrau-n { height: 120px; background: var(--rl-amarelo); animation-delay: .5s; }
+.rl-degrau.d2 .rl-degrau-n { height: 86px; background: #c9ced6; animation-delay: .25s; }
+.rl-degrau.d3 .rl-degrau-n { height: 62px; background: #cd8b52; }
+.rl-fim .rl-rank { text-align: left; }
+.rl-minha { margin: 14px 0 0; font-weight: 700; font-size: 1.1rem; }
+
+@keyframes rl-pisca-verde { 50% { background: #1a9a5c66; } }
+@keyframes rl-pisca-vermelho { 50% { background: #e5484d55; } }
+@keyframes rl-sobe { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .rl-jogadores li, .rl-rank li, .rl-degrau-n, .rl-barra.acerto, .rl-barra.erro { animation: none; }
+}
+@media (max-width: 520px) {
+  .rl-pergunta { font-size: 1.8rem; }
+  .rl-pad { min-height: 80px; }
+  .rl-campo { height: 240px; }
+}

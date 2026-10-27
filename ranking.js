@@ -11,6 +11,9 @@ export const GAMES = {
   caminho: { name: "Caminho da finalização", short: "Caminho", unit: "estrelas" },
   quiz: { name: "Quiz de jiu-jitsu", short: "Quiz", unit: "acertos" },
   luta: { name: "Luta ao vivo", short: "Luta ao vivo 🥊", unit: "vitórias", one: "vitória" },
+  torre: { name: "Torre de faixas", short: "Torre 🏗️", unit: "andares", one: "andar" },
+  esquiva: { name: "Esquiva", short: "Esquiva 💨", unit: "pontos" },
+  palavras: { name: "Caça-palavras", short: "Palavras 🔤", unit: "pontos" },
 };
 
 // se o navegador bloquear o armazenamento (aba anônima, privacidade), guarda na memória enquanto a página estiver aberta
@@ -155,6 +158,9 @@ function localBests() {
     caminho: sum(store.get("cm-estrelas", {})),
     quiz: sum(store.get("quiz-faixas", {})),
     luta: store.get("lt-vitorias", 0),
+    torre: store.get("tr-recorde", 0),
+    esquiva: store.get("eq-recorde", 0),
+    palavras: store.get("cp-recorde", 0),
   };
 }
 export async function sync() {

@@ -22,6 +22,11 @@
       <a href="regras.html">Regra ou mito</a>
       <a href="quiz.html">Quiz</a>
       <a href="luta.html">Luta ao vivo</a>
+      <a href="relampago.html">Relâmpago</a>
+      <a href="infiltrado.html">Infiltrado</a>
+      <a href="torre.html">Torre</a>
+      <a href="esquiva.html">Esquiva</a>
+      <a href="palavras.html">Palavras</a>
     </div>
   </nav>
   <header class="hero">
@@ -35,6 +40,44 @@
   <main class="container">
     <section class="rk-profile" id="rk-profile" aria-live="polite"></section>
     <div class="games">
+      <a class="game-card game-card-live" href="relampago.html">
+        <span class="game-art" aria-hidden="true">⚡</span>
+        <span class="game-new">2 a 8 jogadores</span>
+        <h2>Desafios relâmpago</h2>
+        <p class="muted">Junte a turma, cada um no seu celular. Reflexo, memória, conta de cabeça, mira e mais: todos jogam o mesmo desafio ao mesmo tempo e o placar sai na hora.</p>
+        <span class="feature-cta">Jogar</span>
+      </a>
+      <a class="game-card game-card-live" href="infiltrado.html">
+        <span class="game-art" aria-hidden="true">🕵️</span>
+        <span class="game-new">3 a 8 jogadores</span>
+        <h2>Infiltrado</h2>
+        <p class="muted">Todos recebem a mesma palavra secreta, menos um. Cada um dá uma dica, vocês votam e tentam desmascarar o infiltrado antes que ele descubra a palavra.</p>
+        <span class="feature-cta">Jogar</span>
+      </a>
+      <a class="game-card" href="torre.html">
+        <span class="game-art" aria-hidden="true">🏗️</span>
+        <span class="game-new">Novo</span>
+        <h2>Torre de faixas</h2>
+        <p class="muted">Solte a faixa na hora certa e empilhe a torre mais alta. O que passa da borda cai; acertar em cheio faz combo. Da faixa branca à coral.</p>
+        <span class="game-best" data-best="torre"></span>
+        <span class="feature-cta">Jogar</span>
+      </a>
+      <a class="game-card" href="esquiva.html">
+        <span class="game-art" aria-hidden="true">💨</span>
+        <span class="game-new">Novo</span>
+        <h2>Esquiva</h2>
+        <p class="muted">Arraste o dedo para desviar de blocos, zigue-zagues e lasers. Pegue estrelas e escudos. Quanto mais tempo vivo, mais rápido fica.</p>
+        <span class="game-best" data-best="esquiva"></span>
+        <span class="feature-cta">Jogar</span>
+      </a>
+      <a class="game-card" href="palavras.html">
+        <span class="game-art" aria-hidden="true">🔤</span>
+        <span class="game-new">Novo</span>
+        <h2>Caça-palavras</h2>
+        <p class="muted">Seis temas e palavras escondidas em todas as direções, até de trás para frente. Corra contra o relógio.</p>
+        <span class="game-best" data-best="palavras"></span>
+        <span class="feature-cta">Jogar</span>
+      </a>
       <a class="game-card game-card-live" href="luta.html">
         <span class="game-art" aria-hidden="true">🥊</span>
         <span class="game-new">Ao vivo</span>
@@ -112,6 +155,10 @@
       if (rm) document.querySelector('[data-best="rm"]').textContent = `🏆 Seu recorde: ${rm.toLocaleString("pt-BR")} pontos`;
       const lt = JSON.parse(localStorage.getItem("lt-vitorias")) || 0;
       if (lt) document.querySelector('[data-best="lt"]').textContent = `🏆 ${lt} ${lt === 1 ? "vitória" : "vitórias"} ao vivo`;
+      for (const [k, chave, un] of [["torre", "tr-recorde", "andares"], ["esquiva", "eq-recorde", "pontos"], ["palavras", "cp-recorde", "pontos"]]) {
+        const v = JSON.parse(localStorage.getItem(chave)) || 0;
+        if (v) document.querySelector(`[data-best="${k}"]`).textContent = `🏆 Seu recorde: ${v.toLocaleString("pt-BR")} ${un}`;
+      }
       if (passed.length) document.querySelector('[data-best="quiz"]').textContent = `🥋 Você já passou na faixa ${passed.at(-1)}`;
     } catch (e) { /* sem armazenamento */ }
   </script>
@@ -122,8 +169,8 @@
   </footer>
 
   <script src="ranking-config.js?v=1" defer></script>
-  <script type="module" src="ranking.js?v=6"></script>
-  <script src="jogos.js?v=5" defer></script>
+  <script type="module" src="ranking.js?v=7"></script>
+  <script src="jogos.js?v=6" defer></script>
   <script src="fx.js?v=3" defer></script>
 </body>
 </html>
