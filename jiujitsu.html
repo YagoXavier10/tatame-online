@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jiu-Jitsu · Cohab Team</title>
+  <meta name="description" content="A história do jiu-jitsu, o sistema de faixas, as regras de pontuação e um glossário para quem está começando.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=15">
+  <script>try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-progress>
+  <nav class="site-nav" aria-label="Navegação do site">
+    <div class="container">
+      <a class="site-logo" href="./">COHAB<span>.</span></a>
+      <a href="./">Início</a>
+      <a href="historia.html">História</a>
+      <a href="conquistas.html">Conquistas</a>
+      <a href="atletas.html">Atletas</a>
+      <a href="jiujitsu.html" aria-current="page">Jiu-Jitsu</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="campeonatos.html">Campeonatos</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="jogos.html">Jogos</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">🥋 A arte suave</p>
+      <h1>Jiu-Jitsu</h1>
+      <p class="bio">Do Japão dos samurais aos tatames de Itaquera: como o jiu-jitsu chegou ao Brasil, virou esporte e conquistou o mundo. E tudo o que quem está começando precisa saber.</p>
+      <nav class="chips jj-jump" aria-label="Ir para">
+        <a href="#historia">Linha do tempo</a>
+        <a href="#faixas">Faixas</a>
+        <a href="#pontos">Pontuação</a>
+        <a href="#glossario">Glossário</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="block" id="historia">
+      <h2>Linha do tempo</h2>
+      <ol class="timeline">
+        <li><time>Séc. XVI</time><div><h3>Japão feudal</h3><p>O jujutsu nasce como luta corpo a corpo dos samurais: torções, projeções e estrangulamentos para quando a espada não servia mais.</p></div></li>
+        <li><time>1882</time><div><h3>Jigoro Kano e o Kodokan</h3><p>Kano reúne técnicas de várias escolas de jujutsu, tira as mais perigosas e cria o judô, com treino de luta livre (randori) em vez de só demonstração.</p></div></li>
+        <li><time>1914</time><div><h3>Conde Koma chega ao Brasil</h3><p>Mitsuyo Maeda, aluno do Kodokan que rodou o mundo lutando desafios, chega ao Brasil e se fixa em Belém do Pará.</p></div></li>
+        <li><time>1917</time><div><h3>Carlos Gracie começa a treinar</h3><p>Em Belém, Maeda ensina o jovem Carlos Gracie. Ele leva a luta para o Rio de Janeiro e passa o conhecimento para os irmãos.</p></div></li>
+        <li><time>1925</time><div><h3>Academia Gracie no Rio</h3><p>Carlos abre sua academia no Rio. O irmão mais novo, Hélio, franzino, adapta as técnicas para depender de alavanca e tempo, não de força.</p></div></li>
+        <li><time>1951</time><div><h3>Hélio x Kimura</h3><p>No Maracanã, Hélio Gracie enfrenta o judoca japonês Masahiko Kimura. Kimura vence com uma chave no ombro que, desde então, leva o nome dele: a “kimura”.</p></div></li>
+        <li><time>Anos 70</time><div><h3>Rolls Gracie moderniza a arte</h3><p>Rolls mistura jiu-jitsu com luta olímpica, judô e sambo e forma uma geração de campeões. Morre jovem, em 1982, deixando um estilo mais esportivo.</p></div></li>
+        <li><time>1993</time><div><h3>UFC 1</h3><p>Royce Gracie, magro e de kimono, vence o primeiro UFC finalizando adversários bem maiores. O mundo descobre o “Brazilian Jiu-Jitsu”.</p></div></li>
+        <li><time>1994</time><div><h3>CBJJ</h3><p>É fundada a Confederação Brasileira de Jiu-Jitsu, que organiza o esporte com regras de pontuação e categorias por faixa, idade e peso.</p></div></li>
+        <li><time>1996</time><div><h3>Primeiro Mundial</h3><p>O Rio de Janeiro recebe o primeiro Campeonato Mundial de Jiu-Jitsu, que se torna o torneio mais importante da modalidade.</p></div></li>
+        <li><time>1998</time><div><h3>ADCC e a Cohab</h3><p>Em Abu Dhabi nasce o ADCC, o maior torneio de grappling sem kimono. No mesmo ano, em setembro, começa a primeira aula da Cohab, em Itaquera.</p></div></li>
+        <li><time>2007</time><div><h3>CBJJE</h3><p>Moisés Muradi funda a Confederação Brasileira de Jiu-Jitsu Esportivo, outra grande liga do país, onde a Cohab hoje é uma das equipes de ponta.</p></div></li>
+        <li><time>Hoje</time><div><h3>Esporte mundial</h3><p>O jiu-jitsu é praticado em mais de cem países, com e sem kimono, e segue revelando campeões em projetos sociais como o Nasci pra Vencer.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="block wide" id="faixas">
+      <h2>Sistema de faixas</h2>
+      <p class="muted">Toque em uma faixa para saber mais.</p>
+      <div class="belts" id="belts" role="tablist" aria-label="Faixas"></div>
+      <div class="belt-info season-detail" id="belt-info" aria-live="polite"></div>
+    </section>
+
+    <section class="block wide" id="pontos">
+      <h2>Como se pontua</h2>
+      <p class="muted">Regras de pontuação usadas nos campeonatos (padrão IBJJF). Quem finaliza vence na hora, independente do placar.</p>
+      <div class="grid points">
+        <div class="card"><strong class="pts">2</strong><h4>Queda</h4><span class="meta">Derrubar o adversário e ficar por cima.</span></div>
+        <div class="card"><strong class="pts">2</strong><h4>Raspagem</h4><span class="meta">Estando na guarda (por baixo), inverter a posição e ficar por cima.</span></div>
+        <div class="card"><strong class="pts">2</strong><h4>Joelho na barriga</h4><span class="meta">Apoiar o joelho no abdômen de quem está por baixo, com a outra perna livre.</span></div>
+        <div class="card"><strong class="pts">3</strong><h4>Passagem de guarda</h4><span class="meta">Passar pelas pernas do adversário e estabilizar ao lado dele.</span></div>
+        <div class="card"><strong class="pts">4</strong><h4>Montada</h4><span class="meta">Sentar sobre o tronco do adversário, com os dois joelhos no chão.</span></div>
+        <div class="card"><strong class="pts">4</strong><h4>Pegada nas costas</h4><span class="meta">Controlar as costas com os dois ganchos (pés) por dentro das coxas.</span></div>
+      </div>
+      <p class="muted">Além dos pontos, existem as <strong>vantagens</strong> (quase pontuou) e as <strong>punições</strong> (falta de combatividade, por exemplo), que desempatam a luta.</p>
+    </section>
+
+    <section class="block wide" id="glossario">
+      <h2>Glossário do tatame</h2>
+      <input class="search" id="glossary-search" type="search" placeholder="Buscar um termo… (ex.: raspagem, oss)" aria-label="Buscar no glossário">
+      <dl class="glossary" id="glossary"></dl>
+    </section>
+  </main>
+
+  <footer class="container muted site-foot">
+    Cohab Team Brazilian Jiu-Jitsu · Nasci pra Vencer · desde 1998<br>
+    Site feito por <a href="https://yagoxavier10.github.io/portfolio-noticias/">Yago dos Santos</a> · dados atualizados automaticamente
+  </footer>
+
+  <script>
+    // Faixas e glossário da página Jiu-Jitsu
+    (() => {
+      const BELTS = [
+        ["Branca", "#f2f2f2", "#111", "O começo de tudo. Aprende a se defender, cair, as posições básicas e a ter paciência no tatame."],
+        ["Azul", "#1f4fbf", "#fff", "Primeira faixa adulta, a partir de 16 anos. Já conhece as posições e começa a montar o próprio jogo. Mínimo de 2 anos até a roxa."],
+        ["Roxa", "#6a2fb3", "#fff", "A partir de 16 anos. O atleta já ensina os mais novos e domina transições. Mínimo de 1 ano e meio até a marrom."],
+        ["Marrom", "#6b3e1e", "#fff", "A partir de 18 anos. Fase de lapidar o jogo antes da preta. Mínimo de 1 ano até a faixa preta."],
+        ["Preta", "#111111", "#fff", "A partir de 19 anos. Faixa de professor. Recebe graus com o tempo de prática e de ensino."],
+        ["Coral", "linear-gradient(90deg,#c41e1e 0 25%,#111 25% 50%,#c41e1e 50% 75%,#111 75%)", "#fff", "Vermelha e preta: chega no 7º grau da faixa preta, depois de décadas de jiu-jitsu. Depois vem a vermelha e branca."],
+        ["Vermelha", "#c41e1e", "#fff", "A graduação máxima (9º e 10º grau), reservada a quem dedicou a vida inteira à arte."],
+      ];
+      const KIDS = "Crianças até 15 anos usam faixas próprias: cinza, amarela, laranja e verde.";
+      const box = document.getElementById("belts");
+      const info = document.getElementById("belt-info");
+      const pick = (i) => {
+        const [name, , , text] = BELTS[i];
+        box.querySelectorAll("button").forEach((b, j) => b.setAttribute("aria-selected", i === j));
+        info.replaceChildren();
+        const strong = document.createElement("strong");
+        strong.textContent = `Faixa ${name.toLowerCase()}`;
+        const p = document.createElement("span");
+        p.textContent = text + (i === 0 ? " " + KIDS : "");
+        info.append(strong, p);
+      };
+      BELTS.forEach(([name, bg, fg], i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "belt-btn";
+        b.setAttribute("role", "tab");
+        b.style.background = bg;
+        b.style.color = fg;
+        b.innerHTML = `<span class="belt-tip-mini"></span>${name}`;
+        b.addEventListener("click", () => pick(i));
+        box.append(b);
+      });
+      pick(0);
+
+      const TERMS = [
+        ["Oss", "Cumprimento usado no tatame: serve para “bom dia”, “entendi”, “obrigado” e “vamos treinar”."],
+        ["Tatame", "O piso acolchoado onde se treina. Entra-se descalço e cumprimentando."],
+        ["Kimono (gi)", "A roupa de treino de tecido grosso. Treinar “de kimono” permite pegadas na gola e na manga."],
+        ["NoGi (sem kimono)", "Jiu-jitsu de bermuda e camisa de lycra. Sem pegadas no tecido, o jogo fica mais rápido."],
+        ["Rola", "O treino livre, como uma luta de verdade, só que entre colegas."],
+        ["Drill", "Repetir uma técnica muitas vezes, com o parceiro ajudando, até ficar automática."],
+        ["Bater", "Dar tapinhas no parceiro ou no chão para avisar que desistiu. É assim que se termina uma finalização com segurança."],
+        ["Guarda", "Posição de quem está por baixo, controlando o adversário com as pernas. Pode ser fechada, aberta ou meia-guarda."],
+        ["Meia-guarda", "Quando quem está por baixo prende só uma perna do adversário entre as suas."],
+        ["Raspagem", "Sair de baixo (da guarda) e terminar por cima. Vale 2 pontos."],
+        ["Passagem de guarda", "Vencer as pernas de quem está na guarda e chegar ao lado do corpo dele. Vale 3 pontos."],
+        ["Cem quilos", "Controle lateral: por cima, de lado, peito com peito. Em inglês, side control."],
+        ["Montada", "Sentado sobre o tronco do adversário. Vale 4 pontos."],
+        ["Pegada nas costas", "Controlar as costas do adversário com os dois ganchos. Vale 4 pontos."],
+        ["Finalização", "Técnica que obriga o adversário a desistir: chaves (articulações) ou estrangulamentos."],
+        ["Armlock (chave de braço)", "Finalização que estica o cotovelo do adversário."],
+        ["Triângulo", "Estrangulamento feito com as pernas, prendendo o pescoço e um braço do adversário."],
+        ["Mata-leão", "Estrangulamento pelas costas, com o braço em volta do pescoço."],
+        ["Kimura", "Chave de ombro com os braços. Leva o nome de Masahiko Kimura, que venceu Hélio Gracie com ela em 1951."],
+        ["Americana", "Chave de ombro parecida com a kimura, mas girando o braço para o outro lado."],
+        ["Omoplata", "Chave de ombro aplicada com as pernas, a partir da guarda."],
+        ["Berimbolo", "Técnica moderna de inversão para pegar as costas a partir da guarda. Ficou famosa com os irmãos Mendes."],
+        ["Grau", "As listras na ponta da faixa, que marcam a evolução dentro de cada faixa."],
+        ["Absoluto", "Categoria sem limite de peso, onde atletas de todos os pesos se enfrentam."],
+        ["Vantagem", "Quando o atleta quase completa uma pontuação. Serve de desempate."],
+      ];
+      const dl = document.getElementById("glossary");
+      const norm = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+      const draw = (q) => {
+        dl.replaceChildren();
+        const rows = TERMS.filter(([t, d]) => !q || norm(t + " " + d).includes(norm(q)));
+        if (!rows.length) { dl.textContent = "Nenhum termo encontrado."; return; }
+        rows.forEach(([t, d]) => {
+          const wrap = document.createElement("div");
+          const dt = document.createElement("dt");
+          dt.textContent = t;
+          const dd = document.createElement("dd");
+          dd.textContent = d;
+          wrap.append(dt, dd);
+          dl.append(wrap);
+        });
+      };
+      document.getElementById("glossary-search").addEventListener("input", (e) => draw(e.target.value.trim()));
+      draw("");
+    })();
+  </script>
+  <script src="chat.js?v=7" defer></script>
+  <script src="fx.js?v=3" defer></script>
+</body>
+</html>

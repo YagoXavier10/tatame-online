@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cohab Team · Brazilian Jiu-Jitsu</title>
+  <meta name="description" content="Cohab Team Brazilian Jiu-Jitsu: equipe de Itaquera, São Paulo, desde 1998. História, conquistas, atletas, campeonatos e notícias de jiu-jitsu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=15">
+  <script>try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Navegação do site">
+    <div class="container">
+      <a class="site-logo" href="./">COHAB<span>.</span></a>
+      <a href="./" aria-current="page">Início</a>
+      <a href="historia.html">História</a>
+      <a href="conquistas.html">Conquistas</a>
+      <a href="atletas.html">Atletas</a>
+      <a href="jiujitsu.html">Jiu-Jitsu</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="campeonatos.html">Campeonatos</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="jogos.html">Jogos</a>
+    </div>
+  </nav>
+
+  <header class="home-hero">
+    <div class="container">
+      <p class="feature-eyebrow">🥋 Brazilian Jiu-Jitsu · Itaquera, São Paulo</p>
+      <h1>Cohab Team</h1>
+      <p class="home-tagline">Nasci pra vencer. Desde 1998 transformando vidas no tatame — do colchão improvisado da Cohab José Bonifácio aos pódios do mundo.</p>
+      <div class="home-actions">
+        <a class="feature-cta" href="historia.html">Conhecer nossa história</a>
+        <a class="ghost-cta" href="conquistas.html">Ver as conquistas →</a>
+      </div>
+      <ul class="feature-stats home-stats">
+        <li><strong data-count="titles">0</strong><span>títulos de campeã geral</span></li>
+        <li><strong data-count="podiums">0</strong><span>pódios por equipe</span></li>
+        <li><strong data-count="medals">0</strong><span>medalhas</span></li>
+        <li><strong data-count="golds">0</strong><span>ouros</span></li>
+      </ul>
+    </div>
+    <div class="belt" aria-hidden="true"><span></span></div>
+  </header>
+
+  <main class="container">
+    <section class="block wide home-split">
+      <div>
+        <h2>Últimos títulos</h2>
+        <div class="result-list" id="last-titles"></div>
+        <a class="story-link" href="conquistas.html#equipe">Todos os títulos e pódios →</a>
+      </div>
+      <div>
+        <h2>Próximo campeonato</h2>
+        <div id="next-event"></div>
+        <a class="story-link" href="campeonatos.html">Ver o calendário →</a>
+      </div>
+    </section>
+
+    <section class="block wide">
+      <h2>Os mestres</h2>
+      <div class="grid">
+        <a class="card" href="historia.html"><h4>Mestre Dan</h4><span class="meta">Everdan Olegário da Silva. Primeiro aluno da Cohab em 1998, faixa preta desde 2005 e líder da equipe. Formou campeões mundiais como Sérgio Moraes.</span></a>
+        <a class="card" href="historia.html"><h4>Mestre Fluído Caiman</h4><span class="meta">Divide a liderança da Cohab Team com o Mestre Dan e ajuda a manter o legado do projeto Nasci pra Vencer.</span></a>
+        <a class="card" href="historia.html"><h4>Projeto Nasci pra Vencer</h4><span class="meta">Jiu-jitsu gratuito para crianças e jovens desde 1998. Mais de 3.000 pessoas já passaram pelo tatame.</span></a>
+      </div>
+    </section>
+
+    <section class="block wide">
+      <div class="news-head">
+        <h2>Notícias de jiu-jitsu</h2>
+        <p id="updated" class="muted">Carregando…</p>
+      </div>
+      <div class="grid teaser-grid" id="news-teaser"></div>
+      <a class="button news-more" href="noticias.html">Ver todas as notícias →</a>
+    </section>
+
+    <section class="block wide home-split">
+      <div>
+        <h2>Onde treinar</h2>
+        <p>Rua Victório Santim, 625 — Itaquera, São Paulo.</p>
+        <p class="muted">16 unidades no Brasil e filiais na Argentina, no Chile, no Equador e no Peru.</p>
+        <a class="button" href="https://www.google.com/maps/search/?api=1&query=Rua+Vict%C3%B3rio+Santim+625+Itaquera+S%C3%A3o+Paulo" target="_blank" rel="noopener">Abrir no mapa ↗</a>
+      </div>
+      <a class="card quiz-cta" href="jogos.html">
+        <h4>🎮 Jogos de jiu-jitsu</h4>
+        <span class="meta">Acerte a posição da foto contra o relógio ou encare o quiz da faixa branca à preta. Bate seu recorde?</span>
+        <span class="feature-cta">Jogar</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="container muted site-foot">
+    Cohab Team Brazilian Jiu-Jitsu · Nasci pra Vencer · desde 1998<br>
+    Site feito por <a href="https://yagoxavier10.github.io/portfolio-noticias/">Yago dos Santos</a> · dados atualizados automaticamente
+  </footer>
+
+  <script src="home.js?v=1" defer></script>
+  <script src="app.js?v=1" defer></script>
+  <script src="chat.js?v=7" defer></script>
+  <script src="fx.js?v=3" defer></script>
+</body>
+</html>

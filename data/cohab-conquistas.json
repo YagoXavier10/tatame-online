@@ -1,0 +1,3154 @@
+{
+ "updated": "2026-10-27",
+ "team": [
+  {
+   "year": 2026,
+   "pos": 1,
+   "event": "Projeto Esportivo Jiu-Jitsu para Todos",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 15,
+   "silver": 12,
+   "bronze": 4,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2680-projeto-esportivo-jiu-jitsu-para-todos-1-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 1,
+   "event": "8º Brasil Open BJJ",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 10,
+   "silver": 12,
+   "bronze": 7,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2773-8o-brasil-open-bjj-2026-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 1,
+   "event": "BJJ Internacional CBJJE",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 43,
+   "silver": 15,
+   "bronze": 8,
+   "note": "Campeã também em: Geral Gi, Geral Nogi, Adulto NOGI, Master Gi, Master NOGI",
+   "url": "https://www.meucombate.com.br/cbjje/evento/93/resultados/"
+  },
+  {
+   "year": 2026,
+   "pos": 1,
+   "event": "Internacional SP Open CBJJE",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 49,
+   "silver": 19,
+   "bronze": 14,
+   "note": "Campeã também em: Geral Gi, Geral Nogi, Adulto NOGI, Master Gi, Master NOGI, Juvenil GI, Juvenil NOGI, Kids NOGI",
+   "url": "https://www.meucombate.com.br/cbjje/evento/92/resultados/"
+  },
+  {
+   "year": 2026,
+   "pos": 1,
+   "event": "BJJ Nacional CBJJE",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 44,
+   "silver": 16,
+   "bronze": 10,
+   "note": "Campeã também em: Gi, Nogi, Master Gi, Master Nogi, Juvenil Gi, Juvenil Nogi, Kids Nogi",
+   "url": "https://www.meucombate.com.br/cbjje/evento/89/resultados/"
+  },
+  {
+   "year": 2026,
+   "pos": 1,
+   "event": "Pan-Americano CBJJE",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 32,
+   "silver": 13,
+   "bronze": 16,
+   "note": "Campeã também em: Gi, Nogi, Master Nogi, Juvenil Gi, Juvenil Nogi",
+   "url": "https://www.meucombate.com.br/cbjje/evento/94/resultados/"
+  },
+  {
+   "year": 2025,
+   "pos": 1,
+   "event": "Jiu-Jitsu para Todos / Asas de Jiu-Jitsu",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 21,
+   "silver": 9,
+   "bronze": 6,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2453-jiu-jitsu-para-todos-asas-de-jiu-jitsu-4a-etapa/"
+  },
+  {
+   "year": 2024,
+   "pos": 1,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB",
+   "gold": 34,
+   "silver": 17,
+   "bronze": 17,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2043-jiu-jitsu-para-todos-felfa-sp-iv-edicao/"
+  },
+  {
+   "year": 2023,
+   "pos": 1,
+   "event": "1º Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB",
+   "gold": 54,
+   "silver": 31,
+   "bronze": 35,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p1741-1o-jiu-jitsu-para-todos-felfa-sp-2023-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 2,
+   "event": "Estadual São Paulo de Jiu-Jitsu",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 37,
+   "silver": 25,
+   "bronze": 12,
+   "note": "Campeã também em: Nogi, Juvenil Gi, Juvenil Nogi, Kids Gi, Kids Nogi",
+   "url": "https://www.meucombate.com.br/cbjje/evento/79/resultados/"
+  },
+  {
+   "year": 2026,
+   "pos": 3,
+   "event": "5º Legends BJJ Brasil",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 9,
+   "silver": 10,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2739-5o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 3,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 7,
+   "silver": 6,
+   "bronze": 4,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2566-legends-bjj-brasil-4-etapa/"
+  },
+  {
+   "year": 2024,
+   "pos": 3,
+   "event": "Projeto São Paulo Jiu-Jitsu para Todos",
+   "name": "COHAB",
+   "gold": 21,
+   "silver": 8,
+   "bronze": 9,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2101-projeto-sao-paulo-jiu-jitsu-para-todos-8-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 3,
+   "event": "Copa Open Jiu-Jitsu para Todos",
+   "name": "COHAB",
+   "gold": 12,
+   "silver": 17,
+   "bronze": 15,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2126-copa-open-jiu-jitsu-para-todos-9-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 3,
+   "event": "XII Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB",
+   "gold": 17,
+   "silver": 10,
+   "bronze": 5,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2229-xii-jiu-jitsu-para-todos-felfa-sp-2024-edicao/"
+  },
+  {
+   "year": 2023,
+   "pos": 3,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB",
+   "gold": 25,
+   "silver": 12,
+   "bronze": 12,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p1919-jiu-jitsu-para-todos-felfa-sp-3a-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 4,
+   "event": "6º Legends BJJ Brasil",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 8,
+   "silver": 8,
+   "bronze": 4,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2790-6o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 4,
+   "event": "Projeto São Paulo Jiu-Jitsu para Todos 2025",
+   "name": "COHAB TEAM",
+   "gold": 9,
+   "silver": 14,
+   "bronze": 9,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2373-projeto-sao-paulo-jiu-jitsu-para-todos-2025-1-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 4,
+   "event": "Copa Open Jiu-Jitsu 2025 · Jiu-Jitsu para Todos",
+   "name": "COHAB TEAM",
+   "gold": 10,
+   "silver": 10,
+   "bronze": 6,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2382-copa-open-jiu-jitsu-2025-jiu-jitsu-para-todos-2-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 4,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 8,
+   "silver": 5,
+   "bronze": 7,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2552-legends-bjj-brasil-2-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 4,
+   "event": "5º Brasil Open BJJ",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 10,
+   "silver": 1,
+   "bronze": 3,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2561-5o-brasil-open-bjj-5-etapa/"
+  },
+  {
+   "year": 2024,
+   "pos": 4,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB",
+   "gold": 14,
+   "silver": 16,
+   "bronze": 16,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2081-jiu-jitsu-para-todos-felfa-sp-v-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 4,
+   "event": "Copa Open Jiu-Jitsu para Todos",
+   "name": "COHAB TEAM",
+   "gold": 11,
+   "silver": 9,
+   "bronze": 4,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2126-copa-open-jiu-jitsu-para-todos-9-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 4,
+   "event": "XII Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB TEAM",
+   "gold": 13,
+   "silver": 5,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2229-xii-jiu-jitsu-para-todos-felfa-sp-2024-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 4,
+   "event": "X e XI Jiu-Jitsu para Todos Pro Mais",
+   "name": "COHAB",
+   "gold": 8,
+   "silver": 8,
+   "bronze": 3,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2245-x-e-xi-jiu-jitsu-para-todos-pro-mais-2024-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 5,
+   "event": "Copa Open Jiu-Jitsu 2025 · Jiu-Jitsu para Todos",
+   "name": "COHAB",
+   "gold": 14,
+   "silver": 7,
+   "bronze": 9,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2342-copa-open-jiu-jitsu-2025-jiu-jitsu-para-todos-1-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 5,
+   "event": "Copa Open Jiu-Jitsu 2025 · Jiu-Jitsu para Todos",
+   "name": "COHAB",
+   "gold": 9,
+   "silver": 8,
+   "bronze": 6,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2382-copa-open-jiu-jitsu-2025-jiu-jitsu-para-todos-2-etapa/"
+  },
+  {
+   "year": 2024,
+   "pos": 5,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB",
+   "gold": 11,
+   "silver": 14,
+   "bronze": 11,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2082-jiu-jitsu-para-todos-felfa-sp-pro-mais-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 6,
+   "event": "6º Brasil Open BJJ",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 10,
+   "silver": 3,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2725-6o-brasil-open-bjj-2026-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 6,
+   "event": "9º Brasil Open BJJ",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 7,
+   "silver": 7,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2806-9o-brasil-open-bjj-2026-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 7,
+   "event": "8º Legends BJJ Brasil",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 7,
+   "silver": 6,
+   "bronze": 5,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2796-8o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 7,
+   "event": "Brasileiro de Jiu-Jitsu CBJJE",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 22,
+   "silver": 13,
+   "bronze": 17,
+   "note": "Campeã também em: Juvenil Nogi",
+   "url": "https://www.meucombate.com.br/cbjje/evento/88/resultados/"
+  },
+  {
+   "year": 2025,
+   "pos": 7,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB",
+   "gold": 4,
+   "silver": 7,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2566-legends-bjj-brasil-4-etapa/"
+  },
+  {
+   "year": 2023,
+   "pos": 7,
+   "event": "1º Jiu-Jitsu para Todos FELFA-SP",
+   "name": "NASCI PARA VENCER",
+   "gold": 9,
+   "silver": 8,
+   "bronze": 6,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p1741-1o-jiu-jitsu-para-todos-felfa-sp-2023-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 8,
+   "event": "Copa Open Jiu-Jitsu 2025 · Jiu-Jitsu para Todos",
+   "name": "COHAB TEAM",
+   "gold": 7,
+   "silver": 9,
+   "bronze": 9,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2342-copa-open-jiu-jitsu-2025-jiu-jitsu-para-todos-1-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 9,
+   "event": "Projeto São Paulo Jiu-Jitsu para Todos 2025",
+   "name": "COHAB",
+   "gold": 9,
+   "silver": 10,
+   "bronze": 3,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2373-projeto-sao-paulo-jiu-jitsu-para-todos-2025-1-etapa/"
+  },
+  {
+   "year": 2024,
+   "pos": 9,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB",
+   "gold": 8,
+   "silver": 4,
+   "bronze": 5,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2139-jiu-jitsu-para-todos-felfa-sp-vii-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 9,
+   "event": "Alfa BJJ Pro",
+   "name": "COHAB",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2174-alfa-bjj-pro-1-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 10,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 8,
+   "silver": 5,
+   "bronze": 3,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2551-legends-bjj-brasil-1-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 13,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB",
+   "gold": 5,
+   "silver": 0,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2553-legends-bjj-brasil-3-etapa/"
+  },
+  {
+   "year": 2023,
+   "pos": 13,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "NASCI PARA VENCER",
+   "gold": 7,
+   "silver": 3,
+   "bronze": 3,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p1919-jiu-jitsu-para-todos-felfa-sp-3a-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 14,
+   "event": "4º Brasil Open BJJ",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 5,
+   "silver": 4,
+   "bronze": 7,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2515-4o-brasil-open-bjj-4-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 14,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB",
+   "gold": 4,
+   "silver": 3,
+   "bronze": 5,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2552-legends-bjj-brasil-2-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 14,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 4,
+   "silver": 2,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2553-legends-bjj-brasil-3-etapa/"
+  },
+  {
+   "year": 2022,
+   "pos": 16,
+   "event": "Copa Preto e Branco Jiu-Jitsu",
+   "name": "COHAB",
+   "gold": 3,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p1375-copa-preto-e-branco-jiu-jitsu-1-edicao/"
+  },
+  {
+   "year": 2023,
+   "pos": 17,
+   "event": "Prime Experience Jiu-Jitsu",
+   "name": "COHAB",
+   "gold": 5,
+   "silver": 0,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p1897-prime-experience-jiu-jitsu-27-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 18,
+   "event": "3º Brasil Open BJJ",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 4,
+   "silver": 3,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2516-3o-brasil-open-bjj-3-etapa/"
+  },
+  {
+   "year": 2024,
+   "pos": 20,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB TEAM",
+   "gold": 3,
+   "silver": 5,
+   "bronze": 3,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2081-jiu-jitsu-para-todos-felfa-sp-v-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 20,
+   "event": "Projeto São Paulo Jiu-Jitsu para Todos",
+   "name": "COHAB TEAM",
+   "gold": 3,
+   "silver": 8,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2101-projeto-sao-paulo-jiu-jitsu-para-todos-8-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 23,
+   "event": "X e XI Jiu-Jitsu para Todos Pro Mais",
+   "name": "NASCI PARA VENCER",
+   "gold": 4,
+   "silver": 2,
+   "bronze": 3,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2245-x-e-xi-jiu-jitsu-para-todos-pro-mais-2024-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 24,
+   "event": "Premium Cup BJJ",
+   "name": "COHAB",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2000-premium-cup-bjj-13-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 28,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB TEAM",
+   "gold": 3,
+   "silver": 3,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2082-jiu-jitsu-para-todos-felfa-sp-pro-mais-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 30,
+   "event": "X e XI Jiu-Jitsu para Todos Pro Mais",
+   "name": "COHAB TEAM",
+   "gold": 1,
+   "silver": 5,
+   "bronze": 6,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2245-x-e-xi-jiu-jitsu-para-todos-pro-mais-2024-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 33,
+   "event": "XII Jiu-Jitsu para Todos FELFA-SP",
+   "name": "NASCI PARA VENCER",
+   "gold": 2,
+   "silver": 3,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2229-xii-jiu-jitsu-para-todos-felfa-sp-2024-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 34,
+   "event": "White Belt Championship",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2576-white-belt-championship-1-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 34,
+   "event": "Prime Experience Jiu-Jitsu - Copa Arnold",
+   "name": "COHAB",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p1980-prime-experience-jiu-jitsu-copa-arnold-especial-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 34,
+   "event": "Copa Open Jiu-Jitsu para Todos",
+   "name": "NASCI PARA VENCER",
+   "gold": 1,
+   "silver": 5,
+   "bronze": 3,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2126-copa-open-jiu-jitsu-para-todos-9-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 36,
+   "event": "Copa Open Jiu-Jitsu 2025 · Jiu-Jitsu para Todos",
+   "name": "NASCI PARA VENCER",
+   "gold": 3,
+   "silver": 1,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2342-copa-open-jiu-jitsu-2025-jiu-jitsu-para-todos-1-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 36,
+   "event": "4º Brasil Open BJJ",
+   "name": "COHAB TEAM",
+   "gold": 3,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2515-4o-brasil-open-bjj-4-etapa/"
+  },
+  {
+   "year": 2022,
+   "pos": 36,
+   "event": "Copa Arnold de Jiu-Jitsu",
+   "name": "MO CUISHILE COHAB TEAM JIU JITSU",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p1156-copa-arnold-de-jiu-jitsu-viii-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 37,
+   "event": "Bad Boy Open Pro de Jiu-Jitsu",
+   "name": "COHAB TEAM BRAZILIAN JJ",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2655-bad-boy-open-pro-de-jiu-jitsu-2026-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 37,
+   "event": "Projeto São Paulo Jiu-Jitsu para Todos",
+   "name": "NASCI PARA VENCER",
+   "gold": 1,
+   "silver": 3,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2101-projeto-sao-paulo-jiu-jitsu-para-todos-8-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 37,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "NASCI PARA VENCER",
+   "gold": 2,
+   "silver": 3,
+   "bronze": 3,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2139-jiu-jitsu-para-todos-felfa-sp-vii-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 38,
+   "event": "6º Legends BJJ Brasil",
+   "name": "COHAB",
+   "gold": 2,
+   "silver": 3,
+   "bronze": 3,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2790-6o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 38,
+   "event": "4º Brasil Open BJJ",
+   "name": "NASCI PARA VENCER",
+   "gold": 3,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2515-4o-brasil-open-bjj-4-etapa/"
+  },
+  {
+   "year": 2024,
+   "pos": 38,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "NASCI PARA VENCER",
+   "gold": 2,
+   "silver": 3,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2082-jiu-jitsu-para-todos-felfa-sp-pro-mais-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 38,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB TEAM",
+   "gold": 3,
+   "silver": 0,
+   "bronze": 5,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2139-jiu-jitsu-para-todos-felfa-sp-vii-edicao/"
+  },
+  {
+   "year": 2023,
+   "pos": 39,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "MO CUISHILE COHAB TEAM JIU JITSU",
+   "gold": 1,
+   "silver": 3,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p1919-jiu-jitsu-para-todos-felfa-sp-3a-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 41,
+   "event": "6º Legends BJJ Brasil",
+   "name": "COHAB TEAM",
+   "gold": 3,
+   "silver": 1,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2790-6o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 43,
+   "event": "4º Brasil Open BJJ",
+   "name": "COHAB",
+   "gold": 2,
+   "silver": 1,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2515-4o-brasil-open-bjj-4-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 43,
+   "event": "Legends BJJ Brasil",
+   "name": "NASCI PARA VENCER",
+   "gold": 1,
+   "silver": 2,
+   "bronze": 4,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2551-legends-bjj-brasil-1-etapa/"
+  },
+  {
+   "year": 2024,
+   "pos": 43,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "NASCI PARA VENCER",
+   "gold": 1,
+   "silver": 3,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2081-jiu-jitsu-para-todos-felfa-sp-v-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 51,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "COHAB TEAM",
+   "gold": 2,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2043-jiu-jitsu-para-todos-felfa-sp-iv-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 52,
+   "event": "9º Brasil Open BJJ",
+   "name": "COHAB TAMOIO",
+   "gold": 2,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2806-9o-brasil-open-bjj-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 53,
+   "event": "Prime Experience Jiu-Jitsu - Copa Arnold",
+   "name": "COHAB TEAM",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2262-prime-experience-jiu-jitsu-especial-edicao/"
+  },
+  {
+   "year": 2024,
+   "pos": 54,
+   "event": "Prime Experience Jiu-Jitsu",
+   "name": "COHAB TEAM",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2121-prime-experience-jiu-jitsu-2024-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 55,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB TEAM",
+   "gold": 1,
+   "silver": 2,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2566-legends-bjj-brasil-4-etapa/"
+  },
+  {
+   "year": 2024,
+   "pos": 55,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "NASCI PARA VENCER",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2043-jiu-jitsu-para-todos-felfa-sp-iv-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 56,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB TEAM",
+   "gold": 2,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2551-legends-bjj-brasil-1-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 56,
+   "event": "5º Brasil Open BJJ",
+   "name": "NASCI PARA VENCER",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2561-5o-brasil-open-bjj-5-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 57,
+   "event": "5º Brasil Open BJJ",
+   "name": "COHAB",
+   "gold": 0,
+   "silver": 2,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2561-5o-brasil-open-bjj-5-etapa/"
+  },
+  {
+   "year": 2024,
+   "pos": 58,
+   "event": "Prime Experience Jiu-Jitsu",
+   "name": "COHAB",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2121-prime-experience-jiu-jitsu-2024-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 59,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB TEAM",
+   "gold": 0,
+   "silver": 4,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2552-legends-bjj-brasil-2-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 60,
+   "event": "3º Brasil Open BJJ",
+   "name": "COHAB",
+   "gold": 0,
+   "silver": 2,
+   "bronze": 3,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2516-3o-brasil-open-bjj-3-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 62,
+   "event": "8º Legends BJJ Brasil",
+   "name": "COHAB TEAM",
+   "gold": 2,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2796-8o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2022,
+   "pos": 63,
+   "event": "Copa Arnold de Jiu-Jitsu",
+   "name": "COHAB",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p1156-copa-arnold-de-jiu-jitsu-viii-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 65,
+   "event": "9º Brasil Open BJJ",
+   "name": "COHAB",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2806-9o-brasil-open-bjj-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 65,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2551-legends-bjj-brasil-1-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 66,
+   "event": "8º Brasil Open BJJ",
+   "name": "COHAB TEAM F4",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2773-8o-brasil-open-bjj-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 71,
+   "event": "Projeto São Paulo Jiu-Jitsu para Todos 2025",
+   "name": "NASCI PARA VENCER",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2373-projeto-sao-paulo-jiu-jitsu-para-todos-2025-1-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 72,
+   "event": "5º Legends BJJ Brasil",
+   "name": "COHAB TEAM",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2739-5o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 75,
+   "event": "5º Legends BJJ Brasil",
+   "name": "COHAB",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2739-5o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 75,
+   "event": "Prime Experience Jiu-Jitsu - Copa Arnold",
+   "name": "COHAB",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2262-prime-experience-jiu-jitsu-especial-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 76,
+   "event": "8º Brasil Open BJJ",
+   "name": "COHAB",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2773-8o-brasil-open-bjj-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 77,
+   "event": "Jiu-Jitsu para Todos / Asas de Jiu-Jitsu",
+   "name": "NASCI PARA VENCER",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2453-jiu-jitsu-para-todos-asas-de-jiu-jitsu-4a-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 81,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB TEAM",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2553-legends-bjj-brasil-3-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 84,
+   "event": "8º Brasil Open BJJ",
+   "name": "COHAB TEAM",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2773-8o-brasil-open-bjj-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 86,
+   "event": "Legends BJJ Brasil",
+   "name": "NASCI PARA VENCER",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2566-legends-bjj-brasil-4-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 87,
+   "event": "Projeto Esportivo Jiu-Jitsu para Todos",
+   "name": "COHAB TEAM F4",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2680-projeto-esportivo-jiu-jitsu-para-todos-1-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 97,
+   "event": "8º Legends BJJ Brasil",
+   "name": "COHAB TAMOIO",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2796-8o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 103,
+   "event": "8º Legends BJJ Brasil",
+   "name": "COHAB TEAM F4",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2796-8o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 106,
+   "event": "Copa Open Jiu-Jitsu 2025 · Jiu-Jitsu para Todos",
+   "name": "NASCI PARA VENCER",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2382-copa-open-jiu-jitsu-2025-jiu-jitsu-para-todos-2-etapa/"
+  },
+  {
+   "year": 2024,
+   "pos": 108,
+   "event": "Jiu-Jitsu para Todos FELFA-SP",
+   "name": "MO CUISHILE COHAB TEAM JIU JITSU",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2043-jiu-jitsu-para-todos-felfa-sp-iv-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 124,
+   "event": "Legends BJJ Brasil",
+   "name": "NASCI PARA VENCER",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2553-legends-bjj-brasil-3-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 129,
+   "event": "Projeto Esportivo Jiu-Jitsu para Todos",
+   "name": "COHAB",
+   "gold": 0,
+   "silver": 2,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2680-projeto-esportivo-jiu-jitsu-para-todos-1-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 129,
+   "event": "Projeto Esportivo Jiu-Jitsu para Todos",
+   "name": "NASCI PARA VENCER",
+   "gold": 0,
+   "silver": 2,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2680-projeto-esportivo-jiu-jitsu-para-todos-1-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 141,
+   "event": "5º Legends BJJ Brasil",
+   "name": "NASCI PARA VENCER",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2739-5o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2026,
+   "pos": 145,
+   "event": "8º Legends BJJ Brasil",
+   "name": "COHAB",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 2,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2796-8o-legends-bjj-brasil-2026-edicao/"
+  },
+  {
+   "year": 2025,
+   "pos": 151,
+   "event": "Legends BJJ Brasil",
+   "name": "NASCI PARA VENCER",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2552-legends-bjj-brasil-2-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 154,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB II",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2551-legends-bjj-brasil-1-etapa/"
+  },
+  {
+   "year": 2026,
+   "pos": 165,
+   "event": "Projeto Esportivo Jiu-Jitsu para Todos",
+   "name": "COHAB TEAM",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2680-projeto-esportivo-jiu-jitsu-para-todos-1-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 177,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB II",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2553-legends-bjj-brasil-3-etapa/"
+  },
+  {
+   "year": 2025,
+   "pos": 180,
+   "event": "Legends BJJ Brasil",
+   "name": "COHAB TEAM F4",
+   "gold": 0,
+   "silver": 0,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/eventos/resultados/p2552-legends-bjj-brasil-2-etapa/"
+  }
+ ],
+ "fpjj": [
+  {
+   "year": 2022,
+   "event": "Circuito Paulista 2022 (final)",
+   "division": "Mirim a Juvenil Masculino e Feminino",
+   "pos": 2,
+   "gold": null,
+   "silver": null,
+   "points": 78,
+   "url": "https://www.fpjjcompetidor.com.br/circuito-paulista-2022-resultados-por-academia-final/"
+  },
+  {
+   "year": 2019,
+   "event": "I Etapa Circuito Paulista 2019",
+   "division": "Adulto – Masculino e Feminino",
+   "pos": 2,
+   "gold": 7,
+   "silver": 2,
+   "points": 23,
+   "url": "https://www.fpjjcompetidor.com.br/i-etapa-circuito-paulista-2019-resultados-por-academia/"
+  },
+  {
+   "year": 2019,
+   "event": "III Etapa Circuito Paulista 2019",
+   "division": "Adulto – Masculino e Feminino",
+   "pos": 2,
+   "gold": 8,
+   "silver": 1,
+   "points": 25,
+   "url": "https://www.fpjjcompetidor.com.br/iii-etapa-circuito-paulista-2019-resultados-por-academia/"
+  },
+  {
+   "year": 2019,
+   "event": "Final Circuito Paulista 2019",
+   "division": "Adulto – Masculino e Feminino",
+   "pos": 2,
+   "gold": 20,
+   "silver": 4,
+   "points": 64,
+   "url": "https://www.fpjjcompetidor.com.br/resultado-por-academia-final-circuito-paulista-2019/"
+  },
+  {
+   "year": 2022,
+   "event": "Campeonato Paulista 2022",
+   "division": "Mirim a Juvenil Masculino e Feminino",
+   "pos": 3,
+   "gold": 8,
+   "silver": 4,
+   "points": 28,
+   "url": "https://www.fpjjcompetidor.com.br/campeonato-paulista-2022-resultados-por-academia-2/"
+  },
+  {
+   "year": 2019,
+   "event": "Final Campeonato Paulista 2019",
+   "division": "Adulto – Masculino e Feminino",
+   "pos": 3,
+   "gold": 7,
+   "silver": 2,
+   "points": 23,
+   "url": "https://www.fpjjcompetidor.com.br/resultado-por-academia-final-campeonato-paulista-2019/"
+  },
+  {
+   "year": 2022,
+   "event": "III Etapa Circuito Paulista 2022",
+   "division": "Mirim a Juvenil Masculino e Feminino",
+   "pos": 4,
+   "gold": 7,
+   "silver": 4,
+   "points": 25,
+   "url": "https://www.fpjjcompetidor.com.br/iii-etapa-circuito-paulista-2022-resultados-por-academia/"
+  },
+  {
+   "year": 2023,
+   "event": "I Etapa Circuito Paulista 2023",
+   "division": "Master 1 a 6 Masculino e Feminino",
+   "pos": 5,
+   "gold": 9,
+   "silver": 3,
+   "points": 30,
+   "url": "https://www.fpjjcompetidor.com.br/i-etapa-circuito-paulista-2023-resultados-por-academia/"
+  },
+  {
+   "year": 2019,
+   "event": "II Etapa Circuito Paulista 2019",
+   "division": "Adulto – Masculino e Feminino",
+   "pos": 5,
+   "gold": 5,
+   "silver": 1,
+   "points": 16,
+   "url": "https://www.fpjjcompetidor.com.br/ii-etapa-circuito-paulista-2019-resultados-por-academia/"
+  },
+  {
+   "year": 2018,
+   "event": "III Etapa Circuito Paulista 2018",
+   "division": "Adulto – Masculino e Feminino",
+   "pos": 5,
+   "gold": 3,
+   "silver": 2,
+   "points": 11,
+   "url": "https://www.fpjjcompetidor.com.br/iii-etapa-circuito-paulista-2018-resultados-por-academia/"
+  },
+  {
+   "year": 2023,
+   "event": "I Etapa Circuito Paulista 2023",
+   "division": "Mirim a Juvenil Masculino e Feminino",
+   "pos": 6,
+   "gold": 5,
+   "silver": 4,
+   "points": 19,
+   "url": "https://www.fpjjcompetidor.com.br/i-etapa-circuito-paulista-2023-resultados-por-academia/"
+  },
+  {
+   "year": 2018,
+   "event": "II Etapa Circuito Paulista 2018",
+   "division": "Adulto – Masculino e Feminino",
+   "pos": 6,
+   "gold": 4,
+   "silver": 2,
+   "points": 14,
+   "url": "https://www.fpjjcompetidor.com.br/ii-etapa-circuito-paulista-2018-resultados-por-academia/"
+  },
+  {
+   "year": 2020,
+   "event": "Campeonato Paulista 2020",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 7,
+   "gold": 5,
+   "silver": 3,
+   "points": 18,
+   "url": "https://www.fpjjcompetidor.com.br/campeonato-paulista-2020-resultados-por-academia/"
+  },
+  {
+   "year": 2019,
+   "event": "II Etapa Circuito Paulista 2019",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 8,
+   "gold": 7,
+   "silver": 1,
+   "points": 22,
+   "url": "https://www.fpjjcompetidor.com.br/ii-etapa-circuito-paulista-2019-resultados-por-academia/"
+  },
+  {
+   "year": 2022,
+   "event": "III Etapa Circuito Paulista 2022",
+   "division": "Adulto Masculino e Feminino",
+   "pos": 9,
+   "gold": 2,
+   "silver": 0,
+   "points": 6,
+   "url": "https://www.fpjjcompetidor.com.br/iii-etapa-circuito-paulista-2022-resultados-por-academia/"
+  },
+  {
+   "year": 2018,
+   "event": "Campeonato Paulista 2018",
+   "division": "Adulto – Masculino e Feminino",
+   "pos": 9,
+   "gold": 2,
+   "silver": 0,
+   "points": 6,
+   "url": "https://www.fpjjcompetidor.com.br/campeonato-paulista-2018-resultados-por-academia/"
+  },
+  {
+   "year": 2018,
+   "event": "Final Circuito Paulista 2018",
+   "division": "Adulto – Masculino e Feminino",
+   "pos": 9,
+   "gold": 8,
+   "silver": 5,
+   "points": 29,
+   "url": "https://www.fpjjcompetidor.com.br/resultado-por-academia-final-circuito-paulista-2018/"
+  },
+  {
+   "year": 2022,
+   "event": "Campeonato Paulista 2022",
+   "division": "Master 1 a 6 Masculino e Feminino",
+   "pos": 10,
+   "gold": 5,
+   "silver": 2,
+   "points": 17,
+   "url": "https://www.fpjjcompetidor.com.br/campeonato-paulista-2022-resultados-por-academia-2/"
+  },
+  {
+   "year": 2022,
+   "event": "Campeonato Paulista 2022",
+   "division": "Adulto Masculino e Feminino",
+   "pos": 12,
+   "gold": 2,
+   "silver": 0,
+   "points": 6,
+   "url": "https://www.fpjjcompetidor.com.br/campeonato-paulista-2022-resultados-por-academia-2/"
+  },
+  {
+   "year": 2022,
+   "event": "Circuito Paulista 2022 (final)",
+   "division": "Adulto Masculino e Feminino",
+   "pos": 12,
+   "gold": null,
+   "silver": null,
+   "points": 16,
+   "url": "https://www.fpjjcompetidor.com.br/circuito-paulista-2022-resultados-por-academia-final/"
+  },
+  {
+   "year": 2022,
+   "event": "III Etapa Circuito Paulista 2022",
+   "division": "Master 1 a 6 Masculino e Feminino",
+   "pos": 12,
+   "gold": 4,
+   "silver": 3,
+   "points": 15,
+   "url": "https://www.fpjjcompetidor.com.br/iii-etapa-circuito-paulista-2022-resultados-por-academia/"
+  },
+  {
+   "year": 2019,
+   "event": "Final Circuito Paulista 2019",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 12,
+   "gold": 14,
+   "silver": 10,
+   "points": 52,
+   "url": "https://www.fpjjcompetidor.com.br/resultado-por-academia-final-circuito-paulista-2019/"
+  },
+  {
+   "year": 2020,
+   "event": "Campeonato Paulista 2020",
+   "division": "Adulto – Masculino e Feminino",
+   "pos": 13,
+   "gold": 0,
+   "silver": 2,
+   "points": 2,
+   "url": "https://www.fpjjcompetidor.com.br/campeonato-paulista-2020-resultados-por-academia/"
+  },
+  {
+   "year": 2019,
+   "event": "I Etapa Circuito Paulista 2019",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 13,
+   "gold": 3,
+   "silver": 6,
+   "points": 15,
+   "url": "https://www.fpjjcompetidor.com.br/i-etapa-circuito-paulista-2019-resultados-por-academia/"
+  },
+  {
+   "year": 2019,
+   "event": "III Etapa Circuito Paulista 2019",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 13,
+   "gold": 4,
+   "silver": 3,
+   "points": 15,
+   "url": "https://www.fpjjcompetidor.com.br/iii-etapa-circuito-paulista-2019-resultados-por-academia/"
+  },
+  {
+   "year": 2018,
+   "event": "I Etapa Circuito Paulista 2018",
+   "division": "Adulto – Masculino e Feminino",
+   "pos": 13,
+   "gold": 1,
+   "silver": 1,
+   "points": 4,
+   "url": "https://www.fpjjcompetidor.com.br/i-etapa-circuito-paulista-2018-resultados-por-academia/"
+  },
+  {
+   "year": 2023,
+   "event": "I Etapa Circuito Paulista 2023",
+   "division": "Adulto Masculino e Feminino",
+   "pos": 14,
+   "gold": 1,
+   "silver": 0,
+   "points": 3,
+   "url": "https://www.fpjjcompetidor.com.br/i-etapa-circuito-paulista-2023-resultados-por-academia/"
+  },
+  {
+   "year": 2022,
+   "event": "Circuito Paulista 2022 (final)",
+   "division": "Master 1 a 6 Masculino e Feminino",
+   "pos": 14,
+   "gold": null,
+   "silver": null,
+   "points": 47,
+   "url": "https://www.fpjjcompetidor.com.br/circuito-paulista-2022-resultados-por-academia-final/"
+  },
+  {
+   "year": 2021,
+   "event": "Campeonato Paulista 2021",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 14,
+   "gold": 3,
+   "silver": 1,
+   "points": 10,
+   "url": "https://www.fpjjcompetidor.com.br/campeonato-paulista-2021-resultados-por-academia/"
+  },
+  {
+   "year": 2018,
+   "event": "III Etapa Circuito Paulista 2018",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 17,
+   "gold": 2,
+   "silver": 2,
+   "points": 8,
+   "url": "https://www.fpjjcompetidor.com.br/iii-etapa-circuito-paulista-2018-resultados-por-academia/"
+  },
+  {
+   "year": 2019,
+   "event": "III Etapa Circuito Paulista 2019",
+   "division": "Mirim, Infantil a e B, Infanto a e B, Juvenil Masculino e Feminino",
+   "pos": 18,
+   "gold": 0,
+   "silver": 1,
+   "points": 1,
+   "url": "https://www.fpjjcompetidor.com.br/iii-etapa-circuito-paulista-2019-resultados-por-academia/"
+  },
+  {
+   "year": 2020,
+   "event": "I Etapa Circuito Paulista 2020",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 19,
+   "gold": 1,
+   "silver": 0,
+   "points": 3,
+   "url": "https://www.fpjjcompetidor.com.br/i-etapa-circuito-paulista-2020-resultados-por-academia-2/"
+  },
+  {
+   "year": 2019,
+   "event": "II Etapa Circuito Paulista 2019",
+   "division": "Mirim, Infantil a e B, Infanto a e B, Juvenil Masculino e Feminino",
+   "pos": 19,
+   "gold": 0,
+   "silver": 1,
+   "points": 1,
+   "url": "https://www.fpjjcompetidor.com.br/ii-etapa-circuito-paulista-2019-resultados-por-academia/"
+  },
+  {
+   "year": 2018,
+   "event": "II Etapa Circuito Paulista 2018",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 19,
+   "gold": 2,
+   "silver": 1,
+   "points": 7,
+   "url": "https://www.fpjjcompetidor.com.br/ii-etapa-circuito-paulista-2018-resultados-por-academia/"
+  },
+  {
+   "year": 2019,
+   "event": "Final Campeonato Paulista 2019",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 21,
+   "gold": 1,
+   "silver": 3,
+   "points": 6,
+   "url": "https://www.fpjjcompetidor.com.br/resultado-por-academia-final-campeonato-paulista-2019/"
+  },
+  {
+   "year": 2018,
+   "event": "III Etapa Circuito Paulista 2018",
+   "division": "Mirim, Infantil a e B, Infanto a e B, Juvenil Masculino e Feminino",
+   "pos": 21,
+   "gold": 0,
+   "silver": 1,
+   "points": 1,
+   "url": "https://www.fpjjcompetidor.com.br/iii-etapa-circuito-paulista-2018-resultados-por-academia/"
+  },
+  {
+   "year": 2018,
+   "event": "Campeonato Paulista 2018",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 24,
+   "gold": 0,
+   "silver": 1,
+   "points": 1,
+   "url": "https://www.fpjjcompetidor.com.br/campeonato-paulista-2018-resultados-por-academia/"
+  },
+  {
+   "year": 2018,
+   "event": "I Etapa Circuito Paulista 2018",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 24,
+   "gold": 0,
+   "silver": 2,
+   "points": 2,
+   "url": "https://www.fpjjcompetidor.com.br/i-etapa-circuito-paulista-2018-resultados-por-academia/"
+  },
+  {
+   "year": 2018,
+   "event": "Final Circuito Paulista 2018",
+   "division": "Mirim, Infantil a e B, Infanto a e B, Juvenil Masculino e Feminino",
+   "pos": 27,
+   "gold": 4,
+   "silver": 5,
+   "points": 17,
+   "url": "https://www.fpjjcompetidor.com.br/resultado-por-academia-final-circuito-paulista-2018/"
+  },
+  {
+   "year": 2019,
+   "event": "Final Circuito Paulista 2019",
+   "division": "Mirim, Infantil a e B, Infanto a e B, Juvenil Masculino e Feminino",
+   "pos": 31,
+   "gold": 0,
+   "silver": 2,
+   "points": 2,
+   "url": "https://www.fpjjcompetidor.com.br/resultado-por-academia-final-circuito-paulista-2019/"
+  },
+  {
+   "year": 2018,
+   "event": "Final Circuito Paulista 2018",
+   "division": "Master 1 a 6 – Masculino e Feminino",
+   "pos": 36,
+   "gold": 0,
+   "silver": 1,
+   "points": 1,
+   "url": "https://www.fpjjcompetidor.com.br/resultado-por-academia-final-circuito-paulista-2018/"
+  }
+ ],
+ "seasons": [
+  {
+   "year": 2020,
+   "gold": 9,
+   "silver": 5,
+   "bronze": 5,
+   "rank": 87,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/426/1"
+  },
+  {
+   "year": 2021,
+   "gold": 15,
+   "silver": 10,
+   "bronze": 11,
+   "rank": 41,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/518/1"
+  },
+  {
+   "year": 2022,
+   "gold": 30,
+   "silver": 14,
+   "bronze": 21,
+   "rank": 43,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/628/1"
+  },
+  {
+   "year": 2023,
+   "gold": 38,
+   "silver": 23,
+   "bronze": 44,
+   "rank": 34,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/859/1"
+  },
+  {
+   "year": 2024,
+   "gold": 51,
+   "silver": 29,
+   "bronze": 31,
+   "rank": 33,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1077/1"
+  },
+  {
+   "year": 2025,
+   "gold": 82,
+   "silver": 51,
+   "bronze": 33,
+   "rank": 25,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1497/1"
+  },
+  {
+   "year": 2026,
+   "gold": 247,
+   "silver": 111,
+   "bronze": 94,
+   "rank": 6,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1796/1",
+   "meucombate": true
+  }
+ ],
+ "rankings": [
+  {
+   "label": "Estadual Paulista 2026 · Juvenil Gi",
+   "pos": 1,
+   "gold": 5,
+   "silver": 1,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1814/1"
+  },
+  {
+   "label": "Internacional BJJSport 2026 · Juvenil Gi",
+   "pos": 1,
+   "gold": 5,
+   "silver": 1,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1803/1"
+  },
+  {
+   "label": "Nacional CBJJE 2026 · Juvenil Gi",
+   "pos": 1,
+   "gold": 5,
+   "silver": 1,
+   "bronze": 1,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1792/1"
+  },
+  {
+   "label": "Estadual Paulista 2026 · Juvenil NoGi",
+   "pos": 5,
+   "gold": 1,
+   "silver": 1,
+   "bronze": 5,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1815/1"
+  },
+  {
+   "label": "Internacional BJJSport 2026 · Juvenil NoGi",
+   "pos": 5,
+   "gold": 1,
+   "silver": 1,
+   "bronze": 5,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1804/1"
+  },
+  {
+   "label": "Nacional CBJJE 2026 · Juvenil NoGi",
+   "pos": 5,
+   "gold": 1,
+   "silver": 1,
+   "bronze": 5,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1793/1"
+  },
+  {
+   "label": "Estadual Paulista 2026 · Geral (Gi + NoGi)",
+   "pos": 6,
+   "gold": 20,
+   "silver": 10,
+   "bronze": 17,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1818/1"
+  },
+  {
+   "label": "Estadual Paulista 2026 · Geral Gi",
+   "pos": 6,
+   "gold": 12,
+   "silver": 6,
+   "bronze": 6,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1808/1"
+  },
+  {
+   "label": "Internacional BJJSport 2026 · Geral (Gi + NoGi)",
+   "pos": 6,
+   "gold": 12,
+   "silver": 6,
+   "bronze": 6,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1807/1"
+  },
+  {
+   "label": "Internacional BJJSport 2026 · Geral Gi",
+   "pos": 6,
+   "gold": 12,
+   "silver": 6,
+   "bronze": 6,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1797/1"
+  },
+  {
+   "label": "Nacional CBJJE 2025 · Kids Gi",
+   "pos": 6,
+   "gold": 37,
+   "silver": 21,
+   "bronze": 9,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1495/1"
+  },
+  {
+   "label": "Nacional CBJJE 2026 · Geral (Gi + NoGi)",
+   "pos": 6,
+   "gold": 20,
+   "silver": 10,
+   "bronze": 17,
+   "url": "https://soucompetidor.com.br/pt-br/ranking/ranking-idade/1796/1"
+  }
+ ],
+ "ibjjf": [
+  {
+   "year": 2026,
+   "place": 1,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu Sem Kimono 2026",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Adulto / Preta / Pena",
+   "athlete": "Lucas Tomas Canto",
+   "url": "https://cbjj.com.br/events/3219/results"
+  },
+  {
+   "year": 2026,
+   "place": 1,
+   "event": "European IBJJF Jiu-Jitsu Championship 2026",
+   "tier": "Europeu",
+   "cat": "Feminino / Adulto / Azul / Pluma",
+   "athlete": "Izabelly Costa da Silva",
+   "url": "https://cbjj.com.br/events/2926/results"
+  },
+  {
+   "year": 2026,
+   "place": 1,
+   "event": "Resultados Rio Spring International Open IBJJF Jiu-Jitsu Championship 2026 Resultado final 17/out/2026 18:30:55 (UTC-03:00) Brasilia Resulta",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Branca / Pluma",
+   "athlete": "I. Galdino",
+   "url": "https://cbjj.com.br/events/3369/results"
+  },
+  {
+   "year": 2026,
+   "place": 1,
+   "event": "Resultados Rio Spring International Open IBJJF Jiu-Jitsu Championship 2026 Resultado final 17/out/2026 18:30:55 (UTC-03:00) Brasilia Resulta",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Pena",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/3369/results"
+  },
+  {
+   "year": 2026,
+   "place": 1,
+   "event": "Resultados Rio Spring International Open IBJJF Jiu-Jitsu Championship 2026 Resultado final 17/out/2026 18:30:55 (UTC-03:00) Brasilia Resulta",
+   "tier": "Open internacional",
+   "cat": "Feminino / Adulto / Azul / Pluma",
+   "athlete": "Izabelly Costa da Silva",
+   "url": "https://cbjj.com.br/events/3369/results"
+  },
+  {
+   "year": 2026,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2026",
+   "tier": "Open internacional",
+   "cat": "Masculino / Juvenil / Azul / Médio",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/3318/results"
+  },
+  {
+   "year": 2026,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2026",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Branca / Pluma",
+   "athlete": "I. Galdino",
+   "url": "https://cbjj.com.br/events/3318/results"
+  },
+  {
+   "year": 2026,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2026",
+   "tier": "Open internacional",
+   "cat": "Masculino / Adulto / Marrom / Pluma",
+   "athlete": "Pedro Henryque de Jesus Rocha",
+   "url": "https://cbjj.com.br/events/3318/results"
+  },
+  {
+   "year": 2026,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu No-Gi Championship 2026",
+   "tier": "Open internacional",
+   "cat": "Masculino / Adulto / Marrom / Pluma",
+   "athlete": "Pedro Henryque de Jesus Rocha",
+   "url": "https://cbjj.com.br/events/3319/results"
+  },
+  {
+   "year": 2026,
+   "place": 2,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2026",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Juvenil 1 / Branca / Pluma",
+   "athlete": "I. Blanco",
+   "url": "https://cbjj.com.br/events/3091/results"
+  },
+  {
+   "year": 2026,
+   "place": 2,
+   "event": "Resultados Rio Spring International Open IBJJF Jiu-Jitsu Championship 2026 Resultado final 17/out/2026 18:30:55 (UTC-03:00) Brasilia Resulta",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Absoluto Leve",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/3369/results"
+  },
+  {
+   "year": 2026,
+   "place": 2,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2026",
+   "tier": "Open internacional",
+   "cat": "Masculino / Juvenil / Azul / Absoluto Pesado",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/3318/results"
+  },
+  {
+   "year": 2026,
+   "place": 2,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2026",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Pena",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/3318/results"
+  },
+  {
+   "year": 2026,
+   "place": 2,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2026",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Absoluto Leve",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/3318/results"
+  },
+  {
+   "year": 2026,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2026",
+   "tier": "Brasileiro",
+   "cat": "Feminino / Juvenil 1 / Azul / Médio",
+   "athlete": "G. Meneses",
+   "url": "https://cbjj.com.br/events/3091/results"
+  },
+  {
+   "year": 2026,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2026",
+   "tier": "Brasileiro",
+   "cat": "Feminino / Adulto / Azul / Pluma",
+   "athlete": "Izabelly Costa da Silva",
+   "url": "https://cbjj.com.br/events/3091/results"
+  },
+  {
+   "year": 2026,
+   "place": 3,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu 2026",
+   "tier": "Sul-Americano",
+   "cat": "Feminino / Juvenil 1 / Azul / Pena",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/3347/results"
+  },
+  {
+   "year": 2026,
+   "place": 3,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu 2026",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Master 1 / Azul / Médio",
+   "athlete": "Rodrigo Laurencio da Silva",
+   "url": "https://cbjj.com.br/events/3347/results"
+  },
+  {
+   "year": 2026,
+   "place": 3,
+   "event": "European IBJJF Jiu-Jitsu Championship 2026",
+   "tier": "Europeu",
+   "cat": "Masculino / Adulto / Azul / Galo",
+   "athlete": "Jhonny Bryan Lorena Teles",
+   "url": "https://cbjj.com.br/events/2926/results"
+  },
+  {
+   "year": 2026,
+   "place": 3,
+   "event": "Master International Jiu-Jitsu Championship - South America 2026",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Master 4 / Preta / Pesadíssimo",
+   "athlete": "Fabio Anderson Pavarini",
+   "url": "https://cbjj.com.br/events/3328/results"
+  },
+  {
+   "year": 2026,
+   "place": 3,
+   "event": "Resultados Rio Spring International Open IBJJF Jiu-Jitsu Championship 2026 Resultado final 17/out/2026 18:30:55 (UTC-03:00) Brasilia Resulta",
+   "tier": "Open internacional",
+   "cat": "Feminino / Adulto / Azul / Absoluto",
+   "athlete": "Izabelly Costa da Silva",
+   "url": "https://cbjj.com.br/events/3369/results"
+  },
+  {
+   "year": 2026,
+   "place": 3,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu No-Gi Championship 2026",
+   "tier": "Open internacional",
+   "cat": "Feminino / Adulto / Roxa / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/3319/results"
+  },
+  {
+   "year": 2026,
+   "place": 3,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu No-Gi Championship 2026",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 4 / Preta / Médio",
+   "athlete": "Paulo Carlos Silva",
+   "url": "https://cbjj.com.br/events/3319/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2025",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 1 / Branca / Pesadíssimo",
+   "athlete": "Igor do Nascimento Saraiva",
+   "url": "https://cbjj.com.br/events/2704/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "Curitiba Spring International Open IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 1 / Azul / Médio",
+   "athlete": "Rafael Lopes Ferreira Lemes",
+   "url": "https://cbjj.com.br/events/2860/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "Floripa Fall International Open IBJJF Jiu-Jitsu No-Gi Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 3 / Preta / Meio Pesado",
+   "athlete": "Fabio Pires",
+   "url": "https://cbjj.com.br/events/2784/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "Kids International IBJJF Jiu-Jitsu Championship - São Paulo 2025",
+   "tier": "Open internacional",
+   "cat": "Feminino / Infanto Juvenil 3 / Laranja / Pena",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/2941/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "Rio Summer International Open IBJJF Jiu-Jitsu No-Gi Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Juvenil / Azul / Galo",
+   "athlete": "Jhonny Bryan Lorena Teles",
+   "url": "https://cbjj.com.br/events/2694/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "Rio Summer International Open IBJJF Jiu-Jitsu No-Gi Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2694/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Roxa / Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2895/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Roxa / Absoluto Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2895/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu No-Gi Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Juvenil / Azul / Galo",
+   "athlete": "Jhonny Bryan Lorena Teles",
+   "url": "https://cbjj.com.br/events/2896/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu No-Gi Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Roxa / Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2896/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu No-Gi Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Roxa / Absoluto Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2896/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu No-Gi Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 4 / Preta / Médio",
+   "athlete": "Paulo Carlos Silva",
+   "url": "https://cbjj.com.br/events/2896/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "World IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Mundial",
+   "cat": "Feminino / Juvenil 2 / Roxa / Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2816/results"
+  },
+  {
+   "year": 2025,
+   "place": 1,
+   "event": "World IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Mundial",
+   "cat": "Feminino / Juvenil 2 / Roxa / Absoluto Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2816/results"
+  },
+  {
+   "year": 2025,
+   "place": 2,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2025",
+   "tier": "Brasileiro",
+   "cat": "Feminino / Infanto Juvenil 3 / Laranja / Pena",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/2705/results"
+  },
+  {
+   "year": 2025,
+   "place": 2,
+   "event": "Curitiba Spring International Open IBJJF Jiu-Jitsu No-Gi Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 1 / Azul / Médio",
+   "athlete": "Rafael Lopes Ferreira Lemes",
+   "url": "https://cbjj.com.br/events/2861/results"
+  },
+  {
+   "year": 2025,
+   "place": 2,
+   "event": "Curitiba Spring Kids International Open IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Mirim 2 / Cinza / Pesadíssimo",
+   "athlete": "B. Albuquerque",
+   "url": "https://cbjj.com.br/events/2862/results"
+  },
+  {
+   "year": 2025,
+   "place": 2,
+   "event": "Floripa Fall International Open IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 3 / Preta / Meio Pesado",
+   "athlete": "Fabio Pires",
+   "url": "https://cbjj.com.br/events/2783/results"
+  },
+  {
+   "year": 2025,
+   "place": 2,
+   "event": "Rio Summer International Open IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2693/results"
+  },
+  {
+   "year": 2025,
+   "place": 2,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Juvenil / Azul / Galo",
+   "athlete": "Jhonny Bryan Lorena Teles",
+   "url": "https://cbjj.com.br/events/2895/results"
+  },
+  {
+   "year": 2025,
+   "place": 2,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Adulto / Roxa / Pluma",
+   "athlete": "Pedro Henryque de Jesus Rocha",
+   "url": "https://cbjj.com.br/events/2895/results"
+  },
+  {
+   "year": 2025,
+   "place": 2,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 1 / Branca / Médio",
+   "athlete": "Rodrigo Laurencio da Silva",
+   "url": "https://cbjj.com.br/events/2895/results"
+  },
+  {
+   "year": 2025,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2025",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Juvenil 1 / Azul / Médio",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/2704/results"
+  },
+  {
+   "year": 2025,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2025",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 1 / Branca / Médio",
+   "athlete": "José Soares de Amorim",
+   "url": "https://cbjj.com.br/events/2704/results"
+  },
+  {
+   "year": 2025,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2025",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 1 / Azul / Meio Pesado",
+   "athlete": "Caique Costa Silva de Souza Galhardo",
+   "url": "https://cbjj.com.br/events/2704/results"
+  },
+  {
+   "year": 2025,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2025",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 5 / Azul / Meio Pesado",
+   "athlete": "Roberto Ferreira Junior",
+   "url": "https://cbjj.com.br/events/2704/results"
+  },
+  {
+   "year": 2025,
+   "place": 3,
+   "event": "Curitiba Spring International Open IBJJF Jiu-Jitsu No-Gi Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 3 / Preta / Meio Pesado",
+   "athlete": "Fabio Pires",
+   "url": "https://cbjj.com.br/events/2861/results"
+  },
+  {
+   "year": 2025,
+   "place": 3,
+   "event": "Rio Summer International Open IBJJF Jiu-Jitsu No-Gi Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Absoluto Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2694/results"
+  },
+  {
+   "year": 2025,
+   "place": 3,
+   "event": "São Paulo BJJ Pro IBJJF Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 1 / Branca / Médio",
+   "athlete": "Rodrigo Laurencio da Silva",
+   "url": "https://cbjj.com.br/events/2940/results"
+  },
+  {
+   "year": 2025,
+   "place": 3,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Juvenil / Azul / Pena",
+   "athlete": "G. Souza",
+   "url": "https://cbjj.com.br/events/2895/results"
+  },
+  {
+   "year": 2025,
+   "place": 3,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu No-Gi Championship 2025",
+   "tier": "Open internacional",
+   "cat": "Masculino / Adulto / Roxa / Pluma",
+   "athlete": "Pedro Henryque de Jesus Rocha",
+   "url": "https://cbjj.com.br/events/2896/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2024",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 4 / Marrom / Médio",
+   "athlete": "Paulo Carlos Silva",
+   "url": "https://cbjj.com.br/events/2427/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu 2024",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Master 4 / Marrom / Médio",
+   "athlete": "Paulo Carlos Silva",
+   "url": "https://cbjj.com.br/events/2636/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu No-Gi 2024",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Juvenil 1 / Azul / Pluma",
+   "athlete": "Jhonny Bryan Lorena Teles",
+   "url": "https://cbjj.com.br/events/2603/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "Contagem International Open IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2504/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "Contagem International Open IBJJF Jiu-Jitsu No-Gi Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Masculino / Juvenil / Azul / Pena",
+   "athlete": "Pedro Henryque de Jesus Rocha",
+   "url": "https://cbjj.com.br/events/2505/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "Contagem International Open IBJJF Jiu-Jitsu No-Gi Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2505/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "Contagem International Open IBJJF Jiu-Jitsu No-Gi Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Absoluto Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2505/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "Floripa Fall International Open IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2480/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "Floripa Fall International Open IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Absoluto Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2480/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "Kids International IBJJF Jiu-Jitsu Championship - São Paulo 2024",
+   "tier": "Open internacional",
+   "cat": "Feminino / Infanto Juvenil 2 / Laranja / Leve",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/2590/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "Salvador Fall International Open IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2483/results"
+  },
+  {
+   "year": 2024,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu No-Gi Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 3 / Marrom / Meio Pesado",
+   "athlete": "Renato Pinhas Valério",
+   "url": "https://cbjj.com.br/events/2513/results"
+  },
+  {
+   "year": 2024,
+   "place": 2,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu Sem Kimono 2024",
+   "tier": "Brasileiro",
+   "cat": "Feminino / Juvenil 1 / Azul / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2496/results"
+  },
+  {
+   "year": 2024,
+   "place": 2,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu 2024",
+   "tier": "Sul-Americano",
+   "cat": "Feminino / Juvenil 1 / Azul / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2636/results"
+  },
+  {
+   "year": 2024,
+   "place": 2,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu No-Gi 2024",
+   "tier": "Sul-Americano",
+   "cat": "Feminino / Juvenil 1 / Azul / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2603/results"
+  },
+  {
+   "year": 2024,
+   "place": 2,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu No-Gi 2024",
+   "tier": "Sul-Americano",
+   "cat": "Feminino / Juvenil 1 / Azul / Absoluto Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2603/results"
+  },
+  {
+   "year": 2024,
+   "place": 2,
+   "event": "Contagem International Open IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Masculino / Juvenil / Azul / Pena",
+   "athlete": "Pedro Henryque de Jesus Rocha",
+   "url": "https://cbjj.com.br/events/2504/results"
+  },
+  {
+   "year": 2024,
+   "place": 2,
+   "event": "Contagem International Open IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Masculino / Juvenil / Azul / Absoluto Leve",
+   "athlete": "Pedro Henryque de Jesus Rocha",
+   "url": "https://cbjj.com.br/events/2504/results"
+  },
+  {
+   "year": 2024,
+   "place": 2,
+   "event": "Contagem International Open IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Azul / Absoluto Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2504/results"
+  },
+  {
+   "year": 2024,
+   "place": 2,
+   "event": "Pan IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Pan",
+   "cat": "Feminino / Juvenil 1 / Azul / Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2359/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2024",
+   "tier": "Brasileiro",
+   "cat": "Feminino / Juvenil 1 / Azul / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2427/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2024",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 2 / Branca / Pesado",
+   "athlete": "José Carlos Aparecido Ferreira",
+   "url": "https://cbjj.com.br/events/2427/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2024",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 2 / Azul / Meio Pesado",
+   "athlete": "Fernando Costa de Oliveira",
+   "url": "https://cbjj.com.br/events/2427/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu Sem Kimono 2024",
+   "tier": "Brasileiro",
+   "cat": "Feminino / Juvenil 1 / Azul / Absoluto Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2496/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu Sem Kimono 2024",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Juvenil 2 / Azul / Pena",
+   "athlete": "Pedro Henryque de Jesus Rocha",
+   "url": "https://cbjj.com.br/events/2496/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu Sem Kimono 2024",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Juvenil 2 / Azul / Absoluto Leve",
+   "athlete": "Pedro Henryque de Jesus Rocha",
+   "url": "https://cbjj.com.br/events/2496/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu 2024",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Master 1 / Branca / Médio",
+   "athlete": "José Soares de Amorim",
+   "url": "https://cbjj.com.br/events/2636/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu 2024",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Master 1 / Azul / Meio Pesado",
+   "athlete": "Caique Costa Silva de Souza Galhardo",
+   "url": "https://cbjj.com.br/events/2636/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu 2024",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Master 4 / Azul / Meio Pesado",
+   "athlete": "Roberto Ferreira Junior",
+   "url": "https://cbjj.com.br/events/2636/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Contagem International Open IBJJF Jiu-Jitsu No-Gi Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Masculino / Juvenil / Azul / Absoluto Leve",
+   "athlete": "Pedro Henryque de Jesus Rocha",
+   "url": "https://cbjj.com.br/events/2505/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Kids International IBJJF Jiu-Jitsu Championship - Florianópolis 2024",
+   "tier": "Open internacional",
+   "cat": "Feminino / Infantil 1 / Cinza / Pluma",
+   "athlete": "P. Fraga",
+   "url": "https://cbjj.com.br/events/2378/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "Rio Summer Kids International Open IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Feminino / Infantil 1 / Cinza / Pluma",
+   "athlete": "P. Fraga",
+   "url": "https://cbjj.com.br/events/2381/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Masculino / Juvenil / Azul / Galo",
+   "athlete": "Jhonny Bryan Lorena Teles",
+   "url": "https://cbjj.com.br/events/2512/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 1 / Branca / Leve",
+   "athlete": "Rafael Lopes Ferreira Lemes",
+   "url": "https://cbjj.com.br/events/2512/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu No-Gi Championship 2024",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 3 / Preta / Pesadíssimo",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/2513/results"
+  },
+  {
+   "year": 2024,
+   "place": 3,
+   "event": "World IBJJF Jiu-Jitsu Championship 2024",
+   "tier": "Mundial",
+   "cat": "Feminino / Juvenil 1 / Azul / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2465/results"
+  },
+  {
+   "year": 2023,
+   "place": 1,
+   "event": "Austin Summer Kids International Open IBJJF Jiu-Jitsu Championship 2023",
+   "tier": "Open internacional",
+   "cat": "Feminino / Infanto Juvenil 3 / Laranja / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2077/results"
+  },
+  {
+   "year": 2023,
+   "place": 1,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu 2023",
+   "tier": "Sul-Americano",
+   "cat": "Feminino / Adulto / Branca / Galo",
+   "athlete": "Morgana Franco Campanha",
+   "url": "https://cbjj.com.br/events/2253/results"
+  },
+  {
+   "year": 2023,
+   "place": 1,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu 2023",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Master 4 / Roxa / Médio",
+   "athlete": "Paulo Carlos Silva",
+   "url": "https://cbjj.com.br/events/2253/results"
+  },
+  {
+   "year": 2023,
+   "place": 1,
+   "event": "Curitiba BJJ Pro IBJJF Championship 2023",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 3 / Roxa / Médio",
+   "athlete": "Alexsandro dos Santos Silva",
+   "url": "https://cbjj.com.br/events/2329/results"
+  },
+  {
+   "year": 2023,
+   "place": 1,
+   "event": "Kids International IBJJF Jiu-Jitsu Championship - Curitiba 2023",
+   "tier": "Open internacional",
+   "cat": "Feminino / Infanto Juvenil 3 / Verde / Leve",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2330/results"
+  },
+  {
+   "year": 2023,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2023",
+   "tier": "Open internacional",
+   "cat": "Feminino / Juvenil / Branca / Super Pesado",
+   "athlete": "Larissa Leniel Gonçalves C. Silva",
+   "url": "https://cbjj.com.br/events/2331/results"
+  },
+  {
+   "year": 2023,
+   "place": 1,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2023",
+   "tier": "Open internacional",
+   "cat": "Feminino / Adulto / Branca / Pluma",
+   "athlete": "Morgana Franco Campanha",
+   "url": "https://cbjj.com.br/events/2331/results"
+  },
+  {
+   "year": 2023,
+   "place": 2,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2023",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Infanto Juvenil 2 / Laranja / Meio Pesado",
+   "athlete": "G. Souza",
+   "url": "https://cbjj.com.br/events/2120/results"
+  },
+  {
+   "year": 2023,
+   "place": 2,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2023",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Infanto Juvenil 2 / Laranja / Pesado",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/2120/results"
+  },
+  {
+   "year": 2023,
+   "place": 2,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2023",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Infanto Juvenil 3 / Laranja / Pluma",
+   "athlete": "Jhonny Bryan Lorena Teles",
+   "url": "https://cbjj.com.br/events/2120/results"
+  },
+  {
+   "year": 2023,
+   "place": 2,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2023",
+   "tier": "Brasileiro",
+   "cat": "Feminino / Infanto Juvenil 3 / Laranja / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2120/results"
+  },
+  {
+   "year": 2023,
+   "place": 2,
+   "event": "European Kids IBJJF Jiu-Jitsu Championship 2023",
+   "tier": "Europeu",
+   "cat": "Masculino / Infantil 3 / Amarela / Pesadíssimo",
+   "athlete": "Y. Taboada",
+   "url": "https://cbjj.com.br/events/2160/results"
+  },
+  {
+   "year": 2023,
+   "place": 2,
+   "event": "Kids International IBJJF Jiu-Jitsu Championship - Rio de Janeiro 2023",
+   "tier": "Open internacional",
+   "cat": "Feminino / Infanto Juvenil 3 / Verde / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2262/results"
+  },
+  {
+   "year": 2023,
+   "place": 2,
+   "event": "São Paulo BJJ Pro IBJJF Championship 2023",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 1 / Branca / Pesado",
+   "athlete": "Caique Costa Silva de Souza Galhardo",
+   "url": "https://cbjj.com.br/events/2241/results"
+  },
+  {
+   "year": 2023,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (Juvenil, Adulto e Master) 2023",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 1 / Branca / Pesado",
+   "athlete": "Caique Costa Silva de Souza Galhardo",
+   "url": "https://cbjj.com.br/events/2121/results"
+  },
+  {
+   "year": 2023,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (Juvenil, Adulto e Master) 2023",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 4 / Roxa / Médio",
+   "athlete": "Paulo Carlos Silva",
+   "url": "https://cbjj.com.br/events/2121/results"
+  },
+  {
+   "year": 2023,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2023",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Infanto Juvenil 2 / Laranja / Super Pesado",
+   "athlete": "G. Ribeiro",
+   "url": "https://cbjj.com.br/events/2120/results"
+  },
+  {
+   "year": 2023,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2023",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Infanto Juvenil 3 / Verde / Pesadíssimo",
+   "athlete": "Luiz Vitor dos Santos Diniz",
+   "url": "https://cbjj.com.br/events/2120/results"
+  },
+  {
+   "year": 2023,
+   "place": 3,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu 2023",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Master 2 / Roxa / Pesadíssimo",
+   "athlete": "Rodrigo Francisquetti Antonio",
+   "url": "https://cbjj.com.br/events/2253/results"
+  },
+  {
+   "year": 2023,
+   "place": 3,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu 2023",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Master 3 / Roxa / Meio Pesado",
+   "athlete": "Alexsandro dos Santos Silva",
+   "url": "https://cbjj.com.br/events/2253/results"
+  },
+  {
+   "year": 2023,
+   "place": 3,
+   "event": "Curitiba Summer International Open IBJJF Jiu-Jitsu No-Gi Championship 2023",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Preta / Médio",
+   "athlete": "Fabio Pires",
+   "url": "https://cbjj.com.br/events/2119/results"
+  },
+  {
+   "year": 2023,
+   "place": 3,
+   "event": "Pan Kids IBJJF Jiu-Jitsu Championship 2023",
+   "tier": "Pan",
+   "cat": "Feminino / Infanto Juvenil 3 / Laranja / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/2127/results"
+  },
+  {
+   "year": 2023,
+   "place": 3,
+   "event": "Rio Summer International Open IBJJF Jiu-Jitsu No-Gi Championship 2023",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 1 / Preta / Super Pesado",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/2081/results"
+  },
+  {
+   "year": 2023,
+   "place": 3,
+   "event": "São Paulo BJJ Pro IBJJF Championship 2023",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Roxa / Pesadíssimo",
+   "athlete": "Weslen Everton Silva",
+   "url": "https://cbjj.com.br/events/2241/results"
+  },
+  {
+   "year": 2023,
+   "place": 3,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu No-Gi Championship 2023",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 1 / Preta / Pesadíssimo",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/2332/results"
+  },
+  {
+   "year": 2022,
+   "place": 1,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2022",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Infanto Juvenil 1 / Amarela / Meio Pesado",
+   "athlete": "G. Souza",
+   "url": "https://cbjj.com.br/events/1840/results"
+  },
+  {
+   "year": 2022,
+   "place": 1,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2022",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Infanto Juvenil 1 / Amarela / Super Pesado",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/1840/results"
+  },
+  {
+   "year": 2022,
+   "place": 1,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2022",
+   "tier": "Brasileiro",
+   "cat": "Feminino / Infanto Juvenil 2 / Amarela / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/1840/results"
+  },
+  {
+   "year": 2022,
+   "place": 1,
+   "event": "Campeonato Sul Americano de Jiu-Jitsu - Crianças 2022",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Infantil 2 / Amarela / Pesadíssimo",
+   "athlete": "Y. Taboada",
+   "url": "https://cbjj.com.br/events/1961/results"
+  },
+  {
+   "year": 2022,
+   "place": 1,
+   "event": "Campeonato Sul Americano de Jiu-Jitsu - Crianças 2022",
+   "tier": "Sul-Americano",
+   "cat": "Feminino / Infantil 3 / Amarela / Médio",
+   "athlete": "G. Lima",
+   "url": "https://cbjj.com.br/events/1961/results"
+  },
+  {
+   "year": 2022,
+   "place": 1,
+   "event": "Campeonato Sul Americano de Jiu-Jitsu - Crianças 2022",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Infanto Juvenil 1 / Amarela / Meio Pesado",
+   "athlete": "G. Souza",
+   "url": "https://cbjj.com.br/events/1961/results"
+  },
+  {
+   "year": 2022,
+   "place": 1,
+   "event": "Campeonato Sul Americano de Jiu-Jitsu - Crianças 2022",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Infanto Juvenil 1 / Amarela / Super Pesado",
+   "athlete": "M. Souza",
+   "url": "https://cbjj.com.br/events/1961/results"
+  },
+  {
+   "year": 2022,
+   "place": 1,
+   "event": "Campeonato Sul Americano de Jiu-Jitsu - Crianças 2022",
+   "tier": "Sul-Americano",
+   "cat": "Feminino / Infanto Juvenil 2 / Amarela / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/1961/results"
+  },
+  {
+   "year": 2022,
+   "place": 1,
+   "event": "Pan Kids IBJJF Jiu-Jitsu Championship 2022",
+   "tier": "Pan",
+   "cat": "Feminino / Infanto Juvenil 2 / Amarela / Pena",
+   "athlete": "Rafaela do Nascimento Silva",
+   "url": "https://cbjj.com.br/events/1857/results"
+  },
+  {
+   "year": 2022,
+   "place": 1,
+   "event": "Rio Summer International Open IBJJF Jiu-Jitsu No-Gi Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Super Pesado",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1838/results"
+  },
+  {
+   "year": 2022,
+   "place": 1,
+   "event": "Salvador Fall International Open IBJJF Jiu-Jitsu No-Gi Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Super Pesado",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1882/results"
+  },
+  {
+   "year": 2022,
+   "place": 2,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2022",
+   "tier": "Brasileiro",
+   "cat": "Feminino / Mirim 3 / Cinza / Pesado",
+   "athlete": "A. Sapateiro",
+   "url": "https://cbjj.com.br/events/1840/results"
+  },
+  {
+   "year": 2022,
+   "place": 2,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2022",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Infantil 2 / Amarela / Pesadíssimo",
+   "athlete": "Y. Taboada",
+   "url": "https://cbjj.com.br/events/1840/results"
+  },
+  {
+   "year": 2022,
+   "place": 2,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2022",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Infanto Juvenil 1 / Amarela / Pesadíssimo",
+   "athlete": "G. Ribeiro",
+   "url": "https://cbjj.com.br/events/1840/results"
+  },
+  {
+   "year": 2022,
+   "place": 2,
+   "event": "Campeonato Sul Americano de Jiu-Jitsu - Crianças 2022",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Infanto Juvenil 1 / Amarela / Médio",
+   "athlete": "R. Padilha",
+   "url": "https://cbjj.com.br/events/1961/results"
+  },
+  {
+   "year": 2022,
+   "place": 2,
+   "event": "Campeonato Sul-Brasileiro de Jiu-Jitsu Sem Kimono 2022",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 2 / Marrom / Super Pesado",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1827/results"
+  },
+  {
+   "year": 2022,
+   "place": 2,
+   "event": "Curitiba International Open IBJJF Jiu-Jitsu Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Super Pesado",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1862/results"
+  },
+  {
+   "year": 2022,
+   "place": 2,
+   "event": "Curitiba International Open IBJJF Jiu-Jitsu Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 3 / Roxa / Médio",
+   "athlete": "Paulo Carlos Silva",
+   "url": "https://cbjj.com.br/events/1862/results"
+  },
+  {
+   "year": 2022,
+   "place": 2,
+   "event": "Curitiba International Open IBJJF Jiu-Jitsu No-Gi Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Super Pesado",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1863/results"
+  },
+  {
+   "year": 2022,
+   "place": 2,
+   "event": "Curitiba International Open IBJJF Jiu-Jitsu No-Gi Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Absoluto",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1863/results"
+  },
+  {
+   "year": 2022,
+   "place": 2,
+   "event": "Rio Fall International Open IBJJF Jiu-Jitsu No-Gi Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Super Pesado",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1880/results"
+  },
+  {
+   "year": 2022,
+   "place": 2,
+   "event": "Salvador Fall International Open IBJJF Jiu-Jitsu Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Super Pesado",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1881/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (Juvenil, Adulto e Master) 2022",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 1 / Marrom / Super Pesado",
+   "athlete": "Eremilton Martinelli das Neves",
+   "url": "https://cbjj.com.br/events/1839/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (Juvenil, Adulto e Master) 2022",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 2 / Marrom / Médio",
+   "athlete": "Fabio Pires",
+   "url": "https://cbjj.com.br/events/1839/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2022",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Infanto Juvenil 2 / Amarela / Pluma",
+   "athlete": "Jhonny Bryan Lorena Teles",
+   "url": "https://cbjj.com.br/events/1840/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu (idade 04 a 15 anos) 2022",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Infanto Juvenil 2 / Laranja / Pesadíssimo",
+   "athlete": "Luiz Vitor dos Santos Diniz",
+   "url": "https://cbjj.com.br/events/1840/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Campeonato Sul Americano de Jiu-Jitsu - Crianças 2022",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Infanto Juvenil 1 / Amarela / Pesadíssimo",
+   "athlete": "G. Ribeiro",
+   "url": "https://cbjj.com.br/events/1961/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Campeonato Sul Americano de Jiu-Jitsu - Crianças 2022",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Infanto Juvenil 2 / Amarela / Pluma",
+   "athlete": "Jhonny Bryan Lorena Teles",
+   "url": "https://cbjj.com.br/events/1961/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Campeonato Sul-Americano de Jiu-Jitsu Sem Kimono 2022",
+   "tier": "Sul-Americano",
+   "cat": "Masculino / Adulto / Roxa / Super Pesado",
+   "athlete": "Fernando Freire R. dos Anjos",
+   "url": "https://cbjj.com.br/events/2036/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Campeonato Sul-Brasileiro de Jiu-Jitsu Sem Kimono 2022",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 2 / Marrom / Absoluto",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1827/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Curitiba International Open IBJJF Jiu-Jitsu Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Absoluto",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1862/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Rio Fall International Open IBJJF Jiu-Jitsu Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Super Pesado",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1879/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Rio Summer International Open IBJJF Jiu-Jitsu No-Gi Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Absoluto",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1838/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "Salvador Fall International Open IBJJF Jiu-Jitsu No-Gi Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Absoluto",
+   "athlete": "Fabio Junior da Silva",
+   "url": "https://cbjj.com.br/events/1882/results"
+  },
+  {
+   "year": 2022,
+   "place": 3,
+   "event": "São Paulo International Open IBJJF Jiu-Jitsu Championship 2022",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Marrom / Pesadíssimo",
+   "athlete": "Fabio Anderson Pavarini",
+   "url": "https://cbjj.com.br/events/1977/results"
+  },
+  {
+   "year": 2021,
+   "place": 1,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2021",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Adulto / Branca / Pesadíssimo",
+   "athlete": "Gabriel Julião Silva",
+   "url": "https://cbjj.com.br/events/1775/results"
+  },
+  {
+   "year": 2021,
+   "place": 3,
+   "event": "Balneário Camboriú International Open IBJJF Jiu-Jitsu No-Gi Championship 2021",
+   "tier": "Open internacional",
+   "cat": "Masculino / Master 2 / Preta / Leve",
+   "athlete": "Wilson Roberto Ferreira de Souza",
+   "url": "https://cbjj.com.br/events/1804/results"
+  },
+  {
+   "year": 2021,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2021",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 1 / Branca / Pesado",
+   "athlete": "Anderson de Alcântara H. Santana",
+   "url": "https://cbjj.com.br/events/1775/results"
+  },
+  {
+   "year": 2021,
+   "place": 3,
+   "event": "Campeonato Brasileiro de Jiu-Jitsu 2021",
+   "tier": "Brasileiro",
+   "cat": "Masculino / Master 4 / Preta / Leve",
+   "athlete": "Edevair Roni da Silva",
+   "url": "https://cbjj.com.br/events/1775/results"
+  }
+ ],
+ "smoothcomp": [
+  {
+   "year": 2026,
+   "event": "Seletiva Nacional GAMMA Brasil 2026",
+   "city": "Niterói/RJ",
+   "gold": 0,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://smoothcomp.com/en/event/31448"
+  },
+  {
+   "year": 2025,
+   "event": "ADCC Brazil Open - São Paulo",
+   "city": "São Paulo",
+   "gold": 2,
+   "silver": 5,
+   "bronze": 2,
+   "url": "https://smoothcomp.com/en/event/21742"
+  },
+  {
+   "year": 2025,
+   "event": "ADCC Brazil Open - São Paulo",
+   "city": "SAO PAULO",
+   "gold": 0,
+   "silver": 2,
+   "bronze": 1,
+   "url": "https://smoothcomp.com/en/event/19790"
+  },
+  {
+   "year": 2024,
+   "event": "ADCC Brazil Open - Balneário Camboriú 2nd Edition",
+   "city": "BALNEARIO CAMBORIÚ",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 1,
+   "url": "https://smoothcomp.com/en/event/19511"
+  },
+  {
+   "year": 2024,
+   "event": "ADCC Brazil Open - São Paulo 3rd Edition",
+   "city": "SAO PAULO",
+   "gold": 1,
+   "silver": 1,
+   "bronze": 0,
+   "url": "https://smoothcomp.com/en/event/17278"
+  },
+  {
+   "year": 2024,
+   "event": "BRASILEIRO DE JIU-JITSU CBSJJ 2024",
+   "city": "GOIANIA",
+   "gold": 1,
+   "silver": 0,
+   "bronze": 0,
+   "url": "https://smoothcomp.com/en/event/17176"
+  }
+ ]
+}

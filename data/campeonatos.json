@@ -1,0 +1,113 @@
+{
+ "updated": "2026-10-27T15:45:58+00:00",
+ "events": [
+  {
+   "name": "Nordeste Brasileiro CBJJE 2026",
+   "first_day": "2026-11-14",
+   "last_day": "2026-11-14",
+   "city": "Parnamirim",
+   "state": "RN",
+   "org": "CBJJE",
+   "cbjje": true,
+   "open": true,
+   "banner": "https://api.meucombate.com.br/vault/kFusmTbI/l6sAjlnNAfEf-teWl4zfbU6Se8A/_gVDWg../WhatsApp+Image+2026-09-01+at+15.59.00.jpeg",
+   "url": "https://www.meucombate.com.br/cbjje/evento/466/informacoes/"
+  },
+  {
+   "name": "O Rei da Selva Open Gi & Nogi",
+   "first_day": "2026-11-22",
+   "last_day": "2026-11-22",
+   "city": "Belém",
+   "state": "PA",
+   "org": "FPECAM",
+   "cbjje": false,
+   "open": true,
+   "banner": "https://api.meucombate.com.br/vault/kFusmTbI/oh2qcVufQkyV139MbMbIFnaui2U/M_JI8w../ChatGPT+Image+7+de+out.+de+2026%2C+16_54_54.png",
+   "url": "https://www.meucombate.com.br/fpecam/evento/472/informacoes/"
+  },
+  {
+   "name": "MUNDIAL - JUVENIL / ADULTO / MASTER - CBJJE",
+   "first_day": "2026-11-26",
+   "last_day": "2026-11-29",
+   "city": "São Paulo",
+   "state": "SP",
+   "org": "CBJJE",
+   "cbjje": true,
+   "open": true,
+   "banner": "https://api.meucombate.com.br/vault/kFusmTbI/DD0maXRyQgcf28CBRt2iBVDUgAE/ykunUQ../1784301526229-image+15943.webp",
+   "url": "https://www.meucombate.com.br/cbjje/evento/95/informacoes/"
+  },
+  {
+   "name": "MUNDIAL - KIDS - CBJJE",
+   "first_day": "2026-12-04",
+   "last_day": "2026-12-06",
+   "city": "São Paulo",
+   "state": "SP",
+   "org": "CBJJE",
+   "cbjje": true,
+   "open": true,
+   "banner": "https://api.meucombate.com.br/vault/kFusmTbI/JZccFH5Y_oAe64PMzSrQtMSKmIE/5F_wKA../1784301483307-image+15944.webp",
+   "url": "https://www.meucombate.com.br/cbjje/evento/96/informacoes/"
+  },
+  {
+   "name": "Bjj Guaruja Cbjje 2026",
+   "first_day": "2026-12-12",
+   "last_day": "2026-12-12",
+   "city": "Guarujá",
+   "state": "SP",
+   "org": "CBJJE",
+   "cbjje": true,
+   "open": true,
+   "banner": "https://api.meucombate.com.br/vault/kFusmTbI/XKDOFvo8KpkZBmGTkugLr1lPqyU/5pVhhA../1787256769935-WhatsApp+Image+2026-08-19+at+18.38.08.jpeg",
+   "url": "https://www.meucombate.com.br/cbjje/evento/99/informacoes/"
+  },
+  {
+   "name": "World Trial Recife Championship 2027",
+   "first_day": "2027-01-16",
+   "last_day": "2027-01-16",
+   "city": "Recife",
+   "state": "PE",
+   "org": "CBJJE",
+   "cbjje": true,
+   "open": false,
+   "banner": "https://api.meucombate.com.br/vault/kFusmTbI/B1otlFarVTx8490woff4l3L1x1c/MoHdrA../WhatsApp+Image+2026-09-02+at+16.25.49.jpeg",
+   "url": "https://www.meucombate.com.br/cbjje/evento/468/informacoes/"
+  },
+  {
+   "name": "Mundial Nogi 2027 Cbjje",
+   "first_day": "2027-01-28",
+   "last_day": "2027-01-31",
+   "city": "São Paulo",
+   "state": "SP",
+   "org": "CBJJE",
+   "cbjje": true,
+   "open": true,
+   "banner": "https://api.meucombate.com.br/vault/kFusmTbI/BdJBQoQCUSwY0OSd-7WrYMH2PEw/SY9j_A../44d03a17-9994-4ebb-abfd-8c95488ba653.jpeg",
+   "url": "https://www.meucombate.com.br/cbjje/evento/471/informacoes/"
+  },
+  {
+   "name": "Trial World Mundial Cbjje Rs",
+   "first_day": "2027-02-28",
+   "last_day": "2027-02-28",
+   "city": "Cachoeirinha",
+   "state": "RS",
+   "org": "CBJJE",
+   "cbjje": true,
+   "open": true,
+   "banner": "https://api.meucombate.com.br/vault/kFusmTbI/nB05_tH2BYB8fnmsKiT35t5mibs/ZWa6zQ../1785264343484-WhatsApp+Image+2026-07-28+at+15.24.48.jpeg",
+   "url": "https://www.meucombate.com.br/cbjje/evento/97/informacoes/"
+  },
+  {
+   "name": "PAN-AMAZÔNICO DE JIU-JITSU",
+   "first_day": "2027-03-21",
+   "last_day": "2027-03-21",
+   "city": "Belém",
+   "state": "PA",
+   "org": "FPECAM",
+   "cbjje": false,
+   "open": true,
+   "banner": "https://api.meucombate.com.br/vault/kFusmTbI/q89nzvK4ED1fOsqNroNJya4iEqs/wzcLyA../PAN+01.jpeg",
+   "url": "https://www.meucombate.com.br/fpecam/evento/480/informacoes/"
+  }
+ ]
+}

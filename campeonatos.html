@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campeonatos · Cohab Team</title>
+  <meta name="description" content="Próximos campeonatos de jiu-jitsu da CBJJE e calendários das federações.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=15">
+  <script>try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Navegação do site">
+    <div class="container">
+      <a class="site-logo" href="./">COHAB<span>.</span></a>
+      <a href="./">Início</a>
+      <a href="historia.html">História</a>
+      <a href="conquistas.html">Conquistas</a>
+      <a href="atletas.html">Atletas</a>
+      <a href="jiujitsu.html">Jiu-Jitsu</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="campeonatos.html" aria-current="page">Campeonatos</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="jogos.html">Jogos</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">📅 Calendário</p>
+      <h1>Próximos campeonatos</h1>
+      <p class="bio">Campeonatos com inscrição no Meu Combate, onde a CBJJE publica seus eventos. A lista se atualiza sozinha todo dia.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="chips" id="ev-filter" role="group" aria-label="Filtrar campeonatos">
+      <button data-v="all" aria-pressed="true">Todos</button>
+      <button data-v="cbjje" aria-pressed="false">Só CBJJE</button>
+      <button data-v="sp" aria-pressed="false">Só em SP</button>
+      <button data-v="open" aria-pressed="false">Inscrições abertas</button>
+    </div>
+    <div class="events" id="events"></div>
+
+    <section class="block wide">
+      <h2>Outros calendários</h2>
+      <p class="muted">Campeonatos das outras federações em que a Cohab compete.</p>
+      <div class="grid calendars">
+        <a class="card" href="https://cbjj.com.br/events/calendar" target="_blank" rel="noopener"><h4>CBJJ / IBJJF Brasil ↗</h4><span class="meta">Brasileiro, Sul-Americano e Opens</span></a>
+        <a class="card" href="https://ibjjf.com/events/calendar" target="_blank" rel="noopener"><h4>IBJJF ↗</h4><span class="meta">Mundial, Pan, Europeu e Opens internacionais</span></a>
+        <a class="card" href="https://fpjj.com.br" target="_blank" rel="noopener"><h4>FPJJ ↗</h4><span class="meta">Campeonato e Circuito Paulista</span></a>
+        <a class="card" href="https://soucompetidor.com.br/pt-br/eventos/todos-os-eventos/novos/" target="_blank" rel="noopener"><h4>SouCompetidor ↗</h4><span class="meta">Circuitos abertos: Jiu-Jitsu para Todos, Legends, Brasil Open</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container muted site-foot">
+    Cohab Team Brazilian Jiu-Jitsu · Nasci pra Vencer · desde 1998<br>
+    Site feito por <a href="https://yagoxavier10.github.io/portfolio-noticias/">Yago dos Santos</a> · dados atualizados automaticamente
+  </footer>
+
+  <script src="campeonatos.js?v=1" defer></script>
+  <script src="chat.js?v=7" defer></script>
+  <script src="fx.js?v=3" defer></script>
+</body>
+</html>
