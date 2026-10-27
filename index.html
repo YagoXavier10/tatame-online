@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cohab Team · Brazilian Jiu-Jitsu</title>
-  <meta name="description" content="Cohab Team Brazilian Jiu-Jitsu: equipe de Itaquera, São Paulo, desde 1998. História, conquistas, atletas, campeonatos e notícias de jiu-jitsu.">
+  <title>Jogos · Cohab Team</title>
+  <meta name="description" content="Jogos de jiu-jitsu da Cohab Team: luta ao vivo contra um amigo, quiz em níveis de faixa e o jogo das posições contra o relógio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -12,95 +12,118 @@
   <script>try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
-  <nav class="site-nav" aria-label="Navegação do site">
+  <nav class="site-nav" aria-label="Jogos">
     <div class="container">
-      <a class="site-logo" href="./">COHAB<span>.</span></a>
-      <a href="./" aria-current="page">Início</a>
-      <a href="historia.html">História</a>
-      <a href="conquistas.html">Conquistas</a>
-      <a href="atletas.html">Atletas</a>
-      <a href="jiujitsu.html">Jiu-Jitsu</a>
-      <a href="videos.html">Vídeos</a>
-      <a href="campeonatos.html">Campeonatos</a>
-      <a href="noticias.html">Notícias</a>
-      <a href="jogos.html">Jogos</a>
+      <a class="site-logo" href="./">TATAME<span>.</span></a>
+      <a href="./" aria-current="page">Jogos</a>
+      <a href="posicoes.html">Posição</a>
+      <a href="caminho.html">Caminho</a>
+      <a href="arbitro.html">Árbitro</a>
+      <a href="regras.html">Regra ou mito</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="luta.html">Luta ao vivo</a>
     </div>
   </nav>
-
-  <header class="home-hero">
+  <header class="hero">
     <div class="container">
-      <p class="feature-eyebrow">🥋 Brazilian Jiu-Jitsu · Itaquera, São Paulo</p>
-      <h1>Cohab Team</h1>
-      <p class="home-tagline">Nasci pra vencer. Desde 1998 transformando vidas no tatame — do colchão improvisado da Cohab José Bonifácio aos pódios do mundo.</p>
-      <div class="home-actions">
-        <a class="feature-cta" href="historia.html">Conhecer nossa história</a>
-        <a class="ghost-cta" href="conquistas.html">Ver as conquistas →</a>
-      </div>
-      <ul class="feature-stats home-stats">
-        <li><strong data-count="titles">0</strong><span>títulos de campeã geral</span></li>
-        <li><strong data-count="podiums">0</strong><span>pódios por equipe</span></li>
-        <li><strong data-count="medals">0</strong><span>medalhas</span></li>
-        <li><strong data-count="golds">0</strong><span>ouros</span></li>
-      </ul>
+      <p class="eyebrow">🎮 Aprenda jogando</p>
+      <h1>Jogos</h1>
+      <p class="bio">Teste o que você sabe de jiu-jitsu e da Cohab. Escolha um nickname e dispute o ranking com a galera.</p>
     </div>
-    <div class="belt" aria-hidden="true"><span></span></div>
   </header>
 
   <main class="container">
-    <section class="block wide home-split">
-      <div>
-        <h2>Últimos títulos</h2>
-        <div class="result-list" id="last-titles"></div>
-        <a class="story-link" href="conquistas.html#equipe">Todos os títulos e pódios →</a>
-      </div>
-      <div>
-        <h2>Próximo campeonato</h2>
-        <div id="next-event"></div>
-        <a class="story-link" href="campeonatos.html">Ver o calendário →</a>
-      </div>
-    </section>
-
-    <section class="block wide">
-      <h2>Os mestres</h2>
-      <div class="grid">
-        <a class="card" href="historia.html"><h4>Mestre Dan</h4><span class="meta">Everdan Olegário da Silva. Primeiro aluno da Cohab em 1998, faixa preta desde 2005 e líder da equipe. Formou campeões mundiais como Sérgio Moraes.</span></a>
-        <a class="card" href="historia.html"><h4>Mestre Fluído Caiman</h4><span class="meta">Divide a liderança da Cohab Team com o Mestre Dan e ajuda a manter o legado do projeto Nasci pra Vencer.</span></a>
-        <a class="card" href="historia.html"><h4>Projeto Nasci pra Vencer</h4><span class="meta">Jiu-jitsu gratuito para crianças e jovens desde 1998. Mais de 3.000 pessoas já passaram pelo tatame.</span></a>
-      </div>
-    </section>
-
-    <section class="block wide">
-      <div class="news-head">
-        <h2>Notícias de jiu-jitsu</h2>
-        <p id="updated" class="muted">Carregando…</p>
-      </div>
-      <div class="grid teaser-grid" id="news-teaser"></div>
-      <a class="button news-more" href="noticias.html">Ver todas as notícias →</a>
-    </section>
-
-    <section class="block wide home-split">
-      <div>
-        <h2>Onde treinar</h2>
-        <p>Rua Victório Santim, 625 — Itaquera, São Paulo.</p>
-        <p class="muted">16 unidades no Brasil e filiais na Argentina, no Chile, no Equador e no Peru.</p>
-        <a class="button" href="https://www.google.com/maps/search/?api=1&query=Rua+Vict%C3%B3rio+Santim+625+Itaquera+S%C3%A3o+Paulo" target="_blank" rel="noopener">Abrir no mapa ↗</a>
-      </div>
-      <a class="card quiz-cta" href="jogos.html">
-        <h4>🎮 Jogos de jiu-jitsu</h4>
-        <span class="meta">Acerte a posição da foto contra o relógio ou encare o quiz da faixa branca à preta. Bate seu recorde?</span>
+    <section class="rk-profile" id="rk-profile" aria-live="polite"></section>
+    <div class="games">
+      <a class="game-card game-card-live" href="luta.html">
+        <span class="game-art" aria-hidden="true">🥊</span>
+        <span class="game-new">Ao vivo</span>
+        <h2>Luta ao vivo</h2>
+        <p class="muted">Desafie um amigo, cada um no seu celular. A mesma pergunta aparece para os dois e quem acerta primeiro pontua. Placar de campeonato, finalização e revanche.</p>
+        <span class="game-best" data-best="lt"></span>
+        <span class="feature-cta">Lutar</span>
+      </a>
+      <a class="game-card" href="posicoes.html">
+        <span class="game-art" aria-hidden="true">⏱️</span>
+        <span class="game-new">Novo</span>
+        <h2>Qual é a posição?</h2>
+        <p class="muted">Aparece a foto de uma luta e você escolhe a posição ou finalização certa antes do tempo acabar. Dois modos: contra o relógio e morte súbita.</p>
+        <span class="game-best" data-best="pg"></span>
         <span class="feature-cta">Jogar</span>
       </a>
+      <a class="game-card" href="caminho.html">
+        <span class="game-art" aria-hidden="true">🧭</span>
+        <span class="game-new">Novo</span>
+        <h2>Caminho da finalização</h2>
+        <p class="muted">Escolha o próximo passo certo, posição por posição, até finalizar. Sete desafios da faixa branca à roxa, com placar de pontos de verdade.</p>
+        <span class="game-best" data-best="cm"></span>
+        <span class="feature-cta">Jogar</span>
+      </a>
+      <a class="game-card" href="arbitro.html">
+        <span class="game-art" aria-hidden="true">🧑‍⚖️</span>
+        <span class="game-new">Novo</span>
+        <h2>Árbitro por um dia</h2>
+        <p class="muted">Você apita a luta: marque pontos, vantagens, punições e finalização em cada lance e diga quem venceu. Cinco lutas, da faixa branca à preta.</p>
+        <span class="game-best" data-best="ar"></span>
+        <span class="feature-cta">Jogar</span>
+      </a>
+      <a class="game-card" href="regras.html">
+        <span class="game-art" aria-hidden="true">🃏</span>
+        <span class="game-new">Novo</span>
+        <h2>Regra ou mito?</h2>
+        <p class="muted">Arraste a carta para a direita se for regra ou para a esquerda se for mito. Quinze afirmações sobre as regras, contra o relógio.</p>
+        <span class="game-best" data-best="rm"></span>
+        <span class="feature-cta">Jogar</span>
+      </a>
+      <a class="game-card" href="quiz.html">
+        <span class="game-art" aria-hidden="true">🧠</span>
+        <h2>Quiz de jiu-jitsu</h2>
+        <p class="muted">Cinco níveis, da faixa branca à preta, com mais de 230 perguntas sobre jiu-jitsu, judô, a Cohab e conhecimentos gerais.</p>
+        <span class="game-best" data-best="quiz"></span>
+        <span class="feature-cta">Jogar</span>
+      </a>
+    </div>
+
+    <section class="block wide rk" id="ranking">
+      <div class="rk-head">
+        <h2>🏆 Ranking</h2>
+        <p class="muted" id="rk-status"></p>
+      </div>
+      <div class="chips" id="rk-tabs" role="tablist" aria-label="Jogo do ranking"></div>
+      <ol class="rk-list" id="rk-list" aria-live="polite"></ol>
     </section>
   </main>
+  <script>
+    // mostra os recordes salvos neste aparelho
+    try {
+      const pg = JSON.parse(localStorage.getItem("pg-recordes")) || {};
+      const best = Math.max(0, ...Object.values(pg));
+      if (best) document.querySelector('[data-best="pg"]').textContent = `🏆 Seu recorde: ${best.toLocaleString("pt-BR")} pontos`;
+      const q = JSON.parse(localStorage.getItem("quiz-faixas")) || {};
+      const order = ["branca", "azul", "roxa", "marrom", "preta"];
+      const passed = order.filter((f) => (q[f] || 0) >= 6);
+      const cm = JSON.parse(localStorage.getItem("cm-estrelas")) || {};
+      const st = Object.values(cm).reduce((a, b) => a + b, 0);
+      if (st) document.querySelector('[data-best="cm"]').textContent = `⭐ ${st}/21 estrelas`;
+      const ar = JSON.parse(localStorage.getItem("ar-estrelas")) || {};
+      const arSt = Object.values(ar).reduce((a, b) => a + b, 0);
+      if (arSt) document.querySelector('[data-best="ar"]').textContent = `⭐ ${arSt}/15 estrelas`;
+      const rm = JSON.parse(localStorage.getItem("rm-recorde")) || 0;
+      if (rm) document.querySelector('[data-best="rm"]').textContent = `🏆 Seu recorde: ${rm.toLocaleString("pt-BR")} pontos`;
+      const lt = JSON.parse(localStorage.getItem("lt-vitorias")) || 0;
+      if (lt) document.querySelector('[data-best="lt"]').textContent = `🏆 ${lt} ${lt === 1 ? "vitória" : "vitórias"} ao vivo`;
+      if (passed.length) document.querySelector('[data-best="quiz"]').textContent = `🥋 Você já passou na faixa ${passed.at(-1)}`;
+    } catch (e) { /* sem armazenamento */ }
+  </script>
 
   <footer class="container muted site-foot">
     Cohab Team Brazilian Jiu-Jitsu · Nasci pra Vencer · desde 1998<br>
-    Site feito por <a href="https://yagoxavier10.github.io/portfolio-noticias/">Yago dos Santos</a> · dados atualizados automaticamente
+    Site feito por <a href="https://yagoxavier10.github.io/portfolio-noticias/">Yago dos Santos</a> · site completo em <a href="https://yagoxavier10.github.io/cohab-team/">Cohab Team</a>
   </footer>
 
-  <script src="home.js?v=1" defer></script>
-  <script src="app.js?v=1" defer></script>
-  <script src="chat.js?v=7" defer></script>
+  <script src="ranking-config.js?v=1" defer></script>
+  <script type="module" src="ranking.js?v=6"></script>
+  <script src="jogos.js?v=5" defer></script>
   <script src="fx.js?v=3" defer></script>
 </body>
 </html>

@@ -432,7 +432,7 @@
         rev.append(row);
       });
       const more = el("a", "story-link", "Ver o glossário do tatame →");
-      more.href = "jiujitsu.html#glossario";
+      more.href = "https://yagoxavier10.github.io/cohab-team/jiujitsu.html#glossario";
       rev.append(more);
       card.append(rev);
     }

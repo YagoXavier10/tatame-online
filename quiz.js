@@ -172,7 +172,7 @@
       actions.append(again, back, share);
       if (!passed) {
         const more = el("a", "share-btn", "Estudar a história");
-        more.href = "jiujitsu.html";
+        more.href = "https://yagoxavier10.github.io/cohab-team/jiujitsu.html";
         actions.append(more);
       }
       const total = Object.values(store.get()).reduce((a, b) => a + b, 0);

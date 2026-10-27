@@ -283,7 +283,7 @@
       url: location.href,
     }));
     const more = el("a", "share-btn", "Ver a pontuação");
-    more.href = "jiujitsu.html#pontos";
+    more.href = "https://yagoxavier10.github.io/cohab-team/jiujitsu.html#pontos";
     actions.append(again, share, more);
     const rk = window.cohabRanking?.badge("regras", s.score);
     if (rk) card.append(rk);

@@ -200,7 +200,7 @@ export function badge(game, score) {
       if (online) line.append(document.createTextNode(`: você está em ${pos}º lugar.`));
       else line.append(document.createTextNode(off ? " (guardado neste aparelho; sem conexão com o ranking online agora)." : "."));
       const link = el("a", "rk-link", "Ver o ranking →");
-      link.href = `jogos.html?ranking=${game}#ranking`;
+      link.href = `./?ranking=${game}#ranking`;
       box.append(line, link);
     } catch (e) {
       console.warn(e);
