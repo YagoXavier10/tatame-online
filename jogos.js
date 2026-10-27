@@ -99,7 +99,7 @@
           const empty = el("li", "rk-empty");
           empty.append(document.createTextNode("Ninguém pontuou ainda. "));
           const a = el("a", "", "Seja o primeiro →");
-          a.href = { "posicoes-relogio": "posicoes.html", "posicoes-morte": "posicoes.html", regras: "regras.html", arbitro: "arbitro.html", caminho: "caminho.html", quiz: "quiz.html", luta: "luta.html", torre: "torre.html", esquiva: "esquiva.html", palavras: "palavras.html" }[current];
+          a.href = { "posicoes-relogio": "posicoes.html", "posicoes-morte": "posicoes.html", regras: "regras.html", arbitro: "arbitro.html", caminho: "caminho.html", quiz: "quiz.html", torre: "torre.html", esquiva: "esquiva.html", palavras: "palavras.html", pares: "pares.html", deslize: "deslize.html", labirinto: "labirinto.html", alvo: "alvo.html", luta: "luta.html" }[current];
           empty.append(a);
           list.append(empty);
           return;

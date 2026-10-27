@@ -14,6 +14,10 @@ export const GAMES = {
   torre: { name: "Torre de faixas", short: "Torre 🏗️", unit: "andares", one: "andar" },
   esquiva: { name: "Esquiva", short: "Esquiva 💨", unit: "pontos" },
   palavras: { name: "Caça-palavras", short: "Palavras 🔤", unit: "pontos" },
+  pares: { name: "Pares", short: "Pares 🃏", unit: "pontos" },
+  deslize: { name: "Deslize", short: "Deslize 🧩", unit: "pontos" },
+  labirinto: { name: "Labirinto", short: "Labirinto 🌀", unit: "pontos" },
+  alvo: { name: "Acerta-alvo", short: "Alvo 🎯", unit: "pontos" },
 };
 
 // se o navegador bloquear o armazenamento (aba anônima, privacidade), guarda na memória enquanto a página estiver aberta
@@ -161,6 +165,10 @@ function localBests() {
     torre: store.get("tr-recorde", 0),
     esquiva: store.get("eq-recorde", 0),
     palavras: store.get("cp-recorde", 0),
+    pares: store.get("pr-recorde", 0),
+    deslize: store.get("dz-recorde", 0),
+    labirinto: store.get("lb-recorde", 0),
+    alvo: store.get("av-recorde", 0),
   };
 }
 export async function sync() {
@@ -206,7 +214,7 @@ export function badge(game, score) {
       if (online) line.append(document.createTextNode(`: você está em ${pos}º lugar.`));
       else line.append(document.createTextNode(off ? " (guardado neste aparelho; sem conexão com o ranking online agora)." : "."));
       const link = el("a", "rk-link", "Ver o ranking →");
-      link.href = `./?ranking=${game}#ranking`;
+      link.href = `solo.html?ranking=${game}#ranking`;
       box.append(line, link);
     } catch (e) {
       console.warn(e);
