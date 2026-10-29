@@ -13,9 +13,12 @@
   <img src="https://img.shields.io/badge/Firebase-0d0b2e?style=for-the-badge&logo=firebase&logoColor=ffca28" alt="Firebase" />
 </p>
 
-Só os jogos do site da Cohab Team Brazilian Jiu-Jitsu: Luta ao vivo, Qual é a posição?, Caminho da finalização,
-Árbitro por um dia, Regra ou mito? e o Quiz. Link separado que pode ser ligado e desligado.
-O site completo é https://yagoxavier10.github.io/cohab-team/ (repositório YagoXavier10/cohab-team).
+Jogos de jiu-jitsu no navegador, feitos para a Cohab Team Brazilian Jiu-Jitsu: para jogar sozinho, com recorde e ranking online,
+ou com a turma, no mesmo celular ou ao vivo. O site completo é https://yagoxavier10.github.io/cohab-team/ (repositório YagoXavier10/cohab-team).
+
+> 🎴 **Novo: [Luta de cartas](https://yagoxavier10.github.io/tatame-online/cartas.html).** Jiu-jitsu por turnos contra o computador.
+> Cada carta só funciona de certas posições (guarda, meia, 100 kg, montada, costas) e leva a luta para outra, gastando fôlego e pegadas.
+> Os pontos são os da IBJJF e a finalização acaba a luta.
 
 ## 📸 Prévia
 
@@ -27,14 +30,19 @@ O site completo é https://yagoxavier10.github.io/cohab-team/ (repositório Yago
 
 | Solo | Com os amigos |
 | :-- | :-- |
-| 🧩 Labirinto | 🥋 Luta ao vivo |
-| 🎯 Acerta-alvo | ⚡ Relâmpago |
-| 🗼 Torre | 🕵️ Infiltrado |
-| 💨 Esquiva | 🃏 Blefe |
-| 🎴 Pares | 🪢 Cabo de guerra |
-| ↔️ Deslize | 🥔 Batata quente |
+| 🎴 Luta de cartas | 🥊 Luta ao vivo |
+| 🌀 Labirinto | ⚡ Relâmpago |
+| 🎯 Acerta-alvo | 🕵️ Infiltrado |
+| 🏗️ Torre de faixas | 🎭 Blefe |
+| 💨 Esquiva | 🪢 Cabo de guerra |
+| 🃏 Pares | 🥔 Batata quente |
+| 🧩 Deslize | |
+| 🔤 Caça-palavras | |
 | ❓ Quiz | |
-| 🎴 Luta de cartas | |
+| ⏱️ Qual é a posição? | |
+| 🧭 Caminho da finalização | |
+| 🧑‍⚖️ Árbitro por um dia | |
+| 🃏 Regra ou mito? | |
 
 Com recorde e ranking online. 🏆
 

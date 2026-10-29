@@ -159,5 +159,22 @@
     return raiz;
   }
 
-  window.CartasArte = { POSES, juntas, cena, miniatura };
+  // vitrine do destaque no menu: os lutadores vão trocando de posição sozinhos
+  const ROTEIRO = [["empe", null], ["fechada", "ia"], ["meia", "eu"], ["cem", "eu"], ["montada", "eu"], ["costas", "eu"],
+    ["empe", null], ["aberta", "eu"], ["cem", "ia"], ["fechada", "eu"]];
+  function vitrine(alvo) {
+    const c = cena(alvo);
+    let i = 0, timer = null;
+    c.ir(...ROTEIRO[0], "Dois lutadores trocando de posição");
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const anda = () => { i = (i + 1) % ROTEIRO.length; c.ir(...ROTEIRO[i], "Dois lutadores trocando de posição"); };
+    // só anima quando está na tela
+    new IntersectionObserver(([e]) => {
+      clearInterval(timer);
+      if (e.isIntersecting) timer = setInterval(anda, 1500);
+    }).observe(alvo);
+  }
+  document.querySelectorAll("[data-vitrine]").forEach(vitrine);
+
+  window.CartasArte = { POSES, juntas, cena, miniatura, vitrine };
 })();

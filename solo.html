@@ -4,15 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jogos solo · Tatame</title>
-  <meta name="description" content="Jogos de jiu-jitsu da Cohab Team: luta ao vivo contra um amigo, quiz em níveis de faixa e o jogo das posições contra o relógio.">
+  <meta name="description" content="Jogos de jiu-jitsu para jogar sozinho: Luta de cartas, Labirinto, Acerta-alvo, Torre de faixas, Quiz e mais. Bata seu recorde e entre no ranking online.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tatame Online">
+  <meta property="og:title" content="Jogos solo · Tatame">
+  <meta property="og:description" content="Jogos de jiu-jitsu para jogar sozinho: Luta de cartas, Labirinto, Acerta-alvo, Torre de faixas, Quiz e mais. Bata seu recorde e entre no ranking online.">
+  <meta property="og:url" content="https://yagoxavier10.github.io/tatame-online/solo.html">
+  <meta property="og:image" content="https://yagoxavier10.github.io/tatame-online/assets/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0f0f12">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=16">
-  <link rel="stylesheet" href="extras.css?v=5">
+  <link rel="stylesheet" href="extras.css?v=6">
   <script>try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
-<body>
 <body>
   <nav class="site-nav" aria-label="Jogos">
     <div class="container">
@@ -31,15 +39,17 @@
 
   <main class="container">
     <section class="rk-profile" id="rk-profile" aria-live="polite"></section>
-    <div class="games">
-      <a class="game-card" href="cartas.html">
-        <span class="game-art" aria-hidden="true">🎴</span>
-        <span class="game-new">Novo</span>
-        <h2>Luta de cartas</h2>
-        <p class="muted">Jiu-jitsu por turnos contra o computador. Gaste o fôlego em cartas de queda, raspagem, passagem e finalização, com os pontos da IBJJF.</p>
+    <a class="ct-destaque" href="cartas.html">
+      <span class="ct-destaque-txt">
+        <span class="ct-destaque-selo">🎴 Jogo novo</span>
+        <strong>Luta de cartas</strong>
+        <span class="muted">Jiu-jitsu por turnos contra o computador. Monte sua estratégia com quedas, raspagens, passagens e finalizações, valendo os pontos da IBJJF.</span>
         <span class="game-best" data-best="cartas"></span>
-        <span class="feature-cta">Jogar</span>
-      </a>
+        <span class="feature-cta">Lutar agora →</span>
+      </span>
+      <span class="ct-destaque-cena" data-vitrine aria-hidden="true"></span>
+    </a>
+    <div class="games">
       <a class="game-card" href="labirinto.html">
         <span class="game-art" aria-hidden="true">🌀</span>
         <span class="game-new">Novo</span>
@@ -176,6 +186,7 @@
   <script src="ranking-config.js?v=1" defer></script>
   <script type="module" src="ranking.js?v=10"></script>
   <script src="jogos.js?v=9" defer></script>
+  <script src="cartas-arte.js?v=3" defer></script>
   <script src="fx.js?v=3" defer></script>
 </body>
 </html>

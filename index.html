@@ -4,15 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tatame · Jogos</title>
-  <meta name="description" content="Jogos de jiu-jitsu da Cohab Team: luta ao vivo contra um amigo, quiz em níveis de faixa e o jogo das posições contra o relógio.">
+  <meta name="description" content="Jogos de jiu-jitsu da Cohab Team no navegador: Luta de cartas, Luta ao vivo, Quiz, Labirinto, Torre e mais, para jogar sozinho ou com a turma, com ranking online.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tatame Online">
+  <meta property="og:title" content="Tatame · Jogos">
+  <meta property="og:description" content="Jogos de jiu-jitsu da Cohab Team no navegador: Luta de cartas, Luta ao vivo, Quiz, Labirinto, Torre e mais, para jogar sozinho ou com a turma, com ranking online.">
+  <meta property="og:url" content="https://yagoxavier10.github.io/tatame-online/">
+  <meta property="og:image" content="https://yagoxavier10.github.io/tatame-online/assets/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0f0f12">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=16">
-  <link rel="stylesheet" href="extras.css?v=5">
+  <link rel="stylesheet" href="extras.css?v=6">
   <script>try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
-<body>
 <body>
   <nav class="site-nav" aria-label="Jogos">
     <div class="container">
@@ -30,6 +38,16 @@
   </header>
 
   <main class="container">
+    <a class="ct-destaque" href="cartas.html">
+      <span class="ct-destaque-txt">
+        <span class="ct-destaque-selo">🎴 Jogo novo</span>
+        <strong>Luta de cartas</strong>
+        <span class="muted">Jiu-jitsu por turnos contra o computador. Monte sua estratégia com quedas, raspagens, passagens e finalizações, valendo os pontos da IBJJF.</span>
+        <span class="game-best" data-best="cartas"></span>
+        <span class="feature-cta">Lutar agora →</span>
+      </span>
+      <span class="ct-destaque-cena" data-vitrine aria-hidden="true"></span>
+    </a>
     <div class="tt-abas">
       <a class="tt-aba" href="solo.html">
         <span class="tt-aba-ico" aria-hidden="true">🎮</span>
@@ -51,6 +69,7 @@
     Site feito por <a href="https://yagoxavier10.github.io/portfolio-noticias/">Yago dos Santos</a> · site completo em <a href="https://yagoxavier10.github.io/cohab-team/">Cohab Team</a>
   </footer>
 
+  <script src="cartas-arte.js?v=3" defer></script>
   <script src="fx.js?v=3" defer></script>
 </body>
 </html>
