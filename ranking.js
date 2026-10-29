@@ -18,6 +18,7 @@ export const GAMES = {
   deslize: { name: "Deslize", short: "Deslize 🧩", unit: "pontos" },
   labirinto: { name: "Labirinto", short: "Labirinto 🌀", unit: "pontos" },
   alvo: { name: "Acerta-alvo", short: "Alvo 🎯", unit: "pontos" },
+  cartas: { name: "Luta de cartas", short: "Cartas 🎴", unit: "vitórias", one: "vitória" },
 };
 
 // se o navegador bloquear o armazenamento (aba anônima, privacidade), guarda na memória enquanto a página estiver aberta
@@ -169,6 +170,7 @@ function localBests() {
     deslize: store.get("dz-recorde", 0),
     labirinto: store.get("lb-recorde", 0),
     alvo: store.get("av-recorde", 0),
+    cartas: store.get("ct-vitorias", 0),
   };
 }
 export async function sync() {

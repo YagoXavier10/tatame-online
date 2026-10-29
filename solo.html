@@ -32,6 +32,14 @@
   <main class="container">
     <section class="rk-profile" id="rk-profile" aria-live="polite"></section>
     <div class="games">
+      <a class="game-card" href="cartas.html">
+        <span class="game-art" aria-hidden="true">🎴</span>
+        <span class="game-new">Novo</span>
+        <h2>Luta de cartas</h2>
+        <p class="muted">Jiu-jitsu por turnos contra o computador. Gaste o fôlego em cartas de queda, raspagem, passagem e finalização, com os pontos da IBJJF.</p>
+        <span class="game-best" data-best="cartas"></span>
+        <span class="feature-cta">Jogar</span>
+      </a>
       <a class="game-card" href="labirinto.html">
         <span class="game-art" aria-hidden="true">🌀</span>
         <span class="game-new">Novo</span>
@@ -149,11 +157,13 @@
       const rm = JSON.parse(localStorage.getItem("rm-recorde")) || 0;
       if (rm) document.querySelector('[data-best="rm"]').textContent = `🏆 Seu recorde: ${rm.toLocaleString("pt-BR")} pontos`;
       const lt = JSON.parse(localStorage.getItem("lt-vitorias")) || 0;
-      if (lt) document.querySelector('[data-best="lt"]') && (document.querySelector('[data-best="lt"]').textContent = `🏆 ${lt} ${lt === 1 ? "vitória" : "vitórias"} ao vivo`;
+      if (lt && document.querySelector('[data-best="lt"]')) document.querySelector('[data-best="lt"]').textContent = `🏆 ${lt} ${lt === 1 ? "vitória" : "vitórias"} ao vivo`;
       for (const [k, chave, un] of [["torre", "tr-recorde", "andares"], ["esquiva", "eq-recorde", "pontos"], ["palavras", "cp-recorde", "pontos"], ["pares", "pr-recorde", "pontos"], ["deslize", "dz-recorde", "pontos"], ["labirinto", "lb-recorde", "pontos"], ["alvo", "av-recorde", "pontos"]]) {
         const v = JSON.parse(localStorage.getItem(chave)) || 0;
         if (v) document.querySelector(`[data-best="${k}"]`).textContent = `🏆 Seu recorde: ${v.toLocaleString("pt-BR")} ${un}`;
       }
+      const ct = JSON.parse(localStorage.getItem("ct-vitorias")) || 0;
+      if (ct) document.querySelector('[data-best="cartas"]').textContent = `🏆 ${ct} ${ct === 1 ? "vitória" : "vitórias"}`;
       if (passed.length) document.querySelector('[data-best="quiz"]').textContent = `🥋 Você já passou na faixa ${passed.at(-1)}`;
     } catch (e) { /* sem armazenamento */ }
   </script>
@@ -164,8 +174,8 @@
   </footer>
 
   <script src="ranking-config.js?v=1" defer></script>
-  <script type="module" src="ranking.js?v=9"></script>
-  <script src="jogos.js?v=8" defer></script>
+  <script type="module" src="ranking.js?v=10"></script>
+  <script src="jogos.js?v=9" defer></script>
   <script src="fx.js?v=3" defer></script>
 </body>
 </html>

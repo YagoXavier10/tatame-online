@@ -34,6 +34,7 @@ O site completo é https://yagoxavier10.github.io/cohab-team/ (repositório Yago
 | 🎴 Pares | 🪢 Cabo de guerra |
 | ↔️ Deslize | 🥔 Batata quente |
 | ❓ Quiz | |
+| 🎴 Luta de cartas | |
 
 Com recorde e ranking online. 🏆
 
