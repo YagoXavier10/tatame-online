@@ -1,4 +1,4 @@
-// Aba Jogos: nickname do jogador e ranking de cada jogo
+// Menu solo: nickname do jogador (o ranking fica em ranking.html)
 (() => {
   const el = (tag, cls, text) => {
     const e = document.createElement(tag);
@@ -7,14 +7,13 @@
     return e;
   };
 
+  // links antigos (solo.html?ranking=torre#ranking) vão para a página do ranking
+  const antigo = new URLSearchParams(location.search).get("ranking");
+  if (antigo || location.hash === "#ranking") location.replace(`ranking.html${antigo ? `?jogo=${encodeURIComponent(antigo)}` : ""}`);
+
   function init() {
     const R = window.cohabRanking;
     const profile = document.getElementById("rk-profile");
-    const tabs = document.getElementById("rk-tabs");
-    const list = document.getElementById("rk-list");
-    const status = document.getElementById("rk-status");
-    const wanted = new URLSearchParams(location.search).get("ranking");
-    let current = R.GAMES[wanted] ? wanted : "posicoes-relogio";
 
     // ---------- perfil ----------
     function drawProfile() {
@@ -65,85 +64,13 @@
         const err = R.setNick(input.value);
         if (err) { msg.textContent = err; input.focus(); return; }
         drawProfile();
-        status.textContent = "Enviando seus recordes…";
         await R.sync();
-        drawList();
       });
       profile.append(form);
       if (value) input.select();
     }
 
-    // ---------- ranking ----------
-    Object.entries(R.GAMES).forEach(([id, g]) => {
-      const b = el("button", "", g.short);
-      b.type = "button";
-      b.dataset.game = id;
-      b.setAttribute("role", "tab");
-      b.setAttribute("aria-pressed", id === current);
-      b.addEventListener("click", () => {
-        current = id;
-        tabs.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b));
-        drawList();
-      });
-      tabs.append(b);
-    });
-    // se a aba pedida é de um jogo desligado, abre a primeira que aparece
-    const visivel = () => [...tabs.children].find((b) => getComputedStyle(b).display !== "none");
-    const atual = tabs.querySelector(`[data-game="${current}"]`);
-    if (atual && getComputedStyle(atual).display === "none" && visivel()) {
-      current = visivel().dataset.game;
-      tabs.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x.dataset.game === current));
-    }
-
-    async function drawList() {
-      const g = R.GAMES[current];
-      const asked = current;
-      list.replaceChildren(el("li", "rk-empty", "Carregando…"));
-      try {
-        const [todas, { online, me, problem }] = await Promise.all([R.top(current, 20), R.info()]);
-        // esconde quem o admin bloqueou no painel
-        const bloq = (window.siteConfig?.().nicksBloqueados || []).map((n) => n.trim().toLowerCase());
-        const rows = todas.filter((r) => !bloq.some((n) => String(r.nick).toLowerCase().includes(n)));
-        if (asked !== current) return;
-        status.textContent = online ? `${g.name} · ranking online`
-          : problem ? "⚠️ Sem conexão com o ranking online agora. Mostrando só este aparelho." : "Ranking deste aparelho";
-        list.replaceChildren();
-        if (!rows.length) {
-          const empty = el("li", "rk-empty");
-          empty.append(document.createTextNode("Ninguém pontuou ainda. "));
-          const a = el("a", "", "Seja o primeiro →");
-          a.href = { "posicoes-relogio": "posicoes.html", "posicoes-morte": "posicoes.html", regras: "regras.html", arbitro: "arbitro.html", caminho: "caminho.html", quiz: "quiz.html", torre: "torre.html", esquiva: "esquiva.html", palavras: "palavras.html", pares: "pares.html", deslize: "deslize.html", labirinto: "labirinto.html", alvo: "alvo.html", cartas: "cartas.html", luta: "luta.html" }[current];
-          empty.append(a);
-          list.append(empty);
-          return;
-        }
-        rows.forEach((r, i) => {
-          const li = el("li", r.id === me ? "rk-row me" : "rk-row");
-          li.append(el("span", "rk-pos", i < 3 ? ["🥇", "🥈", "🥉"][i] : `${i + 1}º`),
-            el("span", "rk-nick", r.nick + (r.id === me ? " (você)" : "")),
-            el("span", "rk-score", `${Number(r.score).toLocaleString("pt-BR")} ${R.unit(current, Number(r.score))}`));
-          list.append(li);
-        });
-        // se você não aparece no top 20, mostra sua posição embaixo
-        const mine = R.nick() && !rows.some((r) => r.id === me) ? R.localBests()[current] : 0;
-        if (mine > 0 && online) {
-          const pos = await R.rank(current, mine);
-          if (asked !== current) return;
-          const li = el("li", "rk-row me");
-          li.append(el("span", "rk-pos", `${pos}º`), el("span", "rk-nick", `${R.nick()} (você)`),
-            el("span", "rk-score", `${mine.toLocaleString("pt-BR")} ${R.unit(current, mine)}`));
-          list.append(el("li", "rk-gap", "⋯"), li);
-        }
-      } catch (e) {
-        console.warn(e);
-        status.textContent = "";
-        list.replaceChildren(el("li", "rk-empty", "Não foi possível carregar o ranking agora. Tente de novo em instantes."));
-      }
-    }
-
     drawProfile();
-    drawList();
-    if (wanted && R.GAMES[wanted]) document.getElementById("ranking").scrollIntoView({ block: "start" });
   }
 
   if (window.cohabRanking) init();
