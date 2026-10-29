@@ -78,6 +78,8 @@ a.site-aviso:hover { filter: brightness(1.1); }
 .cfg-bloqueio { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .cfg-bloqueio h2 { margin: 0; font-size: 1.6rem; }
 .cfg-bloqueio p { margin: 0; max-width: 440px; }
+.foot-admin { margin-left: 10px; font-size: .75rem; text-decoration: none; opacity: .18; filter: grayscale(1); transition: opacity .2s ease; }
+.foot-admin:hover, .foot-admin:focus-visible { opacity: .8; }
 .cfg-bloqueio .ex-ico { font-size: 3rem; line-height: 1; }
 .cfg-bloqueio .lt-go { min-width: 220px; padding: 12px 16px; text-align: center; }`;
 
