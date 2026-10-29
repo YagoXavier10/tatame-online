@@ -16,14 +16,14 @@ for (const [id, c] of Object.entries(E.CARTAS)) {
 for (const id of Object.keys(E.BARALHO)) assert.ok(E.CARTAS[id], `baralho tem ${id}`);
 
 // papel é visto dos dois lados
-const s = E.novaLuta({ seed: 1 });
+const s = E.novaLuta({ seed: 1, comeca: "eu" });
 assert.strictEqual(E.papel(s, "eu"), "empe");
 s.pos = "montada"; s.cima = "eu";
 assert.strictEqual(E.papel(s, "eu"), "montada-cima");
 assert.strictEqual(E.papel(s, "ia"), "montada-baixo");
 
 // não dá para jogar carta da posição errada nem sem fôlego
-const t = E.novaLuta({ seed: 2 });
+const t = E.novaLuta({ seed: 2, comeca: "eu" });
 t.lut.eu.mao = ["montar", "puxar"];
 assert.strictEqual(E.avaliar(t, "eu", "montar").ok, false);
 assert.strictEqual(E.avaliar(t, "eu", "puxar").ok, true);
@@ -51,7 +51,7 @@ E.jogar(f, "eu", 0);
 assert.deepStrictEqual([f.fim.vencedor, f.fim.como], ["eu", "finalização"]);
 
 // erro por pouco dá vantagem
-const v = E.novaLuta({ rng: () => 0.6 }); // tiro 60 contra chance 55
+const v = E.novaLuta({ rng: () => 0.6, comeca: "eu" }); // tiro 60 contra chance 55
 v.pos = "aberta"; v.cima = "eu"; v.lut.eu.mao = ["toreando"];
 const ev2 = E.jogar(v, "eu", 0);
 assert.ok(!ev2.ok && ev2.vantagem);
@@ -75,6 +75,35 @@ for (let seed = 0; seed < 500; seed++) {
 }
 log("500 lutas IA×IA:", placar, "média de pontos por luta:", (pontos / 500).toFixed(1));
 assert.ok(placar.finalizacao > 25 && placar.finalizacao < 400, "finalizações nem raras nem certas demais");
+// quem começa é sorteado e o round só acaba depois da vez dos dois
+let comecouIa = 0;
+for (let seed = 0; seed < 200; seed++) if (E.novaLuta({ seed }).vez === "ia") comecouIa++;
+assert.ok(comecouIa > 70 && comecouIa < 130, `sorteio desequilibrado: IA começou ${comecouIa} de 200`);
+const ord = E.novaLuta({ rng: () => 0.9 }); // a IA começa
+assert.strictEqual(ord.vez, "ia");
+assert.strictEqual(E.tempo(ord), 300);
+E.encerrarVez(ord);
+assert.strictEqual(ord.round, 1, "round não pode acabar só com a vez de um");
+assert.strictEqual(E.tempo(ord), 285);
+E.encerrarVez(ord);
+assert.strictEqual(ord.round, 2);
+
+// equilíbrio: o mesmo jogador simples (sem bônus) contra cada dificuldade, cada um começando metade das vezes
+for (const dificuldade of ["facil", "normal", "dificil"]) {
+  let ia = 0, primeiro = 0;
+  for (let seed = 0; seed < 300; seed++) {
+    const l = E.novaLuta({ seed, dificuldade });
+    let voltas = 0;
+    while (!l.fim) {
+      while (!l.fim && E.iaPasso(l, l.vez)) assert.ok(++voltas < 600, "IA em loop");
+      E.encerrarVez(l);
+    }
+    if (l.fim.vencedor === "ia") ia++;
+    if (l.fim.vencedor === l.primeiro) primeiro++;
+  }
+  log(`equilíbrio ${dificuldade}: IA venceu ${ia} de 300; quem começou venceu ${primeiro}`);
+}
+
 // rounds e dificuldade do painel de admin
 for (const dificuldade of ["facil", "normal", "dificil"]) {
   let ia = 0;

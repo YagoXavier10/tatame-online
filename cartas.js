@@ -120,8 +120,11 @@
     ui.mapa.addEventListener("toggle", () => ui.mapa.open && desenharMapa());
 
     box.append(ui.placar, ui.relogio, ui.tatame, ui.msg, ui.vez, ui.mao, ui.acoes, ui.mapa, det);
-    mensagem(`🤝 Toca as mãos! Você contra ${rival[0]} ${rival[1]}.`, "neutro");
+    // quem começa foi sorteado no motor
+    const eu = s.vez === "eu";
+    mensagem(`🤝 Toca as mãos! Você contra ${rival[0]} ${rival[1]}. 🎲 ${eu ? "Você começa!" : `${rival[0]} começa.`}`, "neutro");
     desenhar();
+    if (!eu) { const luta = s; ocupado = true; desenhar(); espera(1400).then(() => vezDaIA(luta)); }
   }
 
   function botao(texto, extra, fn) {
@@ -184,7 +187,8 @@
       u.l.classList.toggle("vez", s.vez === quem && !s.fim);
       u.l.classList.toggle("postura", l.postura);
     }
-    ui.relogio.textContent = `⏱️ ${relogio(E.tempo(s))} · round ${s.round}/${s.rounds}`;
+    const resta = s.fim && s.fim.como !== "finalização" ? 0 : E.tempo(s); // acabou o tempo: 0:00
+    ui.relogio.textContent = `⏱️ ${relogio(resta)} · round ${s.round}/${s.rounds}`;
     const p = E.papel(s, "eu");
     ui.pos.textContent = E.POSICOES[s.pos].nome;
     if (s.pos !== "empe") ui.pos.append(el("i", "ct-aqui", E.PAPEIS[p].curto));
@@ -465,18 +469,28 @@
     ocupado = true;
     E.encerrarVez(s);
     desenhar();
+    if (s.fim) { ocupado = false; fim(); return; }
     await espera(700);
+    await vezDaIA(s);
+  }
+
+  // "luta" é a luta em que o rival ia jogar: se o jogador começou outra no meio, esta para
+  async function vezDaIA(luta) {
+    if (luta !== s || s.vez !== "ia" || s.fim) return;
+    ocupado = true;
     // a IA joga uma ação de cada vez, com uma pausa para dar para ver
     for (let n = 0; n < 12 && !s.fim; n++) {
       const e = E.iaEscolher(s, "ia");
       if (e.acao === "passar") break;
       if (e.acao === "carta") await voarIA(e.id);
+      if (luta !== s) return;
       const ev = e.acao === "carta" ? E.jogar(s, "ia", e.i) : e.acao === "pegada" ? E.pegada(s, "ia") : E.trocar(s, "ia");
       if (ev.erro) break;
       anotar(ev);
       desenhar();
       await espera(ev.tipo === "carta" ? 1300 : 800);
     }
+    if (luta !== s) return;
     if (!s.fim) E.encerrarVez(s);
     ocupado = false;
     desenhar();

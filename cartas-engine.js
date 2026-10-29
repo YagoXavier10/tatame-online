@@ -134,6 +134,9 @@
     };
   }
 
+  // chance a mais (ou a menos) dos golpes do computador em cada dificuldade
+  const BONUS_IA = { facil: -10, normal: 5, dificil: 18 };
+
   const outro = (quem) => (quem === "eu" ? "ia" : "eu");
 
   function embaralhar(lista, rng) {
@@ -163,13 +166,16 @@
 
   function novaLuta(opcoes = {}) {
     const rng = opcoes.rng || (opcoes.seed !== undefined ? rngSemente(opcoes.seed) : Math.random);
+    // quem começa é sorteado (quem começa tem vantagem: pode derrubar primeiro)
+    const comeca = opcoes.comeca || (rng() < 0.5 ? "eu" : "ia");
     const s = {
       rng,
+      primeiro: comeca,
       round: 1,
       rounds: opcoes.rounds || CONFIG.rounds,
-      // fácil: a IA joga uma carta por vez, muitas vezes qualquer uma, e tem 10% a menos de chance; difícil: 10% a mais
+      // fácil: a IA joga uma carta por vez, muitas vezes qualquer uma, e tem menos chance; normal e difícil: um pouco mais (BONUS_IA)
       dificuldade: opcoes.dificuldade || "normal",
-      vez: "eu",
+      vez: comeca,
       pos: "empe",
       cima: null,
       joelhoUsado: false,
@@ -185,7 +191,7 @@
         [l.mao[0], l.baralho[k]] = [l.baralho[k], l.mao[0]];
       }
     }
-    s.lut.eu.folego = CONFIG.folego;
+    s.lut[comeca].folego = CONFIG.folego;
     return s;
   }
 
@@ -203,12 +209,12 @@
 
   // segundos que faltam na luta
   // cada vez vale 15 segundos: 10 rounds são 5 minutos de luta
-  const tempo = (s) => Math.max(0, s.rounds * 30 - ((s.round - 1) * 2 + (s.vez === "ia" ? 1 : 0)) * 15);
+  const tempo = (s) => Math.max(0, s.rounds * 30 - ((s.round - 1) * 2 + (s.vez === s.primeiro ? 0 : 1)) * 15);
 
   function chanceDe(s, quem, carta) {
     const eu = s.lut[quem], ele = s.lut[outro(quem)];
     if (carta.chance >= 100) return 100;
-    let c = carta.chance + eu.pegada * 8 - ele.pegada * 8 - (ele.postura ? 20 : 0) + (quem === "ia" ? { facil: -10, dificil: 10 }[s.dificuldade] || 0 : 0);
+    let c = carta.chance + eu.pegada * 8 - ele.pegada * 8 - (ele.postura ? 20 : 0) + (quem === "ia" ? BONUS_IA[s.dificuldade] || 0 : 0);
     return Math.max(5, Math.min(95, c));
   }
 
@@ -314,7 +320,8 @@
     l.trocou = false;
     l.cartasNaVez = 0;
     comprar(l, CONFIG.mao - l.mao.length, s.rng);
-    if (quem === "ia") {
+    // o round acaba quando joga quem começou depois
+    if (quem !== s.primeiro) {
       if (s.round >= s.rounds) {
         s.fim = decidir(s);
         registrar(s, { tipo: "fim", ...s.fim });
@@ -376,6 +383,11 @@
         return c.precisa && c.de !== "todas" && c.de.includes(papel(s, quem)) && l.pegada < c.precisa && l.folego >= c.custo + CONFIG.custoPegada;
       });
       if (precisa) return { acao: "pegada" };
+    }
+    // no normal e no difícil, pega na gola antes de um golpe que vale ponto, se sobrar fôlego (mais 8% de chance)
+    if (melhor && s.dificuldade !== "facil" && quem === "ia") {
+      const c = CARTAS[melhor.id];
+      if ((c.pontos || c.finaliza) && l.pegada < CONFIG.maxPegada && l.folego >= c.custo + CONFIG.custoPegada && chanceDe(s, quem, c) < 95) return { acao: "pegada" };
     }
     if (melhor && melhor.n > 0.3) return melhor;
     if (!melhor && !l.trocou && l.folego >= CONFIG.custoTrocar + 1) return { acao: "trocar" };
