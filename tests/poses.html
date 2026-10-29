@@ -1,0 +1,16 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Poses · Luta de cartas</title>
+<style>body{background:#18181d;color:#eee;font:14px sans-serif;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;padding:10px}figure{margin:0;background:#0f0f12;border-radius:10px;padding:6px}svg{width:100%}</style>
+<body>
+<script src="../cartas-arte.js"></script>
+<script>
+// confere o desenho de cada posição, com você por cima e por baixo
+for (const [pos, cima] of [["empe", null], ...["fechada", "aberta", "meia", "cem", "montada", "costas"].flatMap((p) => [[p, "eu"], [p, "ia"]])]) {
+  const f = document.createElement("figure");
+  const c = CartasArte.cena(f);
+  c.ir(pos, cima);
+  f.append(`${pos} · por cima: ${cima || "-"}`);
+  document.body.append(f);
+}
+</script>

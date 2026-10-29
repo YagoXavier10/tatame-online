@@ -1,6 +1,6 @@
 // Luta de cartas: a tela do jogo. As regras ficam em cartas-engine.js.
 (() => {
-  const E = window.CartasEngine;
+  const E = window.CartasEngine, A = window.CartasArte;
   const box = document.getElementById("cartas");
   const el = (tag, cls, text) => {
     const e = document.createElement(tag);
@@ -78,6 +78,12 @@
     ui.relogio = el("div", "ct-relogio");
 
     ui.tatame = el("div", "ct-tatame");
+    ui.palco = el("div", "ct-palco");
+    ui.cena = A.cena(ui.palco);
+    ui.fx = el("div", "ct-fx");
+    ui.fx.setAttribute("aria-hidden", "true");
+    ui.palco.append(ui.fx);
+    ui.ultimaPos = null;
     ui.pos = el("strong", "ct-pos");
     ui.papel = el("span", "ct-papel");
     ui.barra = el("div", "ct-barra");
@@ -85,7 +91,7 @@
     ui.barra.append(ui.marca);
     const rotulos = el("div", "ct-barra-rot");
     rotulos.append(el("span", "", "ele domina"), el("span", "", "você domina"));
-    ui.tatame.append(ui.pos, ui.papel, ui.barra, rotulos);
+    ui.tatame.append(ui.palco, ui.pos, ui.papel, ui.barra, rotulos);
 
     ui.msg = el("div", "ct-msg");
     ui.msg.setAttribute("aria-live", "polite");
@@ -105,7 +111,14 @@
     ui.log = el("ol");
     det.append(ui.log);
 
-    box.append(ui.placar, ui.relogio, ui.tatame, ui.msg, ui.vez, ui.mao, ui.acoes, det);
+    ui.mapa = el("details", "ct-mapa");
+    ui.mapa.open = !window.matchMedia("(max-width: 520px)").matches;
+    const sm = el("summary", "", "🗺️ Mapa das posições");
+    ui.mapaSvg = el("div", "ct-mapa-svg");
+    ui.mapa.append(sm, ui.mapaSvg, el("p", "muted ct-mapa-dica", "As setas mostram para onde as cartas da sua mão levam a luta. Verde: dá para jogar agora."));
+    ui.mapa.addEventListener("toggle", () => ui.mapa.open && desenharMapa());
+
+    box.append(ui.placar, ui.relogio, ui.tatame, ui.msg, ui.vez, ui.mao, ui.acoes, ui.mapa, det);
     mensagem(`🤝 Toca as mãos! Você contra ${rival[0]} ${rival[1]}.`, "neutro");
     desenhar();
   }
@@ -124,7 +137,21 @@
     for (let i = 0; i < max; i++) span.append(el("i", i < n ? "on" : "", ico));
   }
 
-  function cartaEl(id, a) {
+  // a arte da carta é a posição onde ela deixa a luta (finalização: de onde sai, com o alvo marcado)
+  const artes = {};
+  function arteDe(id, quem = "eu") {
+    const k = id + quem;
+    if (!artes[k]) {
+      const c = E.CARTAS[id];
+      const papel = c.finaliza || c.fica ? c.de[0] : c.de === "todas" ? "empe" : typeof c.para === "string" ? c.para : c.para[c.de[0]];
+      const [pos, lado] = papel.split("-");
+      const ele = E.outro(quem);
+      artes[k] = A.miniatura(pos, pos === "empe" ? null : lado === "cima" ? quem : ele, c.finaliza ? ele : null);
+    }
+    return artes[k].cloneNode(true);
+  }
+
+  function cartaEl(id, a, quem = "eu") {
     const c = E.CARTAS[id];
     const t = tipoDe(c);
     const b = el("button", `ct-carta t-${t}${a && !a.ok ? " off" : ""}`);
@@ -132,7 +159,9 @@
     b.append(el("span", "ct-custo", String(c.custo)));
     if (c.pontos) b.append(el("span", "ct-ganha", `+${c.pontos}`));
     if (c.finaliza) b.append(el("span", "ct-ganha fin", "FIM"));
-    b.append(el("span", "ct-arte", c.arte), el("strong", "ct-cnome", c.nome), el("span", "ct-tipo", ROTULO[t]),
+    const arte = el("span", "ct-arte");
+    arte.append(arteDe(id, quem), el("span", "ct-emoji", c.arte));
+    b.append(arte, el("strong", "ct-cnome", c.nome), el("span", "ct-tipo", ROTULO[t]),
       el("span", "ct-texto", c.texto));
     const de = el("span", "ct-de");
     (c.de === "todas" ? ["Qualquer posição"] : c.de.map((p) => E.PAPEIS[p].curto)).forEach((x) => de.append(el("i", s && x === E.PAPEIS[E.papel(s, "eu")].curto ? "aqui" : "", x)));
@@ -159,6 +188,11 @@
     ui.pos.textContent = E.POSICOES[s.pos].nome;
     if (s.pos !== "empe") ui.pos.append(el("i", "ct-aqui", E.PAPEIS[p].curto));
     ui.papel.textContent = s.pos === "empe" ? "Os dois em pé, brigando pela pegada" : E.PAPEIS[p].nome.replace(/\bdele\b/, `de ${rival[0]}`).replace(/\b[Ee]le\b/, rival[0]);
+    const chavePos = s.pos + s.cima;
+    if (chavePos !== ui.ultimaPos) {
+      ui.cena.ir(s.pos, s.cima, `${E.POSICOES[s.pos].nome}: ${ui.papel.textContent}`);
+      ui.ultimaPos = chavePos;
+    }
     const v = E.PAPEIS[p].valor; // -9 a 9
     ui.marca.style.left = `${50 + (v / 9) * 46}%`;
     ui.barra.dataset.lado = v > 0 ? "eu" : v < 0 ? "ia" : "";
@@ -172,6 +206,7 @@
     // só anima a entrada quando chegam cartas novas
     const chave = s.lut.eu.mao.join();
     ui.mao.classList.toggle("fixa", chave === ui.ultimaMao);
+    if (chave !== ui.ultimaMao) ui.mao.scrollLeft = 0;
     ui.ultimaMao = chave;
     ui.mao.replaceChildren(...mao.map(({ id, i, a }) => {
       const b = cartaEl(id, s.vez === "eu" ? a : null);
@@ -183,6 +218,7 @@
     ui.bPegada.disabled = !minha || l.folego < E.CONFIG.custoPegada || l.pegada >= E.CONFIG.maxPegada;
     ui.bTrocar.disabled = !minha || l.folego < E.CONFIG.custoTrocar || l.trocou;
     ui.bPassar.disabled = !minha;
+    if (ui.mapa.open) desenharMapa();
     // sem fôlego e sem jogada: o botão de passar chama atenção
     ui.bPassar.classList.toggle("pulsa", minha && !mao.some((x) => x.a.ok) && ui.bPegada.disabled);
   }
@@ -229,8 +265,176 @@
       const u = ui.linha[ev.quem].vant;
       u.classList.remove("sobe"); void u.offsetWidth; u.classList.add("sobe");
     }
+    if (ev.tipo === "carta") efeito(ev);
     if (ev.tipo === "carta" && !ev.ok && ev.quem === "eu") { ui.msg.classList.add("treme"); vibrar(60); }
     if (ev.tipo === "carta" && ev.ok && ev.pontos) vibrar(ev.quem === "eu" ? [20, 30, 20] : 80);
+  }
+
+  // ---------- efeitos ----------
+  // a carta sai da mão e voa até o tatame
+  async function voar(b) {
+    if (reduz || !b.animate) { await espera(120); return; }
+    const de = b.getBoundingClientRect(), para = ui.palco.getBoundingClientRect();
+    const dx = para.left + para.width / 2 - (de.left + de.width / 2), dy = para.top + para.height / 2 - (de.top + de.height / 2);
+    b.style.zIndex = 20;
+    await b.animate([
+      { transform: "none", opacity: 1 },
+      { transform: `translate(${dx * 0.5}px, ${dy * 0.5 - 30}px) scale(.8) rotate(-6deg)`, opacity: 1, offset: 0.55 },
+      { transform: `translate(${dx}px, ${dy}px) scale(.3) rotate(4deg)`, opacity: 0 },
+    ], { duration: 420, easing: "cubic-bezier(.4, 0, .2, 1)", fill: "forwards" }).finished;
+  }
+
+  // a carta do rival aparece em cima do tatame antes de valer
+  async function voarIA(id) {
+    const c = cartaEl(id, null, "ia");
+    c.classList.add("ct-carta-ia");
+    c.dataset.quem = `${rival[1]} ${rival[0]} joga`;
+    c.disabled = true;
+    ui.tatame.append(c);
+    if (reduz || !c.animate) { await espera(500); c.remove(); return; }
+    await c.animate([
+      { transform: "translate(-50%, -140%) scale(.4) rotate(8deg)", opacity: 0 },
+      { transform: "translate(-50%, -50%) scale(.72) rotate(-3deg)", opacity: 1, offset: 0.3 },
+      { transform: "translate(-50%, -50%) scale(.72) rotate(-3deg)", opacity: 1, offset: 0.8 },
+      { transform: "translate(-50%, -40%) scale(.3)", opacity: 0 },
+    ], { duration: 1150, easing: "ease-out", fill: "forwards" }).finished;
+    c.remove();
+  }
+
+  function estoura(grande, pequeno, cls) {
+    const b = el("div", `ct-boom ${cls}`);
+    b.append(el("strong", "", grande));
+    if (pequeno) b.append(el("small", "", pequeno));
+    ui.fx.append(b);
+    setTimeout(() => b.remove(), 1500);
+  }
+
+  function confete() {
+    const cores = ["#f5c542", "#1f4fbf", "#e5484d", "#1a9a5c", "#ffffff", "#8b5cf6"];
+    for (let i = 0; i < (reduz ? 0 : 36); i++) {
+      const c = el("i", "ct-confete");
+      c.style.left = `${40 + Math.random() * 20}%`;
+      c.style.background = cores[i % cores.length];
+      c.style.setProperty("--x", `${(Math.random() - 0.5) * 340}px`);
+      c.style.setProperty("--y", `${-80 - Math.random() * 120}px`);
+      c.style.setProperty("--r", `${Math.random() * 720 - 360}deg`);
+      c.style.animationDelay = `${Math.random() * 0.15}s`;
+      ui.fx.append(c);
+      setTimeout(() => c.remove(), 1800);
+    }
+  }
+
+  function efeito(ev) {
+    const lado = ev.quem === "eu" ? "eu" : "ia";
+    const c = E.CARTAS[ev.id];
+    if (ev.finalizou) {
+      estoura("FINALIZOU!", ev.nome, `${lado} fin`);
+      if (ev.quem === "eu") confete();
+      sacode("forte");
+    } else if (ev.ok && ev.pontos) {
+      estoura(`+${ev.pontos}`, ev.ponto, lado);
+      sacode(c.tipo === "Queda" ? "forte" : "leve");
+    } else if (ev.ok && c.para) {
+      sacode("leve");
+    } else if (!ev.ok) {
+      estoura(ev.vantagem ? "+V" : "✗", ev.vantagem ? "Quase! Vantagem" : "Escapou", `${lado} erro`);
+    }
+  }
+
+  function sacode(forca) {
+    if (reduz) return;
+    ui.palco.classList.remove("leve", "forte");
+    void ui.palco.offsetWidth;
+    ui.palco.classList.add(forca);
+  }
+
+  // ---------- mapa das posições ----------
+  const NS = "http://www.w3.org/2000/svg";
+  const sv = (tag, attrs, text) => {
+    const e = document.createElementNS(NS, tag);
+    for (const [k, v] of Object.entries(attrs || {})) e.setAttribute(k, v);
+    if (text !== undefined) e.textContent = text;
+    return e;
+  };
+  const COLUNAS = ["empe", "fechada", "aberta", "meia", "cem", "montada", "costas"];
+  // no computador o mapa é deitado; no celular, em pé (posições de cima para baixo)
+  let mapaEmPe = false;
+  const noDe = (papel) => {
+    const [pos, lado] = papel.split("-");
+    const i = COLUNAS.indexOf(pos), meio = pos === "empe";
+    if (mapaEmPe) return { x: meio ? 150 : lado === "cima" ? 226 : 74, y: 26 + i * 54 };
+    return { x: 40 + i * 67, y: meio ? 78 : lado === "cima" ? 40 : 116 };
+  };
+
+  function desenharMapa() {
+    const aqui = E.papel(s, "eu");
+    mapaEmPe = ui.mapaSvg.clientWidth < 460;
+    const raiz = sv("svg", { viewBox: mapaEmPe ? "0 0 300 400" : "0 0 480 156", class: `ct-mapa-g${mapaEmPe ? " em-pe" : ""}`, role: "img", "aria-label": "Mapa das posições" });
+    const defs = sv("defs");
+    for (const [id, cor] of [["ct-seta-ok", "#1a9a5c"], ["ct-seta-off", "#8a8a96"]]) {
+      const m = sv("marker", { id, viewBox: "0 0 10 10", refX: 8, refY: 5, markerWidth: 6, markerHeight: 6, orient: "auto-start-reverse" });
+      m.append(sv("path", { d: "M0,0 L10,5 L0,10 z", fill: cor }));
+      defs.append(m);
+    }
+    raiz.append(defs);
+    if (mapaEmPe) raiz.append(sv("text", { x: 74, y: 396, class: "ct-mapa-rot", "text-anchor": "middle" }, "↓ você por baixo"),
+      sv("text", { x: 226, y: 396, class: "ct-mapa-rot", "text-anchor": "middle" }, "↑ você por cima"));
+    else raiz.append(sv("text", { x: 474, y: 13, class: "ct-mapa-rot", "text-anchor": "end" }, "↑ você por cima"),
+      sv("text", { x: 474, y: 152, class: "ct-mapa-rot", "text-anchor": "end" }, "↓ você por baixo"));
+    // linhas fracas: todas as passagens possíveis do baralho
+    const feitas = new Set();
+    for (const c of Object.values(E.CARTAS)) {
+      if (c.de === "todas" || c.finaliza || c.fica) continue;
+      for (const de of c.de) {
+        const para = typeof c.para === "string" ? c.para : c.para[de];
+        const k = [de, para].sort().join();
+        if (feitas.has(k)) continue;
+        feitas.add(k);
+        const a = noDe(de), b = noDe(para);
+        raiz.append(sv("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: "ct-mapa-fundo" }));
+      }
+    }
+    // setas: para onde as cartas da mão levam daqui
+    const destinos = {};
+    let finaliza = [];
+    s.lut.eu.mao.forEach((id) => {
+      const c = E.CARTAS[id];
+      if (c.de === "todas" || !c.de.includes(aqui)) return;
+      const ok = s.vez === "eu" && E.avaliar(s, "eu", id).ok;
+      if (c.finaliza) { finaliza.push(c.arte); return; }
+      if (c.fica) return;
+      const para = typeof c.para === "string" ? c.para : c.para[aqui];
+      (destinos[para] ||= { ok: false, artes: [] }).artes.push(c.arte);
+      destinos[para].ok ||= ok;
+    });
+    const setas = sv("g");
+    for (const [para, d] of Object.entries(destinos)) {
+      const a = noDe(aqui), b = noDe(para);
+      const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+      const len = Math.hypot(b.x - a.x, b.y - a.y) || 1;
+      const cx = mx - ((b.y - a.y) / len) * 22, cy = my + ((b.x - a.x) / len) * 22;
+      // para a seta parar na borda da caixa
+      const enc = 1 - 30 / len;
+      const ex = cx + (b.x - cx) * enc, ey = cy + (b.y - cy) * enc;
+      setas.append(sv("path", { d: `M${a.x},${a.y} Q${cx},${cy} ${ex},${ey}`, class: `ct-seta ${d.ok ? "ok" : "off"}`, "marker-end": `url(#ct-seta-${d.ok ? "ok" : "off"})` }));
+      const lx = 0.25 * a.x + 0.5 * cx + 0.25 * ex, ly = 0.25 * a.y + 0.5 * cy + 0.25 * ey;
+      setas.append(sv("circle", { cx: lx, cy: ly, r: 7 + d.artes.length * 5, class: `ct-seta-bola ${d.ok ? "ok" : ""}` }));
+      setas.append(sv("text", { x: lx, y: ly + 4, "text-anchor": "middle", class: "ct-seta-arte" }, d.artes.join("")));
+    }
+    for (const papel of Object.keys(E.PAPEIS)) {
+      const n = noDe(papel);
+      const g = sv("g", { class: `ct-no${papel === aqui ? " aqui" : ""}${papel.endsWith("cima") ? " cima" : papel.endsWith("baixo") ? " baixo" : ""}${destinos[papel] ? " alvo" : ""}` });
+      g.append(sv("rect", { x: n.x - 31, y: n.y - 14, width: 62, height: 28, rx: 9 }),
+        sv("text", { x: n.x, y: n.y + 4, "text-anchor": "middle" }, E.PAPEIS[papel].curto.replace(" ↑", "").replace(" ↓", "")));
+      raiz.append(g);
+    }
+    raiz.append(setas);
+    if (finaliza.length) {
+      const n = noDe(aqui);
+      const pos = mapaEmPe ? { x: n.x + (aqui.endsWith("cima") ? 48 : -48), y: n.y + 4 } : { x: n.x, y: n.y + (aqui.endsWith("baixo") ? 28 : -20) };
+      raiz.append(sv("text", { x: pos.x, y: pos.y, "text-anchor": "middle", class: "ct-mapa-fin" }, `🏁${finaliza.join("")}`));
+    }
+    ui.mapaSvg.replaceChildren(raiz);
   }
 
   // ---------- jogadas ----------
@@ -238,9 +442,8 @@
     if (ocupado || s.vez !== "eu" || s.fim) return;
     if (!a.ok) { mensagem(`🚫 ${E.CARTAS[a.id].nome}: ${a.motivo.toLowerCase()}`, "neutro"); return; }
     ocupado = true;
-    b.classList.add("jogada");
     ui.mao.querySelectorAll("button").forEach((x) => { x.disabled = true; });
-    await espera(260);
+    await voar(b);
     const ev = E.jogar(s, "eu", i);
     anotar(ev);
     ocupado = false;
@@ -264,8 +467,11 @@
     await espera(700);
     // a IA joga uma ação de cada vez, com uma pausa para dar para ver
     for (let n = 0; n < 12 && !s.fim; n++) {
-      const ev = E.iaPasso(s, "ia");
-      if (!ev) break;
+      const e = E.iaEscolher(s, "ia");
+      if (e.acao === "passar") break;
+      if (e.acao === "carta") await voarIA(e.id);
+      const ev = e.acao === "carta" ? E.jogar(s, "ia", e.i) : e.acao === "pegada" ? E.pegada(s, "ia") : E.trocar(s, "ia");
+      if (ev.erro) break;
       anotar(ev);
       desenhar();
       await espera(ev.tipo === "carta" ? 1300 : 800);
