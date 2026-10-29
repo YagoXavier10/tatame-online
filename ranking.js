@@ -63,20 +63,25 @@ async function firebase(cfg) {
     import(`${base}/firebase-app.js`), import(`${base}/firebase-auth.js`), import(`${base}/firebase-firestore.js`),
   ]);
   // o config.js pode ter aberto o app antes (para ler a configuração do site)
-  const app = getApps().find((x) => x.name === "[DEFAULT]") || initializeApp(cfg);
-  const a = auth.getAuth(app);
-  // cada aparelho ganha um login anônimo: só ele pode mudar as próprias pontuações
-  const user = await new Promise((resolve, reject) => {
-    const off = auth.onAuthStateChanged(a, (u) => {
-      off();
-      if (u) resolve(u); else auth.signInAnonymously(a).then((c) => resolve(c.user), reject);
-    });
-  });
+  let app = getApps().find((x) => x.name === "[DEFAULT]") || initializeApp(cfg);
+  // se o admin entrou no painel (admin.html) neste aparelho, o ranking usa a conta dele:
+  // assim as pontuações do admin somam no mesmo lugar em todos os aparelhos
+  const adm = getApps().find((x) => x.name === "admin") || initializeApp(cfg, "admin");
+  const primeiro = (a) => new Promise((resolve) => { const off = auth.onAuthStateChanged(a, (u) => { off(); resolve(u); }); });
+  let user = await primeiro(auth.getAuth(adm));
+  const admin = !!user && !user.isAnonymous;
+  if (admin) app = adm;
+  else {
+    // cada aparelho ganha um login anônimo: só ele pode mudar as próprias pontuações
+    const a = auth.getAuth(app);
+    user = (await primeiro(a)) || (await auth.signInAnonymously(a)).user;
+  }
   const db = fs.getFirestore(app);
   const scores = (game) => fs.collection(db, "ranking", game, "scores");
   const T = 9000;
   return {
     online: true,
+    admin,
     me: user.uid,
     user,
     fs,
@@ -188,7 +193,9 @@ export async function top(game, n = 20) { return (await ready).top(game, n); }
 export async function rank(game, score) { return (await ready).rank(game, score); }
 // conexão com o Firebase para a Luta ao vivo (null se estiver sem ranking online)
 export async function cloud() { const b = await ready; return b.online ? { fs: b.fs, db: b.db, uid: b.me, user: b.user } : null; }
-export async function info() { const b = await ready; return { online: b.online, me: b.me, configured, problem }; }
+export async function info() { const b = await ready; return { online: b.online, me: b.me, admin: !!b.admin, configured, problem }; }
+// melhor pontuação guardada no ranking (na conta do admin, é a soma de todos os aparelhos)
+export async function best(game) { return (await ready).best(game); }
 
 // ---------- selo para a tela final dos jogos ----------
 const el = (tag, cls, text) => {
@@ -255,5 +262,5 @@ export function badge(game, score) {
   return box;
 }
 
-window.cohabRanking = { GAMES, nick, setNick, checkNick, submit, sync, top, rank, info, badge, localBests, cloud, unit };
+window.cohabRanking = { GAMES, nick, setNick, checkNick, submit, sync, top, rank, info, badge, localBests, cloud, unit, best };
 window.dispatchEvent(new Event("cohab-ranking"));

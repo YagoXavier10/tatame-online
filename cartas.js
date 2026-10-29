@@ -504,6 +504,7 @@
     const f = s.fim;
     const ganhei = f.vencedor === "eu";
     let vit = store.get("ct-vitorias", 0);
+    const antes = vit;
     if (ganhei) { vit++; store.set("ct-vitorias", vit); vibrar([40, 60, 40, 60, 120]); } else vibrar(200);
     const e = s.lut.eu, i = s.lut.ia;
     const titulo = f.vencedor === null ? "Empate!" : ganhei ? "Você venceu! 🥇" : `${rival[0]} venceu`;
@@ -511,7 +512,17 @@
       : f.como === "pontos" ? `nos pontos, ${Math.max(e.pontos, i.pontos)} a ${Math.min(e.pontos, i.pontos)}`
       : f.como === "vantagens" ? `nas vantagens, ${Math.max(e.vant, i.vant)} a ${Math.min(e.vant, i.vant)} (pontos empatados)`
       : f.como === "decisão" ? "na decisão do árbitro: atacou mais" : "Pontos e vantagens iguais.";
-    setTimeout(() => {
+    setTimeout(async () => {
+      // logado como admin, as vitórias ficam na conta: parte do total já guardado no ranking (de qualquer aparelho)
+      if (ganhei) {
+        try {
+          const R = window.cohabRanking;
+          if ((await R?.info())?.admin) {
+            const nuvem = await Promise.race([R.best("cartas"), espera(4000).then(() => null)]);
+            if (nuvem > antes) { vit = nuvem + 1; store.set("ct-vitorias", vit); }
+          }
+        } catch { /* sem conexão: vale a conta do aparelho */ }
+      }
       const over = el("div", `ex-fim ct-fim ${ganhei ? "ganhou" : ""}`);
       over.append(el("span", "ex-ico", ganhei ? "🏆" : f.vencedor === null ? "🤝" : rival[1]),
         el("p", "eyebrow", ganhei && f.como === "finalização" ? "Finalizou!" : "Fim de luta"),

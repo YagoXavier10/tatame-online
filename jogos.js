@@ -25,6 +25,8 @@
       const avatar = el("span", "rk-avatar", nick.slice(0, 1).toUpperCase());
       const text = el("div");
       text.append(el("span", "muted", "Jogando como"), el("strong", "", nick));
+      // logado como admin: avisa que as pontuações somam em todos os aparelhos
+      R.info().then((i) => { if (i.admin) text.append(el("small", "muted", "🔐 Conta de admin: seus recordes somam em todos os aparelhos")); }).catch(() => null);
       const change = el("button", "share-btn", "✏️ Trocar");
       change.type = "button";
       change.setAttribute("aria-label", "Trocar nickname");
