@@ -44,7 +44,7 @@ ou com a turma, no mesmo celular ou ao vivo. O site completo é https://yagoxavi
 | 🧑‍⚖️ Árbitro por um dia | |
 | 🃏 Regra ou mito? | |
 
-Com recorde e ranking online. 🏆
+Com recorde e ranking online. 🏆 A [página do ranking](https://yagoxavier10.github.io/tatame-online/ranking.html) mostra o pódio de cada jogo, a sua posição e o quadro de medalhas somando todos os jogos.
 
 
 
