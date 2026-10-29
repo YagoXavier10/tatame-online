@@ -191,3 +191,9 @@
   .ct-destaque-cena { order: -1; }
 }
 @media (prefers-reduced-motion: reduce) { .ct-destaque-selo { animation: none; } }
+
+/* configuração do site (config.js) */
+.ct-destaque[hidden] { display: none; }
+.ct-destaque-cena.emoji { display: grid; place-items: center; aspect-ratio: 2 / 1; }
+.ct-destaque-cena.emoji svg { display: none; }
+.ct-destaque-cena.emoji::after { content: attr(data-emoji); font-size: clamp(4rem, 14vw, 6.5rem); line-height: 1; animation: pg-pop .5s ease; }

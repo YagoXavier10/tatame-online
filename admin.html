@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel do admin · Tatame</title>
+  <meta name="description" content="Painel do administrador do Tatame Online.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0f0f12">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=16">
+  <link rel="stylesheet" href="extras.css?v=7">
+  <link rel="stylesheet" href="admin.css?v=1">
+  <script>try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="config.js?v=1"></script>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Jogos">
+    <div class="container">
+      <a class="site-logo" href="./">TATAME<span>.</span></a>
+      <a href="solo.html">🎮 Solo</a>
+      <a href="amigos.html">👥 Com amigos</a>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">🔐 Só para o administrador · <a href="./">voltar ao site</a></p>
+      <h1>Painel do admin</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="adm" id="admin"></section>
+  </main>
+
+  <footer class="container muted site-foot">
+    Cohab Team Brazilian Jiu-Jitsu · Nasci pra Vencer · desde 1998<br>
+    Site feito por <a href="https://yagoxavier10.github.io/portfolio-noticias/">Yago dos Santos</a> · site completo em <a href="https://yagoxavier10.github.io/cohab-team/">Cohab Team</a>
+  </footer>
+
+  <script src="ranking-config.js?v=1" defer></script>
+  <script type="module" src="admin.js?v=1"></script>
+  <script src="fx.js?v=3" defer></script>
+</body>
+</html>

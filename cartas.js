@@ -39,7 +39,7 @@
     const card = el("div", "ex-inicio");
     card.append(el("span", "ex-ico", "🎴"), el("h2", "", "Luta de cartas"),
       el("p", "muted", "Jiu-jitsu por turnos. Gaste seus 3 de fôlego ⚡ em cartas: cada uma sai de certas posições e leva a luta para outra. Pegadas ✋ deixam o golpe mais certeiro."),
-      el("p", "muted", "Pontos da IBJJF: queda e raspagem 2, joelho na barriga 2, passagem 3, montada e costas 4. Quase deu? Vantagem. Finalizou, acabou. 5 minutos de luta."));
+      el("p", "muted", "Pontos da IBJJF: queda e raspagem 2, joelho na barriga 2, passagem 3, montada e costas 4. Quase deu? Vantagem. Finalizou, acabou."));
     const ponto = el("ul", "ct-regras");
     [["🪢", "Comece em pé: derrube ou puxe pra guarda"], ["🔀", "Por baixo? Raspe ou finalize"], ["🐃", "Por cima? Passe, monte, pegue as costas"], ["🦁", "Finalize ou vença nos pontos"]]
       .forEach(([i, t]) => { const li = el("li"); li.append(el("span", "", i), document.createTextNode(t)); ponto.append(li); });
@@ -52,7 +52,8 @@
   }
 
   function lutar() {
-    s = E.novaLuta();
+    const ajuste = window.siteConfig?.().cartas || {}; // rounds e dificuldade escolhidos no painel de admin
+    s = E.novaLuta({ rounds: Number(ajuste.rounds) || undefined, dificuldade: ajuste.dificuldade });
     rival = RIVAIS[Math.floor(Math.random() * RIVAIS.length)];
     ocupado = false;
     box.replaceChildren();
@@ -183,7 +184,7 @@
       u.l.classList.toggle("vez", s.vez === quem && !s.fim);
       u.l.classList.toggle("postura", l.postura);
     }
-    ui.relogio.textContent = `⏱️ ${relogio(E.tempo(s))} · round ${s.round}/${E.CONFIG.rounds}`;
+    ui.relogio.textContent = `⏱️ ${relogio(E.tempo(s))} · round ${s.round}/${s.rounds}`;
     const p = E.papel(s, "eu");
     ui.pos.textContent = E.POSICOES[s.pos].nome;
     if (s.pos !== "empe") ui.pos.append(el("i", "ct-aqui", E.PAPEIS[p].curto));

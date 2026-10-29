@@ -48,6 +48,14 @@ Com recorde e ranking online. 🏆
 
 
 
+## 🔐 Painel do admin
+
+Em `admin.html` (fora dos menus) o administrador entra com usuário e senha e controla o site sem mexer no código:
+liga e desliga jogos (com motivo), muda a ordem e a etiqueta “Novo”, escolhe o banner de destaque, coloca um aviso no topo,
+ativa o modo manutenção, ajusta a Luta de cartas (tempo e dificuldade), bloqueia nicks e apaga pontuações do ranking.
+Quem joga não precisa de login. O usuário e a senha ficam no Firebase Authentication (nunca no código), e as regras do
+Firestore só deixam o admin gravar.
+
 ## 📄 Licença
 
 Distribuído sob a licença MIT. Veja o arquivo [LICENSE](LICENSE).

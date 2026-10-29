@@ -59,10 +59,11 @@ const local = {
 
 async function firebase(cfg) {
   const base = `https://www.gstatic.com/firebasejs/${FIREBASE}`;
-  const [{ initializeApp }, auth, fs] = await Promise.all([
+  const [{ initializeApp, getApps }, auth, fs] = await Promise.all([
     import(`${base}/firebase-app.js`), import(`${base}/firebase-auth.js`), import(`${base}/firebase-firestore.js`),
   ]);
-  const app = initializeApp(cfg);
+  // o config.js pode ter aberto o app antes (para ler a configuração do site)
+  const app = getApps().find((x) => x.name === "[DEFAULT]") || initializeApp(cfg);
   const a = auth.getAuth(app);
   // cada aparelho ganha um login anônimo: só ele pode mudar as próprias pontuações
   const user = await new Promise((resolve, reject) => {
@@ -122,7 +123,9 @@ export function checkNick(value) {
   const words = [flat, ...norm(n).split(/[^a-z0-9]+/).filter(Boolean)];
   const bad = BLOCKED_ANY.some((w) => flat.includes(w))
     || BLOCKED_EDGE.some((w) => words.some((x) => x.startsWith(w) || x.endsWith(w)));
-  if (bad) return [null, "Escolha outro nickname, por favor."];
+  // nicks bloqueados pelo admin no painel
+  const extra = (window.siteConfig?.().nicksBloqueados || []).map((w) => norm(w).replace(/[^a-z0-9]/g, "")).filter(Boolean);
+  if (bad || extra.some((w) => flat.includes(w))) return [null, "Escolha outro nickname, por favor."];
   return [n, null];
 }
 

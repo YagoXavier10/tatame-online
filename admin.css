@@ -1,0 +1,73 @@
+/* Painel do admin */
+.adm { max-width: 760px; margin: 28px auto 0; padding-bottom: 90px; }
+.adm-login { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.adm-login h2 { margin: 0; }
+.adm-form { display: grid; gap: 10px; width: 100%; max-width: 320px; text-align: left; }
+.adm-entrar { font: inherit; font-weight: 700; border: 0; cursor: pointer; margin-top: 4px; }
+.adm-entrar:disabled { opacity: .6; }
+.adm-link { font-size: .9rem; color: var(--muted); }
+.adm-alerta { padding: 12px 14px; border-radius: 12px; background: #b3121b18; border: 1px solid #b3121b55; }
+.adm-alerta.demo { background: #f5c54222; border-color: #f5c54288; }
+.adm-corpo { display: grid; gap: 16px; }
+.adm-sec { display: grid; gap: 12px; padding: 20px; border-radius: 18px; background: var(--surface); border: 1px solid var(--border); }
+.adm-sec h2 { margin: 0; font-size: 1.3rem; }
+.adm-sec h3 { margin: 8px 0 0; font-size: 1rem; }
+.adm-desc { margin: -6px 0 0; font-size: .9rem; }
+.adm-linha { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; }
+
+.adm-b { font: inherit; font-weight: 700; font-size: .9rem; padding: 9px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); color: var(--text); cursor: pointer; }
+.adm-b:hover:not(:disabled) { border-color: var(--muted); }
+.adm-b:disabled { opacity: .45; cursor: default; }
+.adm-b.primario { background: var(--accent); color: var(--accent-text); border-color: transparent; }
+.adm-b.perigo { color: #e5484d; border-color: #e5484d55; }
+
+/* interruptor */
+.adm-chave { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.adm-chave input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.adm-switch { flex: none; position: relative; width: 42px; height: 24px; border-radius: 99px; background: var(--border); transition: background .2s ease; }
+.adm-switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px #0005; transition: transform .2s ease; }
+.adm-chave input:checked + .adm-switch { background: #1a9a5c; }
+.adm-chave input:checked + .adm-switch::after { transform: translateX(18px); }
+.adm-chave input:focus-visible + .adm-switch { outline: 2px solid #1f4fbf; outline-offset: 2px; }
+.adm-chave-txt { display: flex; flex-direction: column; }
+.adm-chave-txt small { font-size: .8rem; }
+
+.adm-campo { display: grid; gap: 4px; font-weight: 700; font-size: .9rem; }
+.adm-campo input, .adm-campo textarea, .adm-campo select { font: inherit; font-weight: 400; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); color: var(--text); width: 100%; box-sizing: border-box; }
+.adm-campo textarea { resize: vertical; }
+
+.adm-quem { display: flex; align-items: center; gap: 12px; }
+.adm-quem div { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.adm-uid { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: .85rem; }
+.adm-uid code { padding: 4px 8px; border-radius: 8px; background: var(--bg); border: 1px solid var(--border); word-break: break-all; }
+
+/* lista de jogos */
+.adm-jogos { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.adm-jogos li { display: grid; grid-template-columns: 1fr auto auto auto; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; background: var(--bg); border: 1px solid var(--border); }
+.adm-jogos li.off { border-color: #e5484d66; }
+.adm-jogos li.off .adm-jogo-nome a { opacity: .6; text-decoration: line-through; }
+.adm-jogos li > .adm-campo { grid-column: 1 / -1; }
+.adm-jogo-nome a { font-weight: 700; color: var(--text); text-decoration: none; }
+.adm-mover { display: flex; gap: 4px; }
+.adm-mover .adm-b { padding: 6px 10px; }
+@media (max-width: 560px) {
+  .adm-sec { padding: 16px; }
+  .adm-jogos li { grid-template-columns: 1fr auto; }
+  .adm-jogos li .adm-jogo-nome { grid-column: 1 / -1; }
+}
+
+/* ranking */
+.adm-rank { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; max-height: 360px; overflow-y: auto; }
+.adm-rank li { display: grid; grid-template-columns: 36px 1fr auto auto; align-items: center; gap: 10px; padding: 6px 10px; border-radius: 10px; background: var(--bg); }
+.adm-rank .adm-b { padding: 5px 10px; font-size: .8rem; }
+.adm-pos { color: var(--muted); font-variant-numeric: tabular-nums; }
+.adm-total { font-weight: 700; margin: 0; }
+.adm-num { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 4px; }
+.adm-num li { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding: 8px 12px; border-radius: 10px; background: var(--bg); }
+.adm-num li small { grid-column: 1 / -1; }
+
+/* barra de salvar */
+.adm-barra { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: flex; justify-content: center; align-items: center; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--border); box-shadow: 0 -6px 20px #0003; }
+.adm-barra.mudou { border-top-color: #f5c542; }
+.adm-estado { font-size: .9rem; color: var(--muted); }
+.adm-barra.mudou .adm-estado { color: var(--text); font-weight: 700; }

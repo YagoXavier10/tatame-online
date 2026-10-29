@@ -75,4 +75,20 @@ for (let seed = 0; seed < 500; seed++) {
 }
 log("500 lutas IA×IA:", placar, "média de pontos por luta:", (pontos / 500).toFixed(1));
 assert.ok(placar.finalizacao > 25 && placar.finalizacao < 400, "finalizações nem raras nem certas demais");
+// rounds e dificuldade do painel de admin
+for (const dificuldade of ["facil", "normal", "dificil"]) {
+  let ia = 0;
+  for (let seed = 0; seed < 200; seed++) {
+    const l = E.novaLuta({ seed, rounds: 6, dificuldade });
+    let voltas = 0;
+    while (!l.fim) {
+      while (!l.fim && E.iaPasso(l, l.vez)) assert.ok(++voltas < 400, "IA em loop");
+      E.encerrarVez(l);
+    }
+    assert.ok(l.round <= 6, "passou dos 6 rounds");
+    if (l.fim.vencedor === "ia") ia++;
+  }
+  log(`dificuldade ${dificuldade}: IA venceu ${ia} de 200`);
+}
+assert.strictEqual(E.tempo(E.novaLuta({ rounds: 6 })), 180, "6 rounds são 3 minutos");
 log("ok");

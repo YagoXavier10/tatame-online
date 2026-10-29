@@ -75,6 +75,7 @@
     Object.entries(R.GAMES).forEach(([id, g]) => {
       const b = el("button", "", g.short);
       b.type = "button";
+      b.dataset.game = id;
       b.setAttribute("role", "tab");
       b.setAttribute("aria-pressed", id === current);
       b.addEventListener("click", () => {
@@ -84,13 +85,23 @@
       });
       tabs.append(b);
     });
+    // se a aba pedida é de um jogo desligado, abre a primeira que aparece
+    const visivel = () => [...tabs.children].find((b) => getComputedStyle(b).display !== "none");
+    const atual = tabs.querySelector(`[data-game="${current}"]`);
+    if (atual && getComputedStyle(atual).display === "none" && visivel()) {
+      current = visivel().dataset.game;
+      tabs.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x.dataset.game === current));
+    }
 
     async function drawList() {
       const g = R.GAMES[current];
       const asked = current;
       list.replaceChildren(el("li", "rk-empty", "Carregando…"));
       try {
-        const [rows, { online, me, problem }] = await Promise.all([R.top(current, 20), R.info()]);
+        const [todas, { online, me, problem }] = await Promise.all([R.top(current, 20), R.info()]);
+        // esconde quem o admin bloqueou no painel
+        const bloq = (window.siteConfig?.().nicksBloqueados || []).map((n) => n.trim().toLowerCase());
+        const rows = todas.filter((r) => !bloq.some((n) => String(r.nick).toLowerCase().includes(n)));
         if (asked !== current) return;
         status.textContent = online ? `${g.name} · ranking online`
           : problem ? "⚠️ Sem conexão com o ranking online agora. Mostrando só este aparelho." : "Ranking deste aparelho";

@@ -114,8 +114,7 @@
   };
 
   const CONFIG = {
-    rounds: 10, // cada round é uma vez sua e uma dele: 15 segundos cada, 5 minutos de luta
-    segundos: 300,
+    rounds: 10, // padrão; cada round é uma vez sua e uma dele
     folego: 3, // energia por vez
     mao: 5,
     maxPegada: 3,
@@ -167,6 +166,9 @@
     const s = {
       rng,
       round: 1,
+      rounds: opcoes.rounds || CONFIG.rounds,
+      // fácil: a IA joga uma carta por vez, muitas vezes qualquer uma, e tem 10% a menos de chance; difícil: 10% a mais
+      dificuldade: opcoes.dificuldade || "normal",
       vez: "eu",
       pos: "empe",
       cima: null,
@@ -200,12 +202,13 @@
   }
 
   // segundos que faltam na luta
-  const tempo = (s) => Math.max(0, CONFIG.segundos - ((s.round - 1) * 2 + (s.vez === "ia" ? 1 : 0)) * (CONFIG.segundos / (CONFIG.rounds * 2)));
+  // cada vez vale 15 segundos: 10 rounds são 5 minutos de luta
+  const tempo = (s) => Math.max(0, s.rounds * 30 - ((s.round - 1) * 2 + (s.vez === "ia" ? 1 : 0)) * 15);
 
   function chanceDe(s, quem, carta) {
     const eu = s.lut[quem], ele = s.lut[outro(quem)];
     if (carta.chance >= 100) return 100;
-    let c = carta.chance + eu.pegada * 8 - ele.pegada * 8 - (ele.postura ? 20 : 0);
+    let c = carta.chance + eu.pegada * 8 - ele.pegada * 8 - (ele.postura ? 20 : 0) + (quem === "ia" ? { facil: -10, dificil: 10 }[s.dificuldade] || 0 : 0);
     return Math.max(5, Math.min(95, c));
   }
 
@@ -241,6 +244,7 @@
     const c = a.carta;
     const de = papel(s, quem);
     l.folego -= c.custo;
+    l.cartasNaVez = (l.cartasNaVez || 0) + 1;
     l.mao.splice(i, 1);
     l.descarte.push(id);
     if (c.pontos || c.finaliza) l.tentativas++;
@@ -308,9 +312,10 @@
     const quem = s.vez;
     const l = s.lut[quem];
     l.trocou = false;
+    l.cartasNaVez = 0;
     comprar(l, CONFIG.mao - l.mao.length, s.rng);
     if (quem === "ia") {
-      if (s.round >= CONFIG.rounds) {
+      if (s.round >= s.rounds) {
         s.fim = decidir(s);
         registrar(s, { tipo: "fim", ...s.fim });
         return s.fim;
@@ -334,7 +339,7 @@
     const ele = s.lut[outro(quem)];
     if (c.finaliza) {
       // vale mais quando está perdendo ou o tempo acaba
-      const urg = s.round >= CONFIG.rounds - 1 || s.lut[quem].pontos < ele.pontos ? 6 : 0;
+      const urg = s.round >= s.rounds - 1 || s.lut[quem].pontos < ele.pontos ? 6 : 0;
       return p * (24 + urg) - (c.falha?.[de] ? (1 - p) * 6 : 0);
     }
     if (c.postura) return papel(s, quem).endsWith("baixo") || s.pos === "empe" ? 1.2 : 0.6;
@@ -357,6 +362,13 @@
       const n = notaJogada(s, quem, a);
       if (!melhor || n > melhor.n) melhor = { acao: "carta", i, n, id };
     });
+    // no fácil a IA joga uma carta só por vez, e muitas vezes uma qualquer
+    if (quem === "ia" && s.dificuldade === "facil" && l.cartasNaVez >= 1) return { acao: "passar" };
+    if (melhor && quem === "ia" && s.dificuldade === "facil" && s.rng() < 0.5) {
+      const ok = l.mao.map((id, i) => ({ id, i })).filter(({ id }) => avaliar(s, quem, id).ok);
+      const x = ok[Math.floor(s.rng() * ok.length)];
+      return { acao: "carta", i: x.i, id: x.id, n: 0 };
+    }
     // pega na gola antes se uma carta boa daqui só falta a pegada
     if (l.pegada < CONFIG.maxPegada && l.folego >= CONFIG.custoPegada) {
       const precisa = l.mao.some((id) => {
