@@ -5,19 +5,19 @@
 (() => {
   // os jogos do site: página, grupo do menu e as abas de ranking de cada um
   const JOGOS = [
-    { id: "cartas", nome: "Luta de cartas", emoji: "🎴", pagina: "cartas.html", grupo: "solo", ranking: ["cartas"], texto: "Jiu-jitsu por turnos contra o computador. Monte sua estratégia com quedas, raspagens, passagens e finalizações, valendo os pontos da IBJJF." },
+    { id: "cartas", jj: true, nome: "Luta de cartas", emoji: "🎴", pagina: "cartas.html", grupo: "solo", ranking: ["cartas"], texto: "Jiu-jitsu por turnos contra o computador. Monte sua estratégia com quedas, raspagens, passagens e finalizações, valendo os pontos da IBJJF." },
     { id: "labirinto", nome: "Labirinto", emoji: "🌀", pagina: "labirinto.html", grupo: "solo", ranking: ["labirinto"], texto: "Três labirintos novos a cada partida, cada vez maiores. Chegue à 🏁 o mais rápido que puder." },
     { id: "alvo", nome: "Acerta-alvo", emoji: "🎯", pagina: "alvo.html", grupo: "solo", ranking: ["alvo"], texto: "30 segundos de alvos pulando na tela: acerte 🥋 e ⭐, fuja da 💣 e faça combo." },
-    { id: "torre", nome: "Torre de faixas", emoji: "🏗️", pagina: "torre.html", grupo: "solo", ranking: ["torre"], texto: "Solte a faixa na hora certa e empilhe a torre mais alta, da faixa branca à coral." },
+    { id: "torre", jj: true, nome: "Torre de faixas", emoji: "🏗️", pagina: "torre.html", grupo: "solo", ranking: ["torre"], texto: "Solte a faixa na hora certa e empilhe a torre mais alta, da faixa branca à coral." },
     { id: "esquiva", nome: "Esquiva", emoji: "💨", pagina: "esquiva.html", grupo: "solo", ranking: ["esquiva"], texto: "Arraste o dedo para desviar de blocos e lasers. Quanto mais tempo vivo, mais rápido fica." },
     { id: "pares", nome: "Pares", emoji: "🃏", pagina: "pares.html", grupo: "solo", ranking: ["pares"], texto: "Jogo da memória em 3 fases: vire duas cartas e ache os pares." },
     { id: "deslize", nome: "Deslize", emoji: "🧩", pagina: "deslize.html", grupo: "solo", ranking: ["deslize"], texto: "Empurre as peças pelo espaço vazio até ordenar do 1 ao último." },
     { id: "palavras", nome: "Caça-palavras", emoji: "🔤", pagina: "palavras.html", grupo: "solo", ranking: ["palavras"], texto: "Seis temas e palavras escondidas em todas as direções, contra o relógio." },
-    { id: "quiz", nome: "Quiz de jiu-jitsu", emoji: "🧠", pagina: "quiz.html", grupo: "solo", ranking: ["quiz"], texto: "Cinco níveis, da faixa branca à preta, com mais de 230 perguntas." },
-    { id: "posicoes", nome: "Qual é a posição?", emoji: "⏱️", pagina: "posicoes.html", grupo: "solo", ranking: ["posicoes-relogio", "posicoes-morte"], texto: "Aparece a foto de uma luta e você escolhe a posição certa antes do tempo acabar." },
-    { id: "caminho", nome: "Caminho da finalização", emoji: "🧭", pagina: "caminho.html", grupo: "solo", ranking: ["caminho"], texto: "Escolha o próximo passo certo, posição por posição, até finalizar." },
-    { id: "arbitro", nome: "Árbitro por um dia", emoji: "🧑‍⚖️", pagina: "arbitro.html", grupo: "solo", ranking: ["arbitro"], texto: "Você apita a luta: marque pontos, vantagens, punições e diga quem venceu." },
-    { id: "regras", nome: "Regra ou mito?", emoji: "🃏", pagina: "regras.html", grupo: "solo", ranking: ["regras"], texto: "Arraste a carta: regra para a direita, mito para a esquerda." },
+    { id: "quiz", jj: true, nome: "Quiz de jiu-jitsu", emoji: "🧠", pagina: "quiz.html", grupo: "solo", ranking: ["quiz"], texto: "Cinco níveis, da faixa branca à preta, com mais de 230 perguntas." },
+    { id: "posicoes", jj: true, nome: "Qual é a posição?", emoji: "⏱️", pagina: "posicoes.html", grupo: "solo", ranking: ["posicoes-relogio", "posicoes-morte"], texto: "Aparece a foto de uma luta e você escolhe a posição certa antes do tempo acabar." },
+    { id: "caminho", jj: true, nome: "Caminho da finalização", emoji: "🧭", pagina: "caminho.html", grupo: "solo", ranking: ["caminho"], texto: "Escolha o próximo passo certo, posição por posição, até finalizar." },
+    { id: "arbitro", jj: true, nome: "Árbitro por um dia", emoji: "🧑‍⚖️", pagina: "arbitro.html", grupo: "solo", ranking: ["arbitro"], texto: "Você apita a luta: marque pontos, vantagens, punições e diga quem venceu." },
+    { id: "regras", jj: true, nome: "Regra ou mito?", emoji: "🃏", pagina: "regras.html", grupo: "solo", ranking: ["regras"], texto: "Arraste a carta: regra para a direita, mito para a esquerda." },
     { id: "luta", nome: "Luta ao vivo", emoji: "🥊", pagina: "luta.html", grupo: "amigos", ranking: ["luta"], texto: "Luta ao vivo contra um amigo, cada um no seu celular." },
     { id: "relampago", nome: "Desafios relâmpago", emoji: "⚡", pagina: "relampago.html", grupo: "amigos", ranking: [], texto: "Desafios rápidos para 2 a 8 jogadores." },
     { id: "infiltrado", nome: "Infiltrado", emoji: "🕵️", pagina: "infiltrado.html", grupo: "amigos", ranking: [], texto: "Todo mundo recebe a palavra, menos o infiltrado. Descubra quem é." },
@@ -142,6 +142,11 @@ a.site-aviso:hover { filter: brightness(1.1); }
       if (some) return;
       b.href = j.pagina;
       b.querySelector(".ct-destaque-selo").textContent = `${j.emoji} ${d.selo || "Destaque"}`;
+      // selo de jiu-jitsu quando o jogo em destaque é sobre jiu-jitsu
+      const selo = b.querySelector(".ct-destaque-selo");
+      let jj = b.querySelector(".game-tag");
+      if (!jj) { jj = el("span", "game-tag ct-destaque-jj", "🥋 Jiu-Jitsu"); selo.after(jj); }
+      jj.hidden = !j.jj;
       b.querySelector("strong").textContent = d.titulo || j.nome;
       b.querySelector(".ct-destaque-txt > .muted").textContent = d.texto || j.texto;
       const best = b.querySelector("[data-best]");
